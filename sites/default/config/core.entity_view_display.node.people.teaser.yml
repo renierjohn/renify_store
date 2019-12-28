@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.people.field_people_gender
     - field.field.node.people.field_people_image
     - field.field.node.people.field_people_location
+    - field.field.node.people.field_people_message
     - field.field.node.people.field_people_promote_display
     - field.field.node.people.field_people_status
     - node.type.people
@@ -26,5 +27,6 @@ hidden:
   field_people_gender: true
   field_people_image: true
   field_people_location: true
+  field_people_message: true
   field_people_promote_display: true
   field_people_status: true

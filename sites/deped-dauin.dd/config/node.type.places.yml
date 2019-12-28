@@ -13,6 +13,6 @@ name: Places
 type: places
 description: 'List of Places ,can be school Location or Other Interesting Places'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
 display_submitted: false

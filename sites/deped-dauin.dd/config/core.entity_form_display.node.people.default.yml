@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.people.field_people_gender
     - field.field.node.people.field_people_image
     - field.field.node.people.field_people_location
+    - field.field.node.people.field_people_message
     - field.field.node.people.field_people_promote_display
     - field.field.node.people.field_people_status
     - image.style.thumbnail
@@ -13,6 +14,7 @@ dependencies:
   module:
     - image
     - path
+    - text
 id: node.people.default
 targetEntityType: node
 bundle: people
@@ -47,6 +49,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_people_message:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_people_promote_display:
     weight: 10

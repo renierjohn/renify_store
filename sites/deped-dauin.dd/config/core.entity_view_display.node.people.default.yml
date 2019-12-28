@@ -6,12 +6,14 @@ dependencies:
     - field.field.node.people.field_people_gender
     - field.field.node.people.field_people_image
     - field.field.node.people.field_people_location
+    - field.field.node.people.field_people_message
     - field.field.node.people.field_people_promote_display
     - field.field.node.people.field_people_status
     - node.type.people
   module:
     - image
     - options
+    - text
     - user
 id: node.people.default
 targetEntityType: node
@@ -44,6 +46,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_people_message:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_people_promote_display:
     weight: 103
