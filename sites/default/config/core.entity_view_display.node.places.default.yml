@@ -1,0 +1,75 @@
+uuid: 930c817b-cbce-453e-bff5-a0c693f2782a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.places.field_image_map
+    - field.field.node.places.field_people_location
+    - field.field.node.places.field_people_promote_display
+    - field.field.node.places.field_place_image_thumbnail
+    - field.field.node.places.field_place_map_link
+    - image.style.thumbnail
+    - node.type.places
+  module:
+    - image
+    - link
+    - user
+id: node.places.default
+targetEntityType: node
+bundle: places
+mode: default
+content:
+  field_image_map:
+    weight: 102
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_people_location:
+    weight: 101
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_people_promote_display:
+    weight: 105
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_place_image_thumbnail:
+    weight: 103
+    label: visually_hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_place_map_link:
+    weight: 104
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

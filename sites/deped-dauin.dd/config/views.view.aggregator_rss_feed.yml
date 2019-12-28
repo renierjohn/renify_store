@@ -1,19 +1,19 @@
-uuid: 6a286a73-f5ca-479d-bc0a-cf7a0d473774
+uuid: 5119fd01-62ce-4ad4-8f5c-2276ee2d196e
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.node.teaser
   module:
-    - node
+    - aggregator
     - user
-id: content_list
-label: 'content list'
-module: views
+_core:
+  default_config_hash: ezcJX-8LwzoGik4U8l-EfKsph25JkvG6Yw_cpfVkY98
+id: aggregator_rss_feed
+label: 'Aggregator RSS feed'
+module: aggregator
 description: ''
-tag: ''
-base_table: node_field_data
-base_field: nid
+tag: aggregator
+base_table: aggregator_item
+base_field: iid
 display:
   default:
     display_plugin: default
@@ -24,7 +24,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'access news feeds'
       cache:
         type: tag
         options: {  }
@@ -47,12 +47,12 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 10
           offset: 0
           id: 0
-          total_pages: null
+          total_pages: 0
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -62,40 +62,53 @@ display:
             offset: false
             offset_label: Offset
           tags:
-            previous: ‹‹
-            next: ››
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          quantity: 9
       style:
         type: default
       row:
-        type: 'entity:node'
-        options:
-          view_mode: teaser
+        type: 'entity:aggregator_item'
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          entity_type: node
-          entity_field: title
-          label: ''
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
+        iid:
+          table: aggregator_item
+          field: iid
+          id: iid
           relationship: none
           group_type: group
           admin_label: ''
+          label: 'Item ID'
           exclude: false
+          plugin_id: field
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -105,78 +118,46 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      title: 'content list'
+          type: number_integer
+          entity_type: aggregator_item
+          entity_field: iid
+      filters: {  }
+      sorts: {  }
+      title: 'Aggregator RSS feed'
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
+      display_extenders: {  }
     cache_metadata:
-      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - 'user.node_grants:view'
         - user.permissions
+      cacheable: false
+      max-age: -1
       tags: {  }
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
+  feed_items:
+    display_plugin: feed
+    id: feed_items
+    display_title: Feed
     position: 1
     display_options:
+      path: aggregator/rss
+      display_description: ''
+      defaults:
+        arguments: true
       display_extenders: {  }
-      path: content-list
     cache_metadata:
-      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
         - user.permissions
+      cacheable: false
+      max-age: -1
       tags: {  }

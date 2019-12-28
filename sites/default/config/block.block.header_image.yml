@@ -1,0 +1,25 @@
+uuid: fc2b0a5a-5b96-4a6f-9c16-fb3d4de4f8dd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_and_body:3d9f50a9-a602-4e17-84c0-3df9c4cf3c97'
+  module:
+    - block_content
+  theme:
+    - zurb_foundation
+id: header_image
+theme: zurb_foundation
+region: meta_header
+weight: -6
+provider: null
+plugin: 'block_content:3d9f50a9-a602-4e17-84c0-3df9c4cf3c97'
+settings:
+  id: 'block_content:3d9f50a9-a602-4e17-84c0-3df9c4cf3c97'
+  label: 'Header Image'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
