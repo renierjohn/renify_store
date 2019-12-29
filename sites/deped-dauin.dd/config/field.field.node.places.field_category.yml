@@ -1,0 +1,23 @@
+uuid: 693eb68d-0523-4991-8e8a-5d6bba292d6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.places
+  module:
+    - options
+id: node.places.field_category
+field_name: field_category
+entity_type: node
+bundle: places
+label: Category
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Schools
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -3,17 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.places.field_category
     - field.field.node.places.field_image_map
     - field.field.node.places.field_people_location
     - field.field.node.places.field_people_promote_display
     - field.field.node.places.field_place_image_thumbnail
     - field.field.node.places.field_place_map_link
+    - field.field.node.places.field_places_details
     - image.style.thumbnail
     - node.type.places
   module:
     - image
     - link
     - path
+    - text
 id: node.places.default
 targetEntityType: node
 bundle: places
@@ -26,7 +29,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_image_map:
-    weight: 10
+    weight: 9
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -34,7 +37,7 @@ content:
     type: image_image
     region: content
   field_people_location:
-    weight: 8
+    weight: 7
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -43,14 +46,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_people_promote_display:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_place_image_thumbnail:
-    weight: 11
+    weight: 10
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -58,12 +55,20 @@ content:
     type: image_image
     region: content
   field_place_map_link:
-    weight: 9
+    weight: 8
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_places_details:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   path:
     type: path
@@ -110,4 +115,6 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_category: true
+  field_people_promote_display: true

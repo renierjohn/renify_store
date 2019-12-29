@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.places.field_category
     - field.field.node.places.field_image_map
     - field.field.node.places.field_people_location
     - field.field.node.places.field_people_promote_display
     - field.field.node.places.field_place_image_thumbnail
     - field.field.node.places.field_place_map_link
+    - field.field.node.places.field_places_details
     - node.type.places
   module:
     - user
@@ -23,8 +25,10 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_category: true
   field_image_map: true
   field_people_location: true
   field_people_promote_display: true
   field_place_image_thumbnail: true
   field_place_map_link: true
+  field_places_details: true

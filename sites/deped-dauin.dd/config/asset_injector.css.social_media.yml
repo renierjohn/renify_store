@@ -1,0 +1,17 @@
+uuid: ceaeb265-5224-42ac-9735-51ae9b96c6e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: social_media
+label: 'Social Media'
+code: ".block-content-social-media{\r\n  display: contents;\r\n}"
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    pages: /home
+    negate: false
+conditions_require_all: true

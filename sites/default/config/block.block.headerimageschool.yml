@@ -1,0 +1,31 @@
+uuid: 9e344a6f-92f3-418a-941f-f67bc6b5f32b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_and_body:aa71af88-8a00-4217-b113-5b85d918370f'
+  module:
+    - block_content
+    - system
+  theme:
+    - zurb_foundation
+id: headerimageschool
+theme: zurb_foundation
+region: meta_header
+weight: 0
+provider: null
+plugin: 'block_content:aa71af88-8a00-4217-b113-5b85d918370f'
+settings:
+  id: 'block_content:aa71af88-8a00-4217-b113-5b85d918370f'
+  label: 'Header Image School'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /schools
+    negate: false
+    context_mapping: {  }

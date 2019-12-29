@@ -1,0 +1,18 @@
+uuid: 06f34be6-cb44-4de5-89fc-21ad5b52b6aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: main_navigation
+label: 'Main Navigation'
+code: ".menu.dropdown{\r\n  background-color: aliceblue;\r\n  border-bottom-style: groove;\r\n  border-bottom-color: #0c3d5d;\r\n  border-width: 1px; \r\n}\r\n\r\n\r\n.region-highlighted.panel.callout{\r\n  border: none;\r\n  margin:0px;\r\n}"
+media: all
+preprocess: true
+conditions:
+  current_theme:
+    id: current_theme
+    theme:
+      zurb_foundation: zurb_foundation
+    negate: false
+conditions_require_all: true
