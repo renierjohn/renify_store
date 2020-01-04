@@ -6,7 +6,7 @@ dependencies:
     - system
 id: frontpage_places
 label: 'FrontPage Places'
-code: ".block-frontpage-coloumn-places{\r\n  padding-right:1%;\r\n}\r\n\r\n.block-frontpage-header-places{\r\n    margin-bottom: 5%;\r\n    margin-top: 3%;\r\n    border-bottom: 1px groove black;\r\n}"
+code: ".block-frontpage-coloumn-places{\r\n  padding-right:1%;\r\n}\r\n\r\n.block-frontpage-header-places{\r\n    margin-bottom: 5%;\r\n    margin-top: 3%;\r\n    border-bottom: 1px groove black;\r\n}\r\n\r\n.field-frontpage-places-body{\r\n  text-align: left;\r\n}"
 media: all
 preprocess: true
 conditions:

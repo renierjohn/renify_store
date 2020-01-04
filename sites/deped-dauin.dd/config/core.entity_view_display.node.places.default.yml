@@ -10,64 +10,71 @@ dependencies:
     - field.field.node.places.field_place_image_thumbnail
     - field.field.node.places.field_place_map_link
     - field.field.node.places.field_places_details
-    - image.style.thumbnail
+    - image.style.wide_image
     - node.type.places
   module:
     - image
     - link
-    - options
-    - text
+    - owlcarousel
     - user
 id: node.places.default
 targetEntityType: node
 bundle: places
 mode: default
 content:
-  field_category:
-    weight: 107
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_image_map:
-    weight: 102
+    weight: 2
     label: visually_hidden
     settings:
-      image_style: ''
+      image_style: wide_image
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_people_location:
-    weight: 101
+    weight: 1
     label: visually_hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_people_promote_display:
-    weight: 105
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_place_image_thumbnail:
-    weight: 103
+    weight: 3
     label: visually_hidden
     settings:
       image_style: thumbnail
       image_link: ''
+      items: 5
+      itemsDesktop: '[1199,4]'
+      itemsDesktopSmall: '[979,3]'
+      itemsTablet: '[768,2]'
+      itemsMobile: '[479,1]'
+      singleItem: false
+      itemsScaleUp: false
+      slideSpeed: 200
+      paginationSpeed: 800
+      rewindSpeed: 1000
+      autoPlay: false
+      stopOnHover: false
+      navigation: false
+      navigationText: '["prev","next"]'
+      prevText: prev
+      nextText: next
+      rewindNav: true
+      scrollPerPage: false
+      pagination: true
+      paginationNumbers: false
+      responsive: true
+      responsiveRefreshRate: 200
+      mouseDrag: true
+      touchDrag: true
+      transitionStyle: fade
     third_party_settings: {  }
-    type: image
+    type: owlcarousel_field_formatter
     region: content
   field_place_map_link:
-    weight: 104
+    weight: 4
     label: visually_hidden
     settings:
       trim_length: 80
@@ -78,16 +85,12 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_places_details:
-    weight: 106
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_category: true
+  field_people_promote_display: true
+  field_places_details: true

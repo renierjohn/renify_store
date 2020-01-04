@@ -1,6 +1,6 @@
 uuid: 26862b41-5187-4178-8f4f-a5a9fcd6d7eb
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:image_and_body:36df5e56-514e-4d42-8df8-1cf56fbf3fba'
@@ -12,7 +12,7 @@ dependencies:
 id: socialmedialinks
 theme: zurb_foundation
 region: content
-weight: -8
+weight: -5
 provider: null
 plugin: 'block_content:36df5e56-514e-4d42-8df8-1cf56fbf3fba'
 settings:

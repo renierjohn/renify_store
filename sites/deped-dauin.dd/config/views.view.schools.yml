@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.full
     - node.type.places
   module:
     - node
@@ -72,7 +71,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: full
+          view_mode: default
       fields:
         title:
           id: title

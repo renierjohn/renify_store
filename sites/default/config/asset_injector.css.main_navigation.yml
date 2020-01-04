@@ -6,7 +6,7 @@ dependencies:
     - system
 id: main_navigation
 label: 'Main Navigation'
-code: ".menu.dropdown{\r\n  background-color: aliceblue;\r\n  border-bottom-style: groove;\r\n  border-bottom-color: #0c3d5d;\r\n  border-width: 1px; \r\n}\r\n\r\n\r\n.region-highlighted.panel.callout{\r\n  border: none;\r\n  margin:0px;\r\n}"
+code: ".menu.dropdown{\r\n  background-color: #e6e6e6;\r\n \r\n  border-bottom-color: #e6e6e6;\r\n  border-width: 1px; \r\n}\r\n\r\n\r\n.region-highlighted.panel.callout{\r\n  border: none;\r\n  margin:0px;\r\n}"
 media: all
 preprocess: true
 conditions:
