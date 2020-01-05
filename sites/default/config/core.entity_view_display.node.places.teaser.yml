@@ -13,22 +13,43 @@ dependencies:
     - field.field.node.places.field_places_details
     - node.type.places
   module:
+    - image
+    - link
     - user
 id: node.places.teaser
 targetEntityType: node
 bundle: places
 mode: teaser
 content:
+  field_image_map:
+    type: image
+    weight: 1
+    region: content
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_place_map_link:
+    type: link
+    weight: 2
+    region: content
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_category: true
-  field_image_map: true
   field_people_location: true
   field_people_promote_display: true
   field_place_image_thumbnail: true
-  field_place_map_link: true
   field_places_details: true

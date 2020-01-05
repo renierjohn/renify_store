@@ -3,10 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_image_map
+    - field.storage.node.field_people_location
+    - field.storage.node.field_place_image_thumbnail
+    - image.style.wide_image
     - node.type.places
   module:
+    - image
     - node
     - options
+    - owlcarousel
     - user
 id: schools
 label: 'Main Menu Schools'
@@ -68,49 +74,66 @@ display:
       style:
         type: default
       row:
-        type: 'entity:node'
+        type: fields
         options:
-          relationship: none
-          view_mode: default
-      fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          entity_type: node
-          entity_field: title
-          label: ''
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
+          default_field_elements: true
+          inline: {  }
+          separator: ''
           hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
+      fields:
+        field_people_location:
+          id: field_people_location
+          table: node__field_people_location
+          field: field_people_location
           relationship: none
           group_type: group
           admin_label: ''
+          label: ''
           exclude: false
-          element_type: ''
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: h1
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          group_column: value
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -120,6 +143,159 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
+        field_image_map:
+          id: field_image_map
+          table: node__field_image_map
+          field: field_image_map
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: wide_image
+            image_link: content
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_place_image_thumbnail:
+          id: field_place_image_thumbnail
+          table: node__field_place_image_thumbnail
+          field: field_place_image_thumbnail
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: owlcarousel_field_formatter
+          settings:
+            image_style: ''
+            image_link: ''
+            items: '4'
+            itemsDesktop: '[1199,4]'
+            itemsDesktopSmall: '[979,3]'
+            itemsTablet: '[768,2]'
+            itemsMobile: '[479,1]'
+            singleItem: 0
+            itemsScaleUp: 0
+            slideSpeed: '200'
+            paginationSpeed: '800'
+            rewindSpeed: '1000'
+            autoPlay: 0
+            stopOnHover: 0
+            navigation: 0
+            prevText: prev
+            nextText: next
+            rewindNav: 0
+            scrollPerPage: 0
+            pagination: 0
+            paginationNumbers: 0
+            responsive: 0
+            responsiveRefreshRate: '200'
+            mouseDrag: 0
+            touchDrag: 0
+            transitionStyle: fade
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 4
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -218,7 +394,10 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_image_map'
+        - 'config:field.storage.node.field_people_location'
+        - 'config:field.storage.node.field_place_image_thumbnail'
   page_1:
     display_plugin: page
     id: page_1
@@ -235,4 +414,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_image_map'
+        - 'config:field.storage.node.field_people_location'
+        - 'config:field.storage.node.field_place_image_thumbnail'
