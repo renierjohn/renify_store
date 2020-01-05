@@ -1,0 +1,29 @@
+uuid: ce57027e-5024-42e9-8102-76b2bb3643c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_people_location
+    - node.type.header_image
+    - taxonomy.vocabulary.location
+id: node.header_image.field_people_location
+field_name: field_people_location
+entity_type: node
+bundle: header_image
+label: ' Location'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

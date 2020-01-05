@@ -1,0 +1,22 @@
+uuid: aef7b9d0-2189-4fd5-b931-069c8c5e9ba5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: places_url_alias
+label: 'Places url alias'
+type: 'canonical_entities:node'
+pattern: '/[node:field_category]/[node:title]'
+selection_criteria:
+  0ac9ed36-f628-49bb-b23d-4ea87e4383ad:
+    id: node_type
+    bundles:
+      places: places
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0ac9ed36-f628-49bb-b23d-4ea87e4383ad
+selection_logic: and
+weight: -5
+relationships: {  }

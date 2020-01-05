@@ -1661,7 +1661,7 @@ display:
             more_link_text: 'Read More'
             more_link_path: '/node/{{nid}}'
             strip_tags: false
-            trim: true
+            trim: false
             preserve_tags: ''
             html: false
           element_type: ''
@@ -1712,6 +1712,7 @@ display:
           items_per_page: 3
           offset: 0
       css_class: block-frontpage-places
+      inherit_arguments: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -2057,6 +2058,15 @@ display:
           field_api_classes: false
           plugin_id: field
       css_class: block-frontpage-people
+      menu:
+        type: none
+        title: Main
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
