@@ -12,6 +12,10 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Asset\AttachedAssetsInterface;
 use Drupal\editor\Entity\Editor;
 
+
+use Drupal\Core\Form\FormState;
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements hook_help().
  */
@@ -233,4 +237,9 @@ function asset_injector_preprocess_page(&$vars) {
     }
 
   }
+}
+
+function asset_injector_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  // ksm($form_id);
 }

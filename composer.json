@@ -16,11 +16,14 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "drupal/addtoany": "^1.12",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
-        "drupal/pathauto": "^1.6"
+        "drupal/imce": "^1.7",
+        "drupal/pathauto": "^1.6",
+        "drupal/random_number_field": "^1.0@beta"
     },
     "require-dev": {
     },

@@ -1,0 +1,11 @@
+name: Random Number Field
+type: module
+description: 'Adds a random number field type which populates the field with a random number based on the min/max values given.'
+# core: 8.x
+package: Field
+
+# Information added by Drupal.org packaging script on 2018-09-10
+version: '8.x-1.0-beta1'
+core: '8.x'
+project: 'random_number_field'
+datestamp: 1536595084
