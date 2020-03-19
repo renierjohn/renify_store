@@ -12,6 +12,7 @@ dependencies:
   module:
     - datetime
     - image
+    - imce
     - path
 id: node.events.default
 targetEntityType: node
@@ -41,9 +42,11 @@ content:
   field_event_image:
     weight: 9
     settings:
-      progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
     type: image_image
     region: content
   field_people_promote_display:

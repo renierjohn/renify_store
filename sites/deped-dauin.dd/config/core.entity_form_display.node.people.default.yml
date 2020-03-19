@@ -13,6 +13,7 @@ dependencies:
     - node.type.people
   module:
     - image
+    - imce
     - path
     - text
 id: node.people.default
@@ -35,9 +36,11 @@ content:
   field_people_image:
     weight: 7
     settings:
-      progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
     type: image_image
     region: content
   field_people_location:
