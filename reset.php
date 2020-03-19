@@ -33,6 +33,6 @@ $updatepass = Drupal::database()->update('users_field_data')
   ))
   ->condition('uid', '1', '=')
   ->execute();
-
+ 
 // Clean user 1 cache.
 Drupal::cache('entity')->delete('values:user:1');
