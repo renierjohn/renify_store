@@ -26,6 +26,7 @@
         "drupal/random_number_field": "^1.0@beta"
     },
     "require-dev": {
+        "drupal/core-dev": "^8.8"
     },
     "conflict": {
         "drupal/drupal": "*"
