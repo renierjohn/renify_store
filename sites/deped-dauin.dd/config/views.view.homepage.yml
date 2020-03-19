@@ -12,6 +12,7 @@ dependencies:
     - field.storage.node.field_place_image_thumbnail
     - field.storage.node.field_places_details
     - image.style.event_image_size_400x200_
+    - image.style.profile_400x300_
     - node.type.events
     - node.type.people
     - node.type.places
@@ -1917,7 +1918,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: event_image_size_400x200_
+            image_style: profile_400x300_
             image_link: ''
           group_column: ''
           group_columns: {  }

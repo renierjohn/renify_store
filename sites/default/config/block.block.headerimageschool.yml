@@ -12,7 +12,7 @@ dependencies:
 id: headerimageschool
 theme: zurb_foundation
 region: meta_header
-weight: 0
+weight: -9
 provider: null
 plugin: 'block_content:aa71af88-8a00-4217-b113-5b85d918370f'
 settings:

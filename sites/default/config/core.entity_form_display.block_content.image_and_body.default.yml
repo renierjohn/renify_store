@@ -9,6 +9,7 @@ dependencies:
     - image.style.thumbnail
   module:
     - image
+    - imce
     - text
 id: block_content.image_and_body.default
 targetEntityType: block_content
@@ -28,7 +29,9 @@ content:
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
-    third_party_settings: {  }
+    third_party_settings:
+      imce:
+        enabled: true
     type: image_image
     region: content
   info:

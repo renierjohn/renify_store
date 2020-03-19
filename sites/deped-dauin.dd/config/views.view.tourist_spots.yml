@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_image_map
     - field.storage.node.field_place_image_thumbnail
+    - image.style.event_image_size_400x200_
     - image.style.wide_image
     - node.type.places
   module:
@@ -79,15 +80,15 @@ display:
           separator: ''
           hide_empty: false
       fields:
-        counter:
-          id: counter
-          table: views
-          field: counter
+        field_place_image_thumbnail:
+          id: field_place_image_thumbnail
+          table: node__field_place_image_thumbnail
+          field: field_place_image_thumbnail
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -115,7 +116,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h4
+          element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -127,8 +128,22 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          counter_start: 1
-          plugin_id: counter
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: event_image_size_400x200_
+            image_link: content
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 1
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -139,7 +154,7 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: '{{ counter }} | {{ title }}'
             make_link: false
             path: ''
@@ -165,14 +180,14 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h3
+          element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -180,7 +195,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -251,70 +266,6 @@ display:
           group_columns: {  }
           group_rows: true
           delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_place_image_thumbnail:
-          id: field_place_image_thumbnail
-          table: node__field_place_image_thumbnail
-          field: field_place_image_thumbnail
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: wide_image
-            image_link: content
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 1
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false

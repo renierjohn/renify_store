@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.schools_view
+    - field.field.node.places.feeds_item
     - field.field.node.places.field_category
     - field.field.node.places.field_image_map
     - field.field.node.places.field_people_location
@@ -24,7 +25,7 @@ mode: schools_view
 content:
   field_image_map:
     weight: 0
-    label: visually_hidden
+    label: hidden
     settings:
       image_style: wide_image
       image_link: ''
@@ -33,7 +34,7 @@ content:
     region: content
   field_people_location:
     weight: 1
-    label: visually_hidden
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -41,7 +42,7 @@ content:
     region: content
   field_place_map_link:
     weight: 2
-    label: visually_hidden
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -52,6 +53,8 @@ content:
     type: link
     region: content
 hidden:
+  addtoany: true
+  feeds_item: true
   field_category: true
   field_people_promote_display: true
   field_place_image_thumbnail: true

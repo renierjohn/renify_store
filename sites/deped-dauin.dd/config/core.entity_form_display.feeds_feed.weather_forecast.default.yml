@@ -1,0 +1,44 @@
+uuid: f780dec5-d4ff-41e8-9bbd-4f0422d40dd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.weather_forecast
+    - field.field.feeds_feed.weather_forecast.field_weather_temp
+id: feeds_feed.weather_forecast.default
+targetEntityType: feeds_feed
+bundle: weather_forecast
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_weather_temp:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

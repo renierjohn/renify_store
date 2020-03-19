@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.places.feeds_item
     - field.field.node.places.field_category
     - field.field.node.places.field_image_map
     - field.field.node.places.field_people_location
@@ -10,7 +11,7 @@ dependencies:
     - field.field.node.places.field_place_image_thumbnail
     - field.field.node.places.field_place_map_link
     - field.field.node.places.field_places_details
-    - image.style.wide_image
+    - image.style.wide_image_full_width_x_500_
     - node.type.places
   module:
     - image
@@ -27,7 +28,7 @@ content:
     weight: 2
     label: visually_hidden
     settings:
-      image_style: wide_image
+      image_style: wide_image_full_width_x_500_
       image_link: ''
     third_party_settings: {  }
     type: image
@@ -99,5 +100,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  feeds_item: true
   field_category: true
   field_people_promote_display: true

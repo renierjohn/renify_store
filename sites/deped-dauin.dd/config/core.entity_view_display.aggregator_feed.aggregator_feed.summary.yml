@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.aggregator_feed.summary
+    - field.field.aggregator_feed.aggregator_feed.field_feed_body
   module:
     - aggregator
 _core:
@@ -23,5 +24,6 @@ hidden:
   checked: true
   description: true
   feed_icon: true
+  field_feed_body: true
   image: true
   link: true

@@ -36,7 +36,7 @@ zurb_foundation_meta_header_grid: 0
 zurb_foundation_top_bar_enable: '1'
 zurb_foundation_top_bar_grid: 0
 zurb_foundation_top_bar_sticky: 0
-zurb_foundation_top_bar_is_hover: 0
+zurb_foundation_top_bar_is_hover: 1
 zurb_foundation_top_bar_menu_text: ''
 zurb_foundation_top_bar_custom_back_text: 0
 zurb_foundation_top_bar_back_text: ''

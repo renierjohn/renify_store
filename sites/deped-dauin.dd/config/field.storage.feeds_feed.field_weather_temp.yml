@@ -1,0 +1,20 @@
+uuid: 81f46eb5-93a5-4af3-916a-9af98b63ae7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - feeds
+id: feeds_feed.field_weather_temp
+field_name: field_weather_temp
+entity_type: feeds_feed
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

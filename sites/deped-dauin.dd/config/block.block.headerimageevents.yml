@@ -12,7 +12,7 @@ dependencies:
 id: headerimageevents
 theme: zurb_foundation
 region: meta_header
-weight: 0
+weight: -10
 provider: null
 plugin: 'block_content:c8821769-9edc-4049-bb41-3351a94fed8d'
 settings:

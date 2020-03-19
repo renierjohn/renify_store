@@ -1,0 +1,23 @@
+uuid: 1925a100-bb7b-43d5-9d10-c66ddfb60742
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.weather_forecast
+    - field.storage.feeds_feed.field_weather_temp
+id: feeds_feed.weather_forecast.field_weather_temp
+field_name: field_weather_temp
+entity_type: feeds_feed
+bundle: weather_forecast
+label: 'Weather Temp'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: 'degree C'
+field_type: decimal

@@ -1,0 +1,19 @@
+uuid: ef983f69-fb60-44c1-99f9-4e476af5a3fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.news
+    - field.storage.feeds_feed.field_adams_title
+id: feeds_feed.news.field_adams_title
+field_name: field_adams_title
+entity_type: feeds_feed
+bundle: news
+label: 'News Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

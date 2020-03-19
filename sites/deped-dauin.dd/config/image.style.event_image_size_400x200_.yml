@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies: {  }
 name: event_image_size_400x200_
-label: 'Event Image Size  (400x200)'
+label: 'Event Image Size  (800x300)'
 effects:
   55306650-01f0-49c8-ad04-1e59bd277056:
     uuid: 55306650-01f0-49c8-ad04-1e59bd277056
     id: image_scale_and_crop
     weight: 1
     data:
-      width: 400
-      height: 200
+      width: 800
+      height: 300
       anchor: center-center

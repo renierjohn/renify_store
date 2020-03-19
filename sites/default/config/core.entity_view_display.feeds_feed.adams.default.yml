@@ -1,0 +1,50 @@
+uuid: f76736ed-0502-4df2-85e3-2b132a856a41
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.adams
+    - field.field.feeds_feed.adams.field_adams_title
+  module:
+    - feeds
+    - user
+id: feeds_feed.adams.default
+targetEntityType: feeds_feed
+bundle: adams
+mode: default
+content:
+  field_adams_title:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  imported:
+    label: inline
+    type: timestamp_ago
+    weight: 1
+    region: content
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+  next:
+    label: inline
+    type: timestamp
+    weight: 1
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  source:
+    label: inline
+    type: feeds_uri_link
+    weight: -3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -12,7 +12,7 @@ dependencies:
 id: header_image
 theme: zurb_foundation
 region: meta_header
-weight: -6
+weight: -8
 provider: null
 plugin: 'block_content:3d9f50a9-a602-4e17-84c0-3df9c4cf3c97'
 settings:

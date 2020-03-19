@@ -1,0 +1,49 @@
+uuid: c9d8960a-e0e6-4fb8-8ae4-4fbee4573666
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+  module:
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers: {  }
+label: News
+id: news
+description: ''
+help: ''
+import_period: 900
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: true
+  use_pubsubhubbub: true
+  fallback_hub: ''
+  request_timeout: 30
+parser: syndication
+parser_configuration: {  }
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: 3600
+  owner_feed_author: true
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: article
+custom_sources: {  }
+mappings:
+  -
+    target: title
+    map:
+      value: feed_title
+    unique: {  }
+  -
+    target: created
+    map:
+      value: 'parent:created'
+    settings:
+      timezone: UTC

@@ -1,0 +1,50 @@
+uuid: af97e33f-713b-4e6c-83ff-5a508d08edfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.news
+    - field.field.feeds_feed.news.field_adams_title
+    - field.field.feeds_feed.news.field_new_image
+    - image.style.thumbnail
+  module:
+    - image
+id: feeds_feed.news.default
+targetEntityType: feeds_feed
+bundle: news
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_new_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_adams_title: true

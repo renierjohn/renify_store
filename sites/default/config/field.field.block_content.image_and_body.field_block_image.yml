@@ -11,7 +11,7 @@ id: block_content.image_and_body.field_block_image
 field_name: field_block_image
 entity_type: block_content
 bundle: image_and_body
-label: 'block image'
+label: 'Block Image'
 description: ''
 required: false
 translatable: false

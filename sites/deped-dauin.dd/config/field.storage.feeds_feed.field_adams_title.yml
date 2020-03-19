@@ -1,0 +1,19 @@
+uuid: 7c5d2577-a48c-43ba-b153-2ce1bc801bb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - feeds
+id: feeds_feed.field_adams_title
+field_name: field_adams_title
+entity_type: feeds_feed
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
