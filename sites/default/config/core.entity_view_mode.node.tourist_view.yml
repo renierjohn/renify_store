@@ -1,0 +1,10 @@
+uuid: 4ec071c5-4583-4bd0-9a80-cbfbbfc91de0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.tourist_view
+label: 'Tourist View'
+targetEntityType: node
+cache: true

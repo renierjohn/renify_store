@@ -1,0 +1,244 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
+use Drupal\Core\Cache;
+
+use Drupal\views\Plugin\views\query\Sql;
+use Drupal\views\ViewExecutable;
+
+use Symfony\Component\HttpFoundation\Request;
+
+use Drupal\node\Entity\Node;
+
+function random_sort_views_query_alter( $view, $query) {
+  
+  // $request = \Drupal::request();
+
+  //  if ($view->storage->get('id') === 'artist' ) {
+        
+
+  //        $METHOD = $request->getMethod();
+
+  //        if($METHOD == 'GET'){
+  
+  //               $nids = \Drupal::entityQuery('node')->condition('type','airtist')->sort('field_random_number','DESC')->execute();
+  //               $count = 0;
+  //               $new_arr = array();
+
+  //               foreach ($nids as $key => $value) {
+  //                 $arr = array(  $key  =>  $value );
+  //                 $new_arr = $arr + $new_arr;
+  //                 $count++;
+                
+  //                 if($count > 17 ){
+  //                   break;
+  //                 }
+  //               }
+
+  //               $nodes =  \Drupal\node\Entity\Node::loadMultiple($new_arr);
+  //               foreach ($nodes as $key => $value) {
+                  
+  //                 $value->set('field_random_number',rand(0,1000));    
+  //                 $value->save();
+  //               }
+  //       }  
+  //   }
+}
+
+function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+   // ksm($form_id);
+   // if($form_id == 'csv_importer_form'){
+   //    // ksm($form_id);
+   //    $nids = \Drupal::entityQuery('node')->condition('status',1)->condition('type','airtist')->execute();
+   //    ksm($nids);
+   //      foreach ($nids as $key => $value) {
+   //         $node = Node::load($value);
+   //         $node->set('field_artist_genre',0);
+   //         $node->save();
+   //      }
+   //  }  
+    
+    if($form_id == 'csv_importer_form'){
+      // ksm($form_id);
+        $nids = \Drupal::entityQuery('node')->condition('status',1)->condition('type','airtist')->execute();
+      // ksm($nids);
+        foreach ($nids as $key => $value) {
+           $node = Node::load($value);
+           // ksm($node);
+               if($node->hasField('field_artist_main_image')){
+
+                  if(!$node->field_artist_main_image->isEmpty()){
+
+                    $filepath = $node->field_artist_main_image->entity->getFileUri();
+                    $arr = explode('/',$filepath);
+                    $name = explode('.',$arr[count($arr)-1])[0];
+                    
+                    $node->field_artist_main_image->first()->set('alt',$name);
+                   
+                }
+
+              if(!$node->field_thumb_image->isEmpty()){
+                  $gallery = $node->field_thumb_image;
+                  foreach ($gallery as $key => $value) {
+                      $filepath = $value->entity->getFileUri();
+                      $arr = explode('/',$filepath);
+                      $name = explode('.',$arr[count($arr)-1])[0];
+                      $value->set('alt',$name);
+                  }
+                }
+              $node->save();
+            }
+        }
+    } 
+
+    if($form_id == 'node_airtist_edit_form'){
+        $content = \Drupal::routeMatch()->getParameter('node');
+        if(!$content->field_artist_main_image->isEmpty()){
+            $filepath = $content->field_artist_main_image->entity->getFileUri();
+            $arr = explode('/',$filepath);
+            $name = explode('.',$arr[count($arr)-1])[0];
+            $content->field_artist_main_image->first()->set('alt',$name);
+        }
+
+        if(!$content->field_thumb_image->isEmpty()){
+          $gallery = $content->field_thumb_image;
+          foreach ($gallery as $key => $value) {
+            $filepath = $value->entity->getFileUri();
+            $arr = explode('/',$filepath);
+            $name = explode('.',$arr[count($arr)-1])[0];
+            $value->set('alt',$name);
+          }
+        }
+         $content->save();
+        // ksm( $content->field_thumb_image);
+    }
+}
+
+
+
+
+
+
+
+
+<?php
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
+
+
+function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+  // ksm($form_id);
+    if($form_id == 'csv_importer_form'){
+        $nids = \Drupal::entityQuery('node')->condition('status',1)->condition('type','airtist')->execute();
+        foreach ($nids as $key => $value) {
+           $node = Node::load($value);
+               if($node->hasField('field_artist_main_image')){
+
+                  if(!$node->field_artist_main_image->isEmpty()){
+
+                    // $filepath = $node->field_artist_main_image->entity->getFileUri();
+                    // $arr = explode('/',$filepath);
+                    // $name = explode('.',$arr[count($arr)-1])[0];
+                    
+                    $filename = $node->field_artist_main_image->entity->getFileName();
+                    $filename_arr = explode('.', $filename);
+                    if( count($filename_arr) > 2){
+                        unset($filename_arr[count($filename_arr)-1]);
+                        $name = implode('.', $filename_arr);
+                    }
+                    else{
+                       $name = $filename_arr[0];
+                    }
+
+                    $node->field_artist_main_image->first()->set('alt',$name);
+                   
+                }
+
+              if(!$node->field_thumb_image->isEmpty()){
+                  $gallery = $node->field_thumb_image;
+                  foreach ($gallery as $key => $value) {
+                      // $filepath = $value->entity->getFileUri();
+                      // $arr = explode('/',$filepath);
+                      // $name = explode('.',$arr[count($arr)-1])[0];
+
+                      $filename = $value->entity->getFileName();
+                      $filename_arr = explode('.', $filename);
+                      if( count($filename_arr) > 2){
+                          unset($filename_arr[count($filename_arr)-1]);
+                          $name = implode('.', $filename_arr);
+                      }
+                      else{
+                         $name = $filename_arr[0];
+                      }
+
+                      $value->set('alt',$name);
+                  }
+                }
+
+              $node->save();
+            }
+        }
+    } 
+
+    if($form_id == 'node_airtist_edit_form' || $form_id == 'node_airtist_form' ){
+      ksm($test);
+        $content = \Drupal::routeMatch()->getParameter('node');
+        ksm($content);
+        // if(!$content->field_artist_main_image->isEmpty()){
+        //     $filepath = $content->field_artist_main_image->entity->getFileUri();
+        //     // $content->field_artist_main_image->entity->getFileName();
+        //     $arr = explode('/',$filepath);
+        //     $name = explode('.',$arr[count($arr)-1])[0];
+        //     $content->field_artist_main_image->first()->set('alt',$name);
+        //     $content->save();
+        // }
+
+        // if(!$content->field_thumb_image->isEmpty()){
+        //   $gallery = $content->field_thumb_image;
+        //   foreach ($gallery as $key => $value) {
+        //     $filepath = $value->entity->getFileUri();
+        //     $arr = explode('/',$filepath);
+        //     $name = explode('.',$arr[count($arr)-1])[0];
+        //     $value->set('alt',$name);
+        //   }
+        //   $content->save();
+        // }
+         
+
+         // if(!$content->field_artist_main_image->isEmpty()){
+         //    // $filepath = $content->field_artist_main_image->entity->getFileUri();
+         //    $filename = $content->field_artist_main_image->entity->getFileName();
+         //    $filename_arr = explode('.', $filename);
+         //    if( count($filename_arr) > 2){
+         //        unset($filename_arr[count($filename_arr)-1]);
+         //        $name = implode('.', $filename_arr);
+         //    }
+         //    else{
+         //       $name = $filename_arr[0];
+         //    }
+
+         //    $content->field_artist_main_image->first()->set('alt',$name);
+         //    $content->save();
+         // }
+
+         //  if(!$content->field_thumb_image->isEmpty()){
+         //    $gallery = $content->field_thumb_image;
+         //    foreach ($gallery as $key => $value) {
+         //      $filename = $content->field_artist_main_image->entity->getFileName();
+         //      $filename_arr = explode('.', $filename);
+         //      if( count($filename_arr) > 2){
+         //          unset($filename_arr[count($filename_arr)-1]);
+         //          $name = implode('.', $filename_arr);
+         //      }
+         //      else{
+         //         $name = $filename_arr[0];
+         //      }
+         //      $value->set('alt',$name);
+         //    }
+         //    $content->save();
+         //  }
+    }
+}

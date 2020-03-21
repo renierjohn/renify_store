@@ -1,0 +1,35 @@
+uuid: 8868ae39-f4b5-4f93-981c-a12184ecc4d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.weather_json.feeds_item
+    - field.field.node.weather_json.field_coordinate
+    - field.field.node.weather_json.field_main
+    - field.field.node.weather_json.field_visibility
+    - field.field.node.weather_json.field_weather
+    - field.field.node.weather_json.field_weather_id
+    - field.field.node.weather_json.field_wind
+    - node.type.weather_json
+  module:
+    - user
+id: node.weather_json.teaser
+targetEntityType: node
+bundle: weather_json
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  feeds_item: true
+  field_coordinate: true
+  field_main: true
+  field_visibility: true
+  field_weather: true
+  field_weather_id: true
+  field_wind: true

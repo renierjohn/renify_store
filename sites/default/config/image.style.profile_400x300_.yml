@@ -1,0 +1,15 @@
+uuid: 20ed0d6a-d395-4ea4-aac2-dfe52e588083
+langcode: en
+status: true
+dependencies: {  }
+name: profile_400x300_
+label: 'Profile (400x300)'
+effects:
+  2bc96940-29a2-45ea-8290-96c17c1156b3:
+    uuid: 2bc96940-29a2-45ea-8290-96c17c1156b3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      anchor: center-center

@@ -1,0 +1,64 @@
+uuid: 90cd8c57-0da7-4248-a0a7-cdbf17098a09
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.tourist_view
+    - field.field.node.places.field_category
+    - field.field.node.places.field_image_map
+    - field.field.node.places.field_people_location
+    - field.field.node.places.field_people_promote_display
+    - field.field.node.places.field_place_image_thumbnail
+    - field.field.node.places.field_place_map_link
+    - field.field.node.places.field_places_details
+    - image.style.wide_image
+    - node.type.places
+  module:
+    - image
+    - link
+    - user
+id: node.places.tourist_view
+targetEntityType: node
+bundle: places
+mode: tourist_view
+content:
+  field_image_map:
+    weight: 2
+    label: visually_hidden
+    settings:
+      image_style: wide_image
+      image_link: content
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_people_location:
+    weight: 1
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_place_map_link:
+    weight: 3
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_category: true
+  field_people_promote_display: true
+  field_place_image_thumbnail: true
+  field_places_details: true

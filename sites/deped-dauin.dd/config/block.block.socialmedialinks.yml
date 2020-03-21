@@ -1,0 +1,31 @@
+uuid: 26862b41-5187-4178-8f4f-a5a9fcd6d7eb
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:image_and_body:36df5e56-514e-4d42-8df8-1cf56fbf3fba'
+  module:
+    - block_content
+    - system
+  theme:
+    - zurb_foundation
+id: socialmedialinks
+theme: zurb_foundation
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:36df5e56-514e-4d42-8df8-1cf56fbf3fba'
+settings:
+  id: 'block_content:36df5e56-514e-4d42-8df8-1cf56fbf3fba'
+  label: 'Social Media Links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /home
+    negate: false
+    context_mapping: {  }

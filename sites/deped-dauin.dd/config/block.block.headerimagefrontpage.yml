@@ -1,0 +1,31 @@
+uuid: 2bba3e55-fc18-428d-8a45-c82c255cfe45
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_and_body:3d9f50a9-a602-4e17-84c0-3df9c4cf3c97'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: headerimagefrontpage
+theme: bartik
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:3d9f50a9-a602-4e17-84c0-3df9c4cf3c97'
+settings:
+  id: 'block_content:3d9f50a9-a602-4e17-84c0-3df9c4cf3c97'
+  label: 'Header Image FrontPage'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/home\r\n"
+    negate: false
+    context_mapping: {  }

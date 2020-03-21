@@ -1,0 +1,22 @@
+uuid: de4458ac-17eb-45c0-8c66-7420c75e6835
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.weather_json
+id: node.weather_json.promote
+field_name: promote
+entity_type: node
+bundle: weather_json
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

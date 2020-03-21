@@ -1,0 +1,19 @@
+uuid: bb2c82ed-0c83-498b-8541-630f8f6dcbbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main
+    - node.type.weather_json
+id: node.weather_json.field_main
+field_name: field_main
+entity_type: node
+bundle: weather_json
+label: Main
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

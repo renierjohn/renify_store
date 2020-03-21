@@ -1,0 +1,21 @@
+uuid: 809d255e-a316-4e51-980b-ad1e01cce298
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinate
+    - node.type.weather_json
+  module:
+    - text
+id: node.weather_json.field_coordinate
+field_name: field_coordinate
+entity_type: node
+bundle: weather_json
+label: Coordinate
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

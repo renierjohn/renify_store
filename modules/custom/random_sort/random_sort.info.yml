@@ -1,0 +1,4 @@
+name : 'Random Sort'
+description : 'add plugin on views sort'
+core: 8.x
+type: module
