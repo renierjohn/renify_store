@@ -13,110 +13,7 @@ use Drupal\Core\Ajax\ReplaceCommand;
 use Drupal\Core\Ajax\OpenModalDialogCommand;
 use Symfony\Component\HttpFoundation\Request;
 function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
-  // ksm($form_id);
-    if($form_id == 'csv_importer_form'){
-        $nids = \Drupal::entityQuery('node')->condition('status',1)->condition('type','airtist')->execute();
-        foreach ($nids as $key => $value) {
-           $node = Node::load($value);
-               if($node->hasField('field_artist_main_image')){
-
-                  if(!$node->field_artist_main_image->isEmpty()){
-
-                    // $filepath = $node->field_artist_main_image->entity->getFileUri();
-                    // $arr = explode('/',$filepath);
-                    // $name = explode('.',$arr[count($arr)-1])[0];
-                    
-                    $filename = $node->field_artist_main_image->entity->getFileName();
-                    $filename_arr = explode('.', $filename);
-                    if( count($filename_arr) > 2){
-                        unset($filename_arr[count($filename_arr)-1]);
-                        $name = implode('.', $filename_arr);
-                    }
-                    else{
-                       $name = $filename_arr[0];
-                    }
-
-                    $node->field_artist_main_image->first()->set('alt',$name);
-                   
-                }
-
-              if(!$node->field_thumb_image->isEmpty()){
-                  $gallery = $node->field_thumb_image;
-                  foreach ($gallery as $key => $value) {
-                      // $filepath = $value->entity->getFileUri();
-                      // $arr = explode('/',$filepath);
-                      // $name = explode('.',$arr[count($arr)-1])[0];
-
-                      $filename = $value->entity->getFileName();
-                      $filename_arr = explode('.', $filename);
-                      if( count($filename_arr) > 2){
-                          unset($filename_arr[count($filename_arr)-1]);
-                          $name = implode('.', $filename_arr);
-                      }
-                      else{
-                         $name = $filename_arr[0];
-                      }
-
-                      $value->set('alt',$name);
-                  }
-                }
-
-              $node->save();
-            }
-        }
-    } 
-    
-    if($form_id == 'node_airtist_edit_form' ){
-
-        $content = \Drupal::routeMatch()->getParameter('node');
-        $nids = \Drupal::entityQuery('node')->condition('type','airtist')->condition('feeds_item','51')->execute();
-        $nid = 18416;
-        $target_id = Node::load($nid)->field_artist_main_image[0]->getValue()['target_id'];
-        $img = \Drupal::entityTypeManager()->getStorage('file')->load($target_id); // img object
-        $uri =  $img->uri[0]->getValue()['value']; // uri
-
-        // $filename
-        // $uri =
-        // $img->setFileUri($uri);
-        // $img->setFilename($filename);
-        // $img->save();
-        // $f = \Drupal::entityTypeManager()->getStorage('file')->load(39671);
-        // ksm($f);
-
-        // ksm( \Drupal::moduleHandler()->getModule('image'));
-        if(!$content->field_artist_main_image->isEmpty()){
-            // $filepath = $content->field_artist_main_image->entity->getFileUri();
-            $filename = $content->field_artist_main_image->entity->getFileName();
-            $filename_arr = explode('.', $filename);
-            if( count($filename_arr) > 2){
-                unset($filename_arr[count($filename_arr)-1]);
-                $name = implode('.', $filename_arr);
-            }
-            else{
-               $name = $filename_arr[0];
-            }
-
-            $content->field_artist_main_image->first()->set('alt',$name);
-            $content->save();
-         }
-
-          if(!$content->field_thumb_image->isEmpty()){
-            $gallery = $content->field_thumb_image;
-            foreach ($gallery as $key => $value) {
-              $filename = $content->field_artist_main_image->entity->getFileName();
-              $filename_arr = explode('.', $filename);
-              if( count($filename_arr) > 2){
-                  unset($filename_arr[count($filename_arr)-1]);
-                  $name = implode('.', $filename_arr);
-              }
-              else{
-                 $name = $filename_arr[0];
-              }
-              $value->set('alt',$name);
-            }
-            $content->save();
-          }
-    }
+  ksm($form_id);
 
     if($form_id == 'node_airtist_form'){
        // ksm($form_state);
@@ -152,52 +49,19 @@ function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
     }
 }
 
-function ajax_callback_custom(array &$form, FormStateInterface $form_state) {
-    //----------WORKING-----
-    $response = new AjaxResponse();
-    
-    // $text = $form_state->getValue('field_artist_name');
-    // $text_new = $form_state->getUserInput();
-    // foreach ($text as $key => $value) {
-    //     $response->addCommand(new AlertCommand('ets'));
-    // }
-   
-    return $response;
-    //----------WORKING-----
 
-
-
-    // $form['field_artist_name']['widget'][0]['value'] ='qwqwqwqwq';
-    // $form['field_artist_name']['#value']= 'this is callback';
-    // return $form['field_artist_name'];
-
-
-      // $renderer = \Drupal::service('renderer');
-      // $renderedField = $renderer->render($elem);
-      // $dialogText['#attached']['library'][] = 'core/drupal.dialog.ajax';
-      // $dialogText['#markup'] = "You selected: $selectedText";
-      // return $form
-}
 
 
 function random_sort_preprocess_page(&$variables) {
-  $variables['page']['#cache']['contexts'][] = 'route';
-  $urlRoute = \Drupal::routeMatch()->getRouteName();
+  // $variables['page']['#cache']['contexts'][] = 'route';
+  // $urlRoute = \Drupal::routeMatch()->getRouteName();
   // ksm(\Drupal::routeMatch());
-  if ($urlRoute == 'view.drumstick_page.page_1' ) {
-    // ksm($variables);
-    // unset($variables['#cache']['contexts']);
-    $variables['#attached']['library'][] = 'random_sort/custom-styling';
-    // ksm($variables);
-  }
+  // if ($urlRoute == 'view.drumstick_page.page_1' ) {
+  //   ksm($variables);
+  //   unset($variables['#cache']['contexts']);
+  //   $variables['#attached']['library'][] = 'random_sort/custom-styling';
+  //   ksm($variables);
+  // }
 }
 
 
-// function random_sort_ajax_link_preprocess_page (&$variables) {
-//   // $logged_in = \ Drupal::currentUser()->isAuthenticated ();
-//   // if (!$logged_in) {
-//     # Add libraries for anonymous
-//     $libraries['# attached']['library'][] = 'core/drupal.ajax';
-//     render ($libraries);
-//   // }
-// }
