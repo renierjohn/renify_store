@@ -23,7 +23,8 @@
         "drupal/core-vendor-hardening": "^8.8",
         "drupal/imce": "^1.7",
         "drupal/pathauto": "^1.6",
-        "drupal/random_number_field": "^1.0@beta"
+        "drupal/random_number_field": "^1.0@beta",
+        "peekmo/jsonpath": "^1.1"
     },
     "require-dev": {
         "drupal/core-dev": "^8.8"
