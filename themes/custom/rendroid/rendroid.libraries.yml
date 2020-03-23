@@ -1,0 +1,12 @@
+global:
+  version: 1.0
+  css:
+    base :
+      css/animate.css: {}
+      css/font-awesome.css: {}
+      css/main.css: {}
+      css/viewbox.css: {}
+  js:
+    # js/custom.js: {}
+    js/animate.js: {}
+    js/jquery.viewbox.min.js: {}
