@@ -1,0 +1,25 @@
+uuid: e59ba88d-690a-490c-8823-abb815d0ad7e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_and_body:3d9f50a9-a602-4e17-84c0-3df9c4cf3c97'
+  module:
+    - block_content
+  theme:
+    - bootstrap
+id: headerimagefrontpage_2
+theme: bootstrap
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:3d9f50a9-a602-4e17-84c0-3df9c4cf3c97'
+settings:
+  id: 'block_content:3d9f50a9-a602-4e17-84c0-3df9c4cf3c97'
+  label: 'Header Image FrontPage'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

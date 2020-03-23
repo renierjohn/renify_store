@@ -1,0 +1,25 @@
+uuid: 4c615ce1-1446-4fee-a799-3e3f217c5106
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_and_body:aa71af88-8a00-4217-b113-5b85d918370f'
+  module:
+    - block_content
+  theme:
+    - rendroid
+id: headerimageschool_2
+theme: rendroid
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:aa71af88-8a00-4217-b113-5b85d918370f'
+settings:
+  id: 'block_content:aa71af88-8a00-4217-b113-5b85d918370f'
+  label: 'Header Image School'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

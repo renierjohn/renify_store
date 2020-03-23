@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.weather_json.field_coordinate
     - field.field.node.weather_json.field_main
     - field.field.node.weather_json.field_visibility
     - field.field.node.weather_json.field_weather_id
@@ -42,6 +43,9 @@ parser_configuration:
     weather_main2:
       label: main
       value: main
+    weather_coordinate:
+      label: coord
+      value: coord
   display_errors: false
   source_encoding:
     - auto
@@ -103,6 +107,10 @@ custom_sources:
     label: ''
     value: ''
     machine_name: ''
+  weather_coordinate:
+    label: coord
+    value: coord
+    machine_name: weather_coordinate
 mappings:
   -
     target: title
@@ -128,3 +136,9 @@ mappings:
     target: field_main
     map:
       value: weather_main2
+  -
+    target: field_coordinate
+    map:
+      value: weather_coordinate
+    settings:
+      format: plain_text

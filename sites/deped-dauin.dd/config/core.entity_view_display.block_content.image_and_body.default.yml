@@ -6,29 +6,21 @@ dependencies:
     - block_content.type.image_and_body
     - field.field.block_content.image_and_body.field_block_body
     - field.field.block_content.image_and_body.field_block_image
-    - image.style.wide_image
   module:
     - image
-    - text
 id: block_content.image_and_body.default
 targetEntityType: block_content
 bundle: image_and_body
 mode: default
 content:
-  field_block_body:
-    weight: 2
-    label: visually_hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_block_image:
-    weight: 1
-    label: visually_hidden
+    weight: 0
+    label: hidden
     settings:
-      image_style: wide_image
+      image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
-hidden: {  }
+hidden:
+  field_block_body: true

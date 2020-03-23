@@ -1,0 +1,20 @@
+uuid: f94b5ee4-0e01-43be-9e3a-fff6e18b2f57
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rendroid
+id: poweredbydrupal_2
+theme: rendroid
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 59c66ad6-a661-4205-80be-2173d3598a26
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rendroid
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: rendroid_local_actions
+theme: rendroid
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

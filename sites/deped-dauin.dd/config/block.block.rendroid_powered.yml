@@ -1,0 +1,22 @@
+uuid: 279cc337-83fb-42e7-8411-483fbdde915c
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - rendroid
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: rendroid_powered
+theme: rendroid
+region: meta_header
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

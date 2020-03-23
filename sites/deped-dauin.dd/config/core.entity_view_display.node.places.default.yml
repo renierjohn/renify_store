@@ -10,12 +10,10 @@ dependencies:
     - field.field.node.places.field_place_image_thumbnail
     - field.field.node.places.field_place_map_link
     - field.field.node.places.field_places_details
-    - image.style.wide_image_full_width_x_500_
     - node.type.places
   module:
     - image
     - link
-    - owlcarousel
     - text
     - user
 id: node.places.default
@@ -25,16 +23,16 @@ mode: default
 content:
   field_image_map:
     weight: 2
-    label: visually_hidden
+    label: hidden
     settings:
-      image_style: wide_image_full_width_x_500_
+      image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_people_location:
     weight: 1
-    label: visually_hidden
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -42,41 +40,16 @@ content:
     region: content
   field_place_image_thumbnail:
     weight: 3
-    label: visually_hidden
+    label: hidden
     settings:
-      image_style: event_image_size_400x200_
+      image_style: ''
       image_link: ''
-      items: '3'
-      itemsDesktop: '[1199,4]'
-      itemsDesktopSmall: '[979,3]'
-      itemsTablet: '[768,2]'
-      itemsMobile: '[479,1]'
-      slideSpeed: '200'
-      paginationSpeed: '800'
-      rewindSpeed: '1000'
-      prevText: prev
-      nextText: next
-      rewindNav: '1'
-      pagination: '1'
-      responsive: '1'
-      responsiveRefreshRate: '200'
-      mouseDrag: '1'
-      touchDrag: '1'
-      transitionStyle: fade
-      singleItem: 0
-      itemsScaleUp: 0
-      autoPlay: 0
-      stopOnHover: 0
-      navigation: 0
-      scrollPerPage: 0
-      paginationNumbers: 0
-      navigationText: '["prev","next"]'
     third_party_settings: {  }
-    type: owlcarousel_field_formatter
+    type: image
     region: content
   field_place_map_link:
     weight: 4
-    label: visually_hidden
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -90,7 +63,7 @@ content:
     type: text_default
     weight: 5
     region: content
-    label: visually_hidden
+    label: hidden
     settings: {  }
     third_party_settings: {  }
   links:
