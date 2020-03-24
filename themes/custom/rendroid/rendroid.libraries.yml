@@ -10,3 +10,4 @@ global:
     # js/custom.js: {}
     js/animate.js: {}
     js/jquery.viewbox.min.js: {}
+    js/boostrap.min.js: {}
