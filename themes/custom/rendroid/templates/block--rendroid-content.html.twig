@@ -45,54 +45,6 @@
  * @see template_process()
  */
 #}
-{# {%
-  set classes = [
-    'block',
-    'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
-    'clearfix',
-  ]
-%}
-<section{{ attributes.addClass(classes) }}>
-
-</section>
-<section class="about">
-    <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col">
-          <div class="item">
-           <img src="/sites/deped-dauin.dd/files/places/2020-01/dauin1.png" alt="about" style="width:100%;">
-           <div class="text-block">
-              <i class="fa fa-briefcase" aria-hidden="true"></i><a href="#"><span>Web Design</span></a>
-              <div class="inner-contant">
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the since the 1500s, when an unknown printer took a galley...</p>
-              </div>
-           </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col">
-          <div class="item">
-           <img src="/sites/deped-dauin.dd/files/places/2020-01/dauin1.png" alt="Nature" style="width:100%;">
-           <div class="text-block">
-              <i class="fa fa-cogs" aria-hidden="true"></i><a href="#"><span>Wordpress</span></a>
-              <div class="inner-contant">
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the since the 1500s, when an unknown printer took a galley...</p>
-              </div>
-           </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col">
-          <div class="item">
-           <img src="/sites/deped-dauin.dd/files/places/2020-01/dauin1.png" alt="Nature" style="width:100%;">
-           <div class="text-block">
-              <i class="fa fa-object-group" aria-hidden="true"></i><a href="#"><span>Web Hosting</span></a>
-              <div class="inner-contant">
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the since the 1500s, when an unknown printer took a galley...</p>
-              </div>
-           </div>
-          </div>
-        </div>
-    </div>
-</section> #}
   {% block content %}
     {{ content }}
   {% endblock %}
