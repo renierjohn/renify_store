@@ -125,27 +125,27 @@
           page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
         ]
       %}
-      <section{{ content_attributes.addClass(content_classes) }}>
+      {# <section{{ content_attributes.addClass(content_classes) }}> #}
+      <section class="col-sm-12 custom-content" style="padding: 0;">
+          {% if page.highlighted %}
+            {% block highlighted %}
+              <div class="highlighted">{{ page.highlighted }}</div>
+            {% endblock %}
+          {% endif %}
 
-        {# Highlighted #}
-        {% if page.highlighted %}
-          {% block highlighted %}
-            <div class="highlighted">{{ page.highlighted }}</div>
-          {% endblock %}
-        {% endif %}
+          {# Help #}
+          {% if page.help %}
+            {% block help %}
+              {{ page.help }}
+            {% endblock %}
+          {% endif %}
 
-        {# Help #}
-        {% if page.help %}
-          {% block help %}
-            {{ page.help }}
-          {% endblock %}
-        {% endif %}
-
-        {# Content #}
-        {% block content %}
-           <a id="main-content"></a>
-		      	{{ page.content }}
-		{% endblock %}
+          {# Content #}
+          {% block content %}
+             <a id="main-content"></a>
+            	{{ page.content }}
+  	        
+    	     {% endblock %}
       </section>
 
       {# Sidebar Second #}
