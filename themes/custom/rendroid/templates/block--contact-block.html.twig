@@ -1,0 +1,38 @@
+<section class="contact" id="contact-section">
+<div class="container">
+    <div class="row">
+	  	<div class="col-sm-6 col" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+	        <h3>Do You Have Questions?</h3>
+	        <h4>Feel Free to ask and Please Like Share Subscribe</h4>
+	        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 1500s, scrambled it to make specimen book.</p>
+		    <address>
+		         <p><i class="fa fa-map-marker" aria-hidden="true"></i>Dauin , Negros Oriental</p>
+		         <p><i class="fa fa-clock-o" aria-hidden="true"><span></span></i>10:00 am - 11:00 pm</p>
+		         <p><i class="fa fa-phone" aria-hidden="true"></i>09263870560</p>
+		    </address>
+	    </div>
+	    <form {{ attributes }} >
+		    <div class="col-sm-6 col">
+		      <div class="row" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+		        <div class="col-sm-6 col form-group">
+		          {# <input class="form-control" placeholder="Your Name" type="text" required /> #}
+		          {{content.name}}
+		        </div>
+		        <div class="col-sm-6 col form-group">
+		          {# <input class="form-control" placeholder="Your Email Id" type="email" required /> #}
+		          {{content.mail}}
+		        </div>
+		      </div>
+		      {# <textarea class="form-control" placeholder="Your Message" rows="8" required></textarea> #}
+		      {{content.message}}
+		      <div class="row">
+		        <div class="col-sm-12 col form-group">
+		          {# <button type="submit" class="btn btn-default pull-left">lets make awesome</button> #}
+		        	{{content.actions.submit}}
+		        </div>
+		      </div>
+		    </div>
+	    </form>
+    </div>
+</div>
+</section>

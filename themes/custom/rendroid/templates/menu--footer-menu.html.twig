@@ -1,0 +1,8 @@
+ {% if items %}
+    <ul>
+    {% for item in items %}
+       <li><a href={{item.url}}>{{item.title}}</a></li>
+       <li class="semicolon">|</li>
+    {% endfor %}
+    </ul>
+ {% endif %}

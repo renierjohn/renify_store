@@ -32,6 +32,7 @@
  * @see template_preprocess_views_view()
  */
 #}
+
 <section class="about">
   {% if rows %}
     <div class="row">
@@ -39,16 +40,20 @@
     </div>
   {% endif %}
 </section>
+
+{% if header %}
+    {{ header }}
+{% endif %}  
+
 <section class="team">
   {% if footer %}
     <h4>Upcoming Events</h4>
     <h6>These is Testing for upcoming events</h6>
     <div class="row">
       {{ footer }}
-      {# {{ kint(footer)}} #}
-    </div>
+     </div>
   {% endif %}
 </section>
-
+{# <section></section> #}
 
 
