@@ -9,7 +9,7 @@ _core:
 id: rendroid_local_tasks
 theme: rendroid
 region: content
-weight: -7
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:

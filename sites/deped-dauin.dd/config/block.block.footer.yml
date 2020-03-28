@@ -1,0 +1,25 @@
+uuid: 5af44018-ea0b-47ff-a72b-bb1b9a74fabd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_and_body:d7531894-fc9b-4c45-bead-452de1043bdf'
+  module:
+    - block_content
+  theme:
+    - rendroid
+id: footer
+theme: rendroid
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:d7531894-fc9b-4c45-bead-452de1043bdf'
+settings:
+  id: 'block_content:d7531894-fc9b-4c45-bead-452de1043bdf'
+  label: Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

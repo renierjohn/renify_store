@@ -4,11 +4,11 @@ status: true
 dependencies: {  }
 id: animate
 label: Animate
-code: "// javascript Animate onscroll Start\r\n    $(document).ready(function () {\r\n        if (screen.width > 1024) {\r\n            AOS.init({\r\n                easing: 'ease-in-out-sine',\r\n                once: true,\r\n                });\r\n            }\r\n    });\r\n\r\n// javascript Top-Onscroll Start\r\n$(window).scroll(function() {\r\n    if ($(this).scrollTop() > 50 ) {\r\n        $('.scrolltop:hidden').stop(true, true).fadeIn();\r\n    } else {\r\n        $('.scrolltop').stop(true, true).fadeOut();\r\n    }\r\n});\r\n$(function(){$(\".scroll\").click(function(){$(\"html,body\").animate({scrollTop:$(\".banner\").offset().top},\"1000\");return false})})\r\n\r\n// javascript viewbox Start\r\n$(function(){\r\n\t$('.thumbnail').viewbox();\r\n});"
+code: "jQuery(document).ready(function($) {\r\n    // $(document).ready(function () {\r\n        if (screen.width > 1024) {\r\n          AOS.init({\r\n            easing: 'ease-in-out-sine',\r\n            once: true,\r\n          });\r\n        }\r\n    // });\r\n    \r\n    $(window).scroll(function() {\r\n      if ($(this).scrollTop() > 50 ) {\r\n          $('.scrolltop:hidden').stop(true, true).fadeIn();\r\n      } else {\r\n          $('.scrolltop').stop(true, true).fadeOut();\r\n      }\r\n    });\r\n\r\n    $(function(){$(\".scroll\").click(function(){$(\"html,body\").animate({scrollTop:$(\".banner\").offset().top},\"1000\");return false})})\r\n\r\n// javascript viewbox Start\r\n    $(function(){\r\n    \t$('.thumbnail').viewbox();\r\n    });\r\n});\r\n// javascript Top-Onscroll Start\r\n"
 noscript: ''
 noscriptRegion: {  }
-jquery: false
+jquery: true
 header: true
-preprocess: false
+preprocess: true
 conditions: {  }
 conditions_require_all: true

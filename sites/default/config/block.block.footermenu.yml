@@ -1,0 +1,25 @@
+uuid: 2300d599-14c5-4b4e-a0d7-63b47223815a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu
+  module:
+    - system
+  theme:
+    - rendroid
+id: footermenu
+theme: rendroid
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu'
+settings:
+  id: 'system_menu_block:footer-menu'
+  label: 'Footer Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: fbed0d80-1408-4a89-9f3e-be3360a97b23
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.inquire
+  module:
+    - contact_block
+  theme:
+    - rendroid
+id: contactblock
+theme: rendroid
+region: content
+weight: -4
+provider: null
+plugin: contact_block
+settings:
+  id: contact_block
+  label: 'Contact block'
+  provider: contact_block
+  label_display: '0'
+  contact_form: inquire
+visibility: {  }
