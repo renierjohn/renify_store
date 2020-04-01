@@ -173,16 +173,18 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     color: #fff;
     padding-top: 90px;
     position: relative;
     text-transform: uppercase;
-    background-position: center;
+   /* background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('/sites/default/files/header/header.jpg');
+    background-image: url('/sites/default/files/header/header.jpg');*/
 }
+
+
+
 
 .banner .gradient {
     background: -moz-linear-gradient(-45deg, rgba(255, 0, 251, 0.5) 0%, rgba(0, 24, 255, 0.5) 100%);

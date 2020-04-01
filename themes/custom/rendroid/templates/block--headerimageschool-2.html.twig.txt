@@ -53,6 +53,7 @@
     'clearfix',
   ]
 %}
+
 <section{{ attributes.addClass(classes) }}>
 {% block content %}
   {# {{ kint(content.field_block_image.0.item)}} #}

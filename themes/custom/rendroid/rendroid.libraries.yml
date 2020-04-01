@@ -2,12 +2,14 @@ global:
   version: 1.0
   css:
     base :
+      css/boostrap.min.css: {}
       css/animate.css: {}
       css/font-awesome.css: {}
       css/main.css: {}
       css/viewbox.css: {}
   js:
     # js/custom.js: {}
+    js/boostrap.min.js: {}
     js/animate.js: {}
     js/jquery.viewbox.min.js: {}
-    js/boostrap.min.js: {}
+    
