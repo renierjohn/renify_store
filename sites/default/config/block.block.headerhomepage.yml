@@ -1,4 +1,4 @@
-uuid: 4c615ce1-1446-4fee-a799-3e3f217c5106
+uuid: 08c01934-3ed3-4d50-ae9c-26ccec0e1236
 langcode: en
 status: true
 dependencies:
@@ -6,20 +6,26 @@ dependencies:
     - 'block_content:image_and_body:aa71af88-8a00-4217-b113-5b85d918370f'
   module:
     - block_content
+    - system
   theme:
     - rendroid
-id: headerimageschool_2
+id: headerhomepage
 theme: rendroid
 region: content
-weight: -9
+weight: -10
 provider: null
 plugin: 'block_content:aa71af88-8a00-4217-b113-5b85d918370f'
 settings:
   id: 'block_content:aa71af88-8a00-4217-b113-5b85d918370f'
-  label: 'Header Image School'
+  label: 'Header Homepage'
   provider: block_content
   label_display: '0'
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /homepage
+    negate: false
+    context_mapping: {  }

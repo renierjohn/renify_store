@@ -6,6 +6,7 @@ dependencies:
     - contact.form.inquire
   module:
     - contact_block
+    - system
   theme:
     - rendroid
 id: contactblock
@@ -20,4 +21,9 @@ settings:
   provider: contact_block
   label_display: '0'
   contact_form: inquire
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /homepage
+    negate: false
+    context_mapping: {  }
