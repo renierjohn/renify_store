@@ -87,12 +87,22 @@
             </div>
           </div> #}
           {{ rows }}
-          
+
         </div>
       </section>
-
-      {# {{ kint(rows)}} #}
-
+  {% elseif id == "schools" %}
+      <section id="blog">
+        <div class="container-fluid">
+          <div class="row">
+              <h4>Explore</h4>
+              <h6>Explore the Beauty and Location of Our Schools in Dauin</h6>
+              {{ rows }}
+           {#    {% if pager %}
+                {{ pager }}
+              {% endif %}    #}
+          </div>
+        </div>
+      </section>        
   {% else %}
     {{ rows }}
   {% endif %} 
@@ -119,8 +129,13 @@
  {% endif %}
 
 {% if pager %}
-    {{ pager }}
-{% endif %}
+  <section id="blog">
+    <div class="container-fluid">
+      <div class="row">
+        {{ pager }}
+      </div>
+    </div>
+  </section>
+{% endif %}  
+
 {# <section></section> #}
-
-
