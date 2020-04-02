@@ -276,7 +276,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12 col\">\r\n  <div class=\"item\">\r\n   <img src=\"{{ field_place_image_thumbnail }}\" alt=\"about\" style=\"width:100%;\">\r\n   <div class=\"text-block\">\r\n      <i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i><a href=\"#\"><span>{{ title }}</span></a>\r\n      <div class=\"inner-contant\">\r\n       <p>{{ field_places_details }}</p>\r\n      </div>\r\n   </div>\r\n  </div>\r\n</div>"
+            text: "<div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12 col\">\r\n  <div class=\"item\">\r\n   <img src=\"{{ field_place_image_thumbnail }}\" alt=\"about\" style=\"width:100%;\">\r\n   <div class=\"text-block\">\r\n      <i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i><a href=\"#\"><span>{{ title }}</span></a>\r\n      <div class=\"inner-contant\">\r\n       <p>{{ field_places_details }}</p>\r\n      </div>\r\n   </div>\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -397,7 +397,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'HOMAPAGE BOOTSTRAP'
+      title: 'LIHOK DAUIN'
       header: {  }
       footer: {  }
       empty: {  }
