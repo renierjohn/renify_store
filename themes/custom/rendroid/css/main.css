@@ -571,7 +571,7 @@ a:hover {
     width: 100%;
     color: white;
     padding-top: 68px;
-    background-image: url("../images/banner-team.jpg");
+    background-image: url("/sites/default/files/background-image/backgroud1.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -753,7 +753,7 @@ textarea.form-control {
 }
 
 .customers {
-    background-image: url("../images/banner-customers.jpg");
+    background-image: url("/sites/default/files/background-image/backgroud2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
