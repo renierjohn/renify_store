@@ -1,0 +1,20 @@
+uuid: 10ead02e-39e3-494d-8c14-d20017381293
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: footer_carousel
+label: 'Footer Carousel'
+code: "footer = document.getElementsByClassName('footer-carousel')\r\nfooter[0].className = \"active item\""
+noscript: ''
+noscriptRegion: {  }
+jquery: false
+header: false
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    pages: /homepage
+    negate: false
+conditions_require_all: true

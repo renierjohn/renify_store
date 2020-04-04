@@ -24,6 +24,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  addtoany: true
   field_people_gender: true
   field_people_image: true
   field_people_location: true

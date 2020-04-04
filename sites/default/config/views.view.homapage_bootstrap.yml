@@ -419,7 +419,7 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
+    display_title: Footer
     position: 2
     display_options:
       display_extenders: {  }
@@ -733,6 +733,7 @@ display:
         options:
           items_per_page: 4
           offset: 0
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -746,7 +747,7 @@ display:
   block_2:
     display_plugin: block
     id: block_2
-    display_title: '1L 4R '
+    display_title: Header
     position: 2
     display_options:
       display_extenders: {  }
