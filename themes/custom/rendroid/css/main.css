@@ -1223,19 +1223,19 @@ Blog Section
     padding: 0 30px;
 }
 
-#blog .bt ul {
+#footer-blog .bt ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-#blog .bt ul li {
+#footer-blog .bt ul li {
     background: #252525;
     display: inline-flex;
 }
 
-#blog .bt ul li a {
+#footer-blog .bt ul li a {
     width: 37px;
     height: 37px;
     color: white;
@@ -1250,17 +1250,17 @@ Blog Section
     text-decoration: none;
 }
 
-#blog .bt .active {
+#footer-blog .bt .active {
     background-color: #b70082;
     color: white;
 }
 
-#blog .bt a:hover {
+#footer-blog .bt a:hover {
     background-color: #b70082;
     color: white;
 }
 
-#blog .bt {
+#footer-blog .bt {
     padding-top: 80px;
 }
 
@@ -1925,7 +1925,7 @@ Blog-page
         font-size: 11px;
         padding-bottom: 20px;
     }
-    #blog .bt {
+    #footer-blog .bt {
         padding-top: 0;
     }
     #blog {
@@ -2311,7 +2311,7 @@ Blog-page
             padding-top: 30px;
             padding-bottom: 0;
         }
-        #blog .bt {
+        #footer-blog .bt {
             padding-top: 0;
         }
         #services h3 {
