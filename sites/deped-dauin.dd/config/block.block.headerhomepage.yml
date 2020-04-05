@@ -12,7 +12,7 @@ dependencies:
 id: headerhomepage
 theme: rendroid
 region: content
-weight: -10
+weight: -12
 provider: null
 plugin: 'block_content:aa71af88-8a00-4217-b113-5b85d918370f'
 settings:

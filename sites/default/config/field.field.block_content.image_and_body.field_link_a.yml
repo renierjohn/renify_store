@@ -1,21 +1,23 @@
-uuid: 36c4130c-e421-48f2-81fb-7a66bb99881d
+uuid: 5befbff7-2eb0-4944-83fa-fef449b27710
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.image_and_body
-    - field.storage.block_content.field_block_body
+    - field.storage.block_content.field_link_a
   module:
-    - text
-id: block_content.image_and_body.field_block_body
-field_name: field_block_body
+    - link
+id: block_content.image_and_body.field_link_a
+field_name: field_link_a
 entity_type: block_content
 bundle: image_and_body
-label: 'Block Body'
+label: 'Link A'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: text_long
+settings:
+  link_type: 1
+  title: 1
+field_type: link

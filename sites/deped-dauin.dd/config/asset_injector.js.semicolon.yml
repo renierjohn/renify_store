@@ -1,0 +1,20 @@
+uuid: 5a0000c5-b45d-4e72-8931-8bcc8793d912
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: semicolon
+label: Semicolon
+code: "semicolon_header = document.getElementsByClassName('semicolon-top')\r\nsemicolon_footer = document.getElementsByClassName('semicolon')\r\nsemicolon_header[semicolon_header.length-1].style.display = \"none\"\r\nsemicolon_footer[semicolon_footer.length-1].style.display = \"none\""
+noscript: ''
+noscriptRegion: {  }
+jquery: false
+header: false
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    pages: "/admin/*\r\n/node/add/*"
+    negate: true
+conditions_require_all: true

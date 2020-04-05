@@ -1,23 +1,23 @@
-uuid: 08c01934-3ed3-4d50-ae9c-26ccec0e1236
+uuid: c0be680b-92de-454b-a61c-76ec447d999d
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:image_and_body:aa71af88-8a00-4217-b113-5b85d918370f'
+    - 'block_content:image_and_body:c8821769-9edc-4049-bb41-3351a94fed8d'
   module:
     - block_content
     - system
   theme:
     - rendroid
-id: headerhomepage
+id: headerimageevents_2
 theme: rendroid
 region: content
-weight: -12
+weight: -10
 provider: null
-plugin: 'block_content:aa71af88-8a00-4217-b113-5b85d918370f'
+plugin: 'block_content:c8821769-9edc-4049-bb41-3351a94fed8d'
 settings:
-  id: 'block_content:aa71af88-8a00-4217-b113-5b85d918370f'
-  label: 'Header Homepage'
+  id: 'block_content:c8821769-9edc-4049-bb41-3351a94fed8d'
+  label: 'Header Image Events'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /homepage
+    pages: /events
     negate: false
     context_mapping: {  }
