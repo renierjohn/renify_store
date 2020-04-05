@@ -468,6 +468,7 @@ a:hover {
     padding-bottom: 12px;
     color: #b7b7b7;
     text-transform: capitalize;
+
 }
 
 .services h4 {
@@ -633,6 +634,7 @@ a:hover {
 .team img {
     width: 100%;
     margin-bottom: 30px;
+    opacity: 0.7;
 }
 
 .inner-contant {
@@ -1653,6 +1655,7 @@ Blog-page
     padding-bottom: 16px;
     font-weight: 700;
     text-transform: uppercase;
+    float: left;
 }
 
 #services h4 {

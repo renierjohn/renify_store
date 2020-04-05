@@ -1,0 +1,26 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'clearfix',
+  ]
+%}
+<section {{ attributes.addClass(classes) }}>
+  <div class="text-center banner"  style="
+  	height: 50vh;
+  	background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image:  url({{ content.field_block_image.0 }});
+     ">
+    <div class="gradient"></div>
+      <div class="container">
+         <div class="row">
+             <div class="col-md-12">
+                  <h1 data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">{{content.field_block_title}}</h1>
+             </div>
+         </div>
+      </div>
+  </div>
+</section>

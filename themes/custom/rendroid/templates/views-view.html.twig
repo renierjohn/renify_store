@@ -8,89 +8,6 @@
   ]
 %}
 
-{# 
-<div{{ attributes.addClass(classes) }}>
-{% if rows %}
-  {% if id == "homapage_bootstrap" %}
-    <section class="about">
-      <div class="row">
-        {{ rows }}
-      </div>
-    </section>
-
-  {% elseif id == "students" %}
-    <section class="customers">   
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <div class="carousel slide" id="fade-quote-carousel">
-              <div class="carousel-inner" role="listbox">
-                  {{ rows }}
-               </div>    
-                   <a class="left carousel-control" href="#fade-quote-carousel" role="button" data-slide="prev">
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#fade-quote-carousel" role="button" data-slide="next">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    <span class="sr-only">Next</span>
-                  </a>
-            </div>              
-          </div>
-        </div>  
-      </div>
-    </section>
-  {% elseif id == "tourist_spots" %}
-      <section id="services">
-        <div class="container">
-          {{ rows }}
-        </div>
-      </section>
-  {% elseif id == "schools" %}
-      <section id="blog">
-        <div class="container-fluid">
-          <div class="row">
-              <h4>Explore</h4>
-              <h6>Explore the Beauty and Location of Our Schools in Dauin</h6>
-              {{ rows }}
-          </div>
-        </div>
-      </section>        
-  
-  {% endif %} 
-{% endif %}  
-
-
-
-  {% if header %}
-    {% if id == "homapage_bootstrap" %} 
-      {{ header }}
-    {% endif %}    
-  {% endif %}  
-
-  {% if footer %}
-     <section class="team">
-        <h4>Upcoming Events</h4>
-        <h6>These is Testing for upcoming events</h6>
-        <div class="row">
-          {{ footer }}
-        </div>
-      </section>
-  {% endif %}
-
-
-{% if pager %}
-  <section id="blog">
-    <div class="container-fluid">
-      <div class="row">
-        {{ pager }}
-      </div>
-    </div>
-  </section>
-{% endif %}
-
-</div>
- #}
 <div{{ attributes.addClass(classes) }}>
 
 {% if id == "homapage_bootstrap" %}
@@ -104,6 +21,10 @@
   {% endif %}  
 
   {% if header %}
+    <section class="team">
+      <h4>HEADS UP</h4>
+      <h6>Get latest Updates Happening </h6>
+     </section> 
     {{ header }}
   {% endif %} 
 
@@ -118,35 +39,6 @@
   {% endif %}
 
 {% endif %} 
-
- 
-
-
-{% if id == "students" %}
-  {% if rows %}
-    <section class="customers">   
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <div class="carousel slide" id="fade-quote-carousel">
-              <div class="carousel-inner" role="listbox">
-                  {{ rows }}
-               </div>    
-                   <a class="left carousel-control" href="#fade-quote-carousel" role="button" data-slide="prev">
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#fade-quote-carousel" role="button" data-slide="next">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    <span class="sr-only">Next</span>
-                  </a>
-            </div>              
-          </div>
-        </div>  
-      </div>
-    </section>
-  {% endif %}
-{% endif %}
 
 
 {% if id == "tourist_spots" %}
@@ -174,6 +66,7 @@
   {% endif %}
 {% endif %}
 
+
 {% if pager %}
   <section id="footer-blog">
     <div class="container-fluid">
@@ -183,5 +76,38 @@
     </div>
   </section>
 {% endif %}  
+
+{% if id == "events" %}
+  {% if rows %}
+    {{ rows }}
+  {% endif %}  
+{% endif %} 
+
+   
+{% if id == "students" %}
+  {% if rows %}
+    <section class="customers">   
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="carousel slide" id="fade-quote-carousel">
+              <div class="carousel-inner" role="listbox">
+                  {{ rows }}
+               </div>    
+                   <a class="left carousel-control" href="#fade-quote-carousel" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#fade-quote-carousel" role="button" data-slide="next">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+            </div>              
+          </div>
+        </div>  
+      </div>
+    </section>
+  {% endif %}
+{% endif %}
 
 </div>

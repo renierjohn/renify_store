@@ -55,7 +55,7 @@
 %}
 
 <section{{ attributes.addClass(classes) }}>
-{% block content %}
+
   {# {{ kint(content.field_block_image.0.item)}} #}
      {# background-image: url('/sites/deped-dauin.dd/files/places/2019-12/cp_baslay_spring_dauin_2.jpg'); #}
   <div class="text-center banner" style=" 
@@ -63,25 +63,30 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image:  url('/sites/default/files/header/header.jpg');
+    background-image:  url({{ content.field_block_image.0 }});
   "> 
     <div class="gradient"></div>
       <div class="row">
           <div class="col-md-12">
-            <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">Dauin Ni Bai</h1>
-            <p data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">Its More Fun in Dauin</p>
+            <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">{{ content.field_block_title }}</h1>
+            <p data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">{{ content.field_block_body_paragraph }}</p>
             <p><a href="#" target="_blank" class="btn btn-primary" role="button" data-aos="fade-right" data-aos-duration="900" data-aos-delay="200">
-                Explore
+                Explore Us
               </a>
+              {# {{ content.field_link_a.0 }} #}
               <a href="#contact-section" target="_blank" class="btn btn-success" role="button" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
                 Contact Us
               </a>
+              {# {{ kint(content.field_link_b.0) }}
+              {{ content.field_link_b.0 }} #}
             </p>
           </div>
       </div>
   </div>
-  {% endblock %}
+  {# {{ content.field_block_body }} #}
+ 
+{# {{ kint() }}  #}
+{# {{ kint(content.field_link_b.0) }}   #}
 </section>
-
 
 
