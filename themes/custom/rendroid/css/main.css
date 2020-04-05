@@ -309,7 +309,7 @@ a:hover {
 }
 
 .technologies {
-    padding-top: 97px;
+   /* padding-top: 97px;*/
     padding-bottom: 35px;
 }
 
@@ -565,6 +565,30 @@ a:hover {
 .fa-search:hover {
     color: #eee;
 }
+
+/*== Custom  ==*/
+.event-frontpage {
+    width: 100%;
+    color: white;
+    padding-top: 68px;
+}
+.event-frontpage h4 {
+    font-size: 37px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.event-frontpage h6 {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 3px;
+    padding-bottom: 70px;
+    text-transform: uppercase;
+}
+
+
+
 
 /*== Team ==*/
 
