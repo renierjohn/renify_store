@@ -75,55 +75,34 @@
     'clearfix',
   ]
 %}
-{# <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('author') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
-  <div{{ content_attributes.addClass('content') }}>
-    {{ content }}
-  </div>
-
-</article> #}
-
- <article{{ attributes.addClass(classes) }}>
+ <article {{ attributes.addClass(classes) }}>
     <div class="text-center banner"  style="
         height: 50vh;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         background-image:  url({{ content.field_place_image_thumbnail.0 }} );
-    ">
+        ">
 
-    <div class="gradient"></div>
-        <div class="container">
-           <div class="row">
-               <div class="col-md-12">
-                    <h1 data-aos="fade-left" data-aos-easing="linear" data-aos-duration="800">{{ label }}</h1>
-               </div>
-           </div>
-        </div>
-    </div>    
-    <div{{ content_attributes.addClass('content') }}>
-      {{ content }}
-      <div class="image-url">{{ content.field_place_image_thumbnail.0 }}</div>
-      {# {{ kint(content.field_place_image_thumbnail.0)}} #}
-    </div>
-  </div>
+        <div class="gradient"></div>
+          <div class="container">
+             <div class="row">
+                 <div class="col-md-12">
+                      <h1 data-aos="fade-left" data-aos-easing="linear" data-aos-duration="800">{{ label }}</h1>
+                 </div>
+             </div>
+          </div>
+    </div>  
+
+    <div {{ content_attributes.addClass('content') }}>
+      {% if content.field_category.0|raw == "Schools" %}
+        <h1>SCHOOL CONTENT sample</h1>
+      {% endif %}
+     </div>    
+      {{ content.field_category }}   
+   
 </article>
+
   

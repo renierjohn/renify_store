@@ -821,7 +821,7 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: false
+            strip_tags: true
             trim: false
             preserve_tags: ''
             html: false
@@ -840,7 +840,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -927,7 +927,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-xs-12 col-sm-6 col-md-3\">\r\n  <a href=\"images/Portfolio-1.jpg\" class=\"thumbnail\">\r\n    <img src=\"{{ field_place_image_thumbnail }}\" alt=\"\">\r\n     <div class=\"overlay\">\r\n       <div class=\"icon\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i><span>view full</span></div>\r\n     </div>\r\n  </a>\r\n</div>"
+            text: "<div class=\"col-xs-12 col-sm-6 col-md-3\">\r\n  <a href=\"/node/{{nid}}\" class=\"thumbnail\">\r\n    <img src=\"{{ field_place_image_thumbnail }}\" alt=\"\">\r\n     <div class=\"overlay\">\r\n       <div class=\"icon\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i>\r\n               <span>{{ title }}</span>\r\n           </div>\r\n     </div>\r\n  </a>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
