@@ -2158,6 +2158,9 @@ Blog-page
         #services p {
             font-size: 14px;
         }
+        .navbar-brand > img {
+            width: 6vh;
+        }
     }
     /*======== Media Query 767px ========*/
     @media only screen and (max-width: 767px) {
