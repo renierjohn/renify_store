@@ -301,14 +301,15 @@ a:hover {
 }
 
 .about .tourist-spot-title h4{
-    font-size: 35px;
-    font-weight: 600;
-    color: #2e3192;
+    font-size: 37px;
+    font-weight: 700;
+    color: black;
     padding-bottom: 15px;
     letter-spacing: -1px;
+    text-align: center;
+    text-transform: capitalize;
     margin-top: 1em;
     margin-bottom: 1em;
-    text-align: center;
 }
 /*== Technologies Section Start ==*/
 
@@ -579,8 +580,9 @@ a:hover {
 /*== Custom  ==*/
 .event-frontpage {
     width: 100%;
-    color: white;
-    padding-top: 68px;
+    color: black;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 .event-frontpage h4 {
     font-size: 37px;
@@ -2180,6 +2182,9 @@ Blog-page
         .navbar-brand > img {
             padding: 0;
         }
+        .event-frontpage .col{
+            padding-bottom: 2em;
+        }
     }
     /*======== Media Query 688px ========*/
     @media only screen and (max-width: 688px) {
@@ -2221,6 +2226,9 @@ Blog-page
         }
         .carousel-control.right {
             right: 32%;
+        }
+        .event-frontpage .col{
+            padding-bottom: 2em;
         }
     }
     /*======== Media Query 425px ========*/
@@ -2376,6 +2384,9 @@ Blog-page
         .services h3 {
             font-size: 32px;
         }
+        .event-frontpage .col{
+            padding-bottom: 2em;
+        }
     }
     /*======== Media Query 375px ========*/
     @media only screen and (max-width: 375px) {
@@ -2419,6 +2430,9 @@ Blog-page
         }
         #blog h4 {
             font-size: 24px;
+        }
+        .event-frontpage .col{
+            padding-bottom: 2em;
         }
     }
  
