@@ -1,47 +1,23 @@
-{%
-  set classes = [
-    'view',
-    'view-' ~ id|clean_class,
-    'view-id-' ~ id,
-    'view-display-id-' ~ display_id,
-    dom_id ? 'js-view-dom-id-' ~ dom_id,
-  ]
-%}
-
-<div{{ attributes.addClass(classes) }}>
 
 {% if id == "homapage_bootstrap" %}
   {% if rows %}
     <section class="about">
       <div class="row">
+        <div class="col-md-12">
+          <div class="tourist-spot-title" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+            <h4>TOURIST SPOTS</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
         {{ rows }}
       </div>
     </section>  
-    {# {{ rows }} #}
-  {% endif %}  
-
-  {% if header %}
-    <section class="event-frontpage">
-      <h4>HEADS UP</h4>
-      <h6>Get latest Updates Happening </h6>
-     </section> 
-    {{ header }}
-  {% endif %} 
-
-  {% if footer %}
-    <section class="team">
-      <h4>Upcoming Events</h4>
-      <h6>These is Testing for upcoming events</h6>
-      <div class="row">
-          {{ footer }}
-      </div>
-    </section>
-  {% endif %}
-
-{% endif %} 
+  {% endif %}   
+{# {% endif %}  #}
 
 
-{% if id == "tourist_spots" %}
+{% elseif id == "tourist_spots" %}
   {% if rows %}
       <section id="services">
         <div class="container">
@@ -49,10 +25,10 @@
         </div>
       </section>
   {% endif %}
-{% endif %}      
+{# {% endif %}       #}
   
 
-{% if id == "schools" %}
+{% elseif id == "schools" %}
   {% if rows %}
     <section id="blog">
       <div class="container-fluid">
@@ -64,27 +40,19 @@
       </div>
     </section> 
   {% endif %}
-{% endif %}
+{# {% endif %} #}
 
 
-{% if pager %}
-  <section id="footer-blog">
-    <div class="container-fluid">
-      <div class="row">
-        {{ pager }}
-      </div>
-    </div>
-  </section>
-{% endif %}  
 
-{% if id == "events" %}
+
+{% elseif id == "events" %}
   {% if rows %}
     {{ rows }}
   {% endif %}  
-{% endif %} 
+{# {% endif %}  #}
 
 
-{% if id == "students" %}
+{% elseif id == "students" %}
   {% if rows %}
     <section class="customers">   
       <div class="container">
@@ -108,6 +76,20 @@
       </div>
     </section>
   {% endif %}
+{% else %}
+  {% if rows %}
+    {{ rows }}
+  {% endif %}
 {% endif %}
 
-</div>
+
+
+{% if pager %}
+  <section id="footer-blog">
+    <div class="container-fluid">
+      <div class="row">
+        {{ pager }}
+      </div>
+    </div>
+  </section>
+{% endif %}  

@@ -300,6 +300,16 @@ a:hover {
     transform: scale(1.1);
 }
 
+.about .tourist-spot-title h4{
+    font-size: 35px;
+    font-weight: 600;
+    color: #2e3192;
+    padding-bottom: 15px;
+    letter-spacing: -1px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
 /*== Technologies Section Start ==*/
 
 .technologies .col,

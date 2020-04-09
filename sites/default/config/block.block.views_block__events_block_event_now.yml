@@ -1,22 +1,22 @@
-uuid: 6a90dbdf-b09b-4463-9bf8-ae5405704ded
+uuid: 9f0a4672-b65b-41f6-a6a7-b9e46404c63f
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.schools
+    - views.view.events
   module:
     - system
     - views
   theme:
     - rendroid
-id: views_block__schools_view_block_school
+id: views_block__events_block_event_now
 theme: rendroid
 region: content
-weight: -1
+weight: -6
 provider: null
-plugin: 'views_block:schools-view_block_school'
+plugin: 'views_block:events-block_event_now'
 settings:
-  id: 'views_block:schools-view_block_school'
+  id: 'views_block:events-block_event_now'
   label: ''
   provider: views
   label_display: '0'

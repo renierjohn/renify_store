@@ -406,7 +406,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       css_class: ''
-      use_ajax: true
+      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -417,9 +417,33 @@ display:
       tags:
         - 'config:field.storage.node.field_place_image_thumbnail'
         - 'config:field.storage.node.field_places_details'
-  block_1:
+  homepage:
+    display_plugin: page
+    id: homepage
+    display_title: Page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: homepage
+      header: {  }
+      defaults:
+        header: false
+        footer: false
+      exposed_block: true
+      footer: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_place_image_thumbnail'
+        - 'config:field.storage.node.field_places_details'
+  homepage_footer:
     display_plugin: block
-    id: block_1
+    id: homepage_footer
     display_title: Footer
     position: 2
     display_options:
@@ -790,9 +814,9 @@ display:
       tags:
         - 'config:field.storage.node.field_event_discription'
         - 'config:field.storage.node.field_event_image'
-  block_2:
+  homepage_header:
     display_plugin: block
-    id: block_2
+    id: homepage_header
     display_title: Header
     position: 2
     display_options:
@@ -1214,49 +1238,3 @@ display:
       tags:
         - 'config:field.storage.node.field_event_discription'
         - 'config:field.storage.node.field_event_image'
-  homepage:
-    display_plugin: page
-    id: homepage
-    display_title: Page
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: homepage
-      header:
-        view:
-          id: view
-          table: views
-          field: view
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          view_to_insert: 'homapage_bootstrap:block_2'
-          inherit_arguments: false
-          plugin_id: view
-      defaults:
-        header: false
-        footer: false
-      exposed_block: true
-      footer:
-        view:
-          id: view
-          table: views
-          field: view
-          relationship: none
-          group_type: group
-          admin_label: Thumbnails
-          empty: false
-          view_to_insert: 'homapage_bootstrap:block_1'
-          inherit_arguments: false
-          plugin_id: view
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_place_image_thumbnail'
-        - 'config:field.storage.node.field_places_details'
