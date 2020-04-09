@@ -516,7 +516,7 @@ a:hover {
     width: 100%;
     opacity: 0;
     transition: .3s ease;
-    background-color: rgba(0, 255, 255, 0.76);
+    background-color: #337ab794;
 }
 
 .thumbnail:hover .overlay {
@@ -1054,7 +1054,7 @@ footer p {
     overflow: hidden;
     border: none;
     border-radius: 0;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .thumbnail img {
@@ -1204,7 +1204,7 @@ Blog Section
 
 #blog .row {
     margin: 0;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 }
 
 #blog .col-md-3 {
@@ -1214,8 +1214,8 @@ Blog Section
 #blog {
     width: 100%;
     color: black;
-    padding-top: 68px;
-    padding-bottom: 71px;
+    padding-top: 5em;
+    padding-bottom: 6em;
 }
 
 #blog h4 {
