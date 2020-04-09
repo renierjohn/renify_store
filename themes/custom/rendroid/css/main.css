@@ -611,6 +611,7 @@ a:hover {
     background-image: url("/sites/default/files/background-image/backgroud1.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment:fixed;
 }
 
 .team h4 {
@@ -795,6 +796,7 @@ textarea.form-control {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment:fixed;
 }
 
 .customers p:last-child {
@@ -921,11 +923,11 @@ textarea.form-control {
 
 /*== Footer Section Start ==*/
 
-footer {
-    padding-bottom: 75px;
-    padding-top: 75px;
-    background-color: black;
+.footer {
     background-position: bottom;
+    margin: 0px;
+    padding: 0px;
+
 }
 
 footer .Subscribe {
@@ -947,6 +949,15 @@ footer .heading h3 {
     text-transform: uppercase;
 }
 
+footer .footer-menu {
+    padding-bottom: 75px;
+    padding-top: 75px;
+    background-color: black;
+    background-position: bottom;
+}
+footer .form-group {
+    margin: 0px;
+}
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .btn-group {
     z-index: 2;
