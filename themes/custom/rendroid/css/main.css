@@ -2159,7 +2159,7 @@ Blog-page
             font-size: 14px;
         }
         .navbar-brand > img {
-            width: 6vh;
+            width: 6vw;
         }
     }
     /*======== Media Query 767px ========*/
@@ -2378,6 +2378,9 @@ Blog-page
         .about .inner-contant {
             padding-left: 0;
         }
+        .inner-contant {
+            margin-left: 1em;
+        }
         .about i {
             font-size: 2em;
         }
@@ -2408,3 +2411,4 @@ Blog-page
             font-size: 24px;
         }
     }
+ 
