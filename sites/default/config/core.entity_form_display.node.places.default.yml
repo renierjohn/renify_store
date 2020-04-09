@@ -4,18 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.node.places.field_category
+    - field.field.node.places.field_iframe_link
     - field.field.node.places.field_image_map
     - field.field.node.places.field_people_location
     - field.field.node.places.field_people_promote_display
     - field.field.node.places.field_place_image_thumbnail
-    - field.field.node.places.field_place_map_link
     - field.field.node.places.field_places_details
+    - field.field.node.places.field_website_link
     - image.style.thumbnail
     - node.type.places
   module:
     - image
     - imce
-    - link
     - path
     - text
 id: node.places.default
@@ -35,8 +35,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_iframe_link:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_image_map:
-    weight: 11
+    weight: 12
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
@@ -62,7 +70,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_place_image_thumbnail:
-    weight: 12
+    weight: 13
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
@@ -71,21 +79,21 @@ content:
         enabled: true
     type: image_image
     region: content
-  field_place_map_link:
-    weight: 10
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_places_details:
-    weight: 13
+    weight: 14
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_website_link:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   path:
     type: path
