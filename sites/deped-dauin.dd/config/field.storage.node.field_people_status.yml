@@ -23,6 +23,12 @@ settings:
     -
       value: Others
       label: Others
+    -
+      value: Admin
+      label: Admin
+    -
+      value: Designer
+      label: Designer
   allowed_values_function: ''
 module: options
 locked: false
