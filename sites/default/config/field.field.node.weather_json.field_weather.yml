@@ -9,7 +9,7 @@ id: node.weather_json.field_weather
 field_name: field_weather
 entity_type: node
 bundle: weather_json
-label: Weather
+label: 'Weather Indicator'
 description: ''
 required: false
 translatable: false

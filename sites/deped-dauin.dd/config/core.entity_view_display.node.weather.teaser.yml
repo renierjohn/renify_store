@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.weather.feeds_item
     - field.field.node.weather.field_country_code
     - field.field.node.weather.field_json_text
     - field.field.node.weather.field_location_name
@@ -24,7 +23,6 @@ content:
     region: content
 hidden:
   addtoany: true
-  feeds_item: true
   field_country_code: true
   field_json_text: true
   field_location_name: true

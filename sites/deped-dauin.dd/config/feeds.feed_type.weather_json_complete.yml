@@ -6,12 +6,32 @@ dependencies:
     - field.field.node.weather_json.field_coordinate
     - field.field.node.weather_json.field_main
     - field.field.node.weather_json.field_visibility
+    - field.field.node.weather_json.field_weather
+    - field.field.node.weather_json.field_weather_discription
     - field.field.node.weather_json.field_weather_id
     - field.field.node.weather_json.field_wind
     - node.type.weather_json
   module:
     - feeds_ex
+    - feeds_tamper
     - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      456fde11-e558-4525-a229-f9090494b6cc:
+        format: '%s'
+        plugin: custom_tamper
+        source: weather_weather_2
+        weight: -10
+        label: 'Custom Tamper'
+        uuid: 456fde11-e558-4525-a229-f9090494b6cc
+      1c7b3e02-24cf-4e23-a115-e699f7ed49f7:
+        format: 'NO FUNCTION'
+        plugin: custom_tamper_discription
+        source: weather_weather
+        weight: 0
+        label: 'Custom Tamper for Discription'
+        uuid: 1c7b3e02-24cf-4e23-a115-e699f7ed49f7
 label: 'Weather JSON Complete'
 id: weather_json_complete
 description: ''
@@ -46,6 +66,12 @@ parser_configuration:
     weather_coordinate:
       label: coord
       value: coord
+    weather_weather_2:
+      label: weather
+      value: weather
+    weather_weather:
+      label: weather
+      value: weather
   display_errors: false
   source_encoding:
     - auto
@@ -142,3 +168,12 @@ mappings:
       value: weather_coordinate
     settings:
       format: plain_text
+  -
+    target: field_weather
+    map:
+      value: weather_weather_2
+  -
+    target: field_weather_discription
+    map:
+      value: weather_weather
+    unique: {  }

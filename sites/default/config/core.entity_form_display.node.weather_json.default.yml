@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.weather_json.field_main
     - field.field.node.weather_json.field_visibility
     - field.field.node.weather_json.field_weather
+    - field.field.node.weather_json.field_weather_discription
     - field.field.node.weather_json.field_weather_id
     - field.field.node.weather_json.field_wind
     - node.type.weather_json
@@ -55,6 +56,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_weather_discription:
+    weight: 129
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_weather_id:
     weight: 126

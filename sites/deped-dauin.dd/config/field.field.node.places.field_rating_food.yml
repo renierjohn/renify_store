@@ -1,0 +1,25 @@
+uuid: b1023b72-c8bf-4c7f-94f2-d603ad9d0778
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating_food
+    - node.type.places
+id: node.places.field_rating_food
+field_name: field_rating_food
+entity_type: node
+bundle: places
+label: 'Rating Food'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,20 @@
+uuid: ee9436f5-978a-45c2-97a2-6ee00b633e6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_rating_food
+field_name: field_rating_food
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

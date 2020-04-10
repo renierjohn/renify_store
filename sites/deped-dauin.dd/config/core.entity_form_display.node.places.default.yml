@@ -10,6 +10,9 @@ dependencies:
     - field.field.node.places.field_people_promote_display
     - field.field.node.places.field_place_image_thumbnail
     - field.field.node.places.field_places_details
+    - field.field.node.places.field_rating_accomodation_
+    - field.field.node.places.field_rating_experience
+    - field.field.node.places.field_rating_food
     - field.field.node.places.field_website_link
     - image.style.thumbnail
     - node.type.places
@@ -44,7 +47,7 @@ content:
     type: string_textfield
     region: content
   field_image_map:
-    weight: 12
+    weight: 11
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
@@ -70,7 +73,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_place_image_thumbnail:
-    weight: 13
+    weight: 12
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
@@ -80,15 +83,36 @@ content:
     type: image_image
     region: content
   field_places_details:
-    weight: 14
+    weight: 13
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_rating_accomodation_:
+    weight: 14
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_rating_experience:
+    weight: 15
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_rating_food:
+    weight: 16
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_website_link:
-    weight: 26
+    weight: 17
     settings:
       size: 60
       placeholder: ''

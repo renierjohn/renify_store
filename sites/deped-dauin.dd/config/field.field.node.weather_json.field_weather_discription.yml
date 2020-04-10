@@ -1,0 +1,19 @@
+uuid: 7ab05262-6bd2-44e3-b088-3017f6a0d975
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weather_discription
+    - node.type.weather_json
+id: node.weather_json.field_weather_discription
+field_name: field_weather_discription
+entity_type: node
+bundle: weather_json
+label: 'Weather Discription'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

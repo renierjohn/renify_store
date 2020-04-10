@@ -12,7 +12,7 @@ dependencies:
 id: views_block__schools_view_block_school
 theme: rendroid
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: 'views_block:schools-view_block_school'
 settings:

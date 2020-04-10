@@ -11,6 +11,9 @@ dependencies:
     - field.field.node.places.field_people_promote_display
     - field.field.node.places.field_place_image_thumbnail
     - field.field.node.places.field_places_details
+    - field.field.node.places.field_rating_accomodation_
+    - field.field.node.places.field_rating_experience
+    - field.field.node.places.field_rating_food
     - field.field.node.places.field_website_link
     - node.type.places
   module:
@@ -43,4 +46,7 @@ hidden:
   field_people_promote_display: true
   field_place_image_thumbnail: true
   field_places_details: true
+  field_rating_accomodation_: true
+  field_rating_experience: true
+  field_rating_food: true
   field_website_link: true

@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.weather.feeds_item
     - field.field.node.weather.field_country_code
     - field.field.node.weather.field_json_text
     - field.field.node.weather.field_location_name
@@ -58,4 +57,3 @@ content:
     region: content
 hidden:
   addtoany: true
-  feeds_item: true
