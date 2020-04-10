@@ -1,15 +1,15 @@
-uuid: d82a4212-7847-49c9-a540-ffbb0174bf56
+uuid: 6cd6e9b2-68c1-4d22-827b-580b249ba5a4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_rating_experience
+    - field.storage.node.field_rating_accomodation
     - node.type.places
-id: node.places.field_rating_experience
-field_name: field_rating_experience
+id: node.places.field_rating_accomodation
+field_name: field_rating_accomodation
 entity_type: node
 bundle: places
-label: 'Rating Experience'
+label: 'Rating Accomodation'
 description: ''
 required: false
 translatable: false

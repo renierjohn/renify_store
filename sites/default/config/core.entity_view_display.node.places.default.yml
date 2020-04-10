@@ -10,7 +10,7 @@ dependencies:
     - field.field.node.places.field_people_promote_display
     - field.field.node.places.field_place_image_thumbnail
     - field.field.node.places.field_places_details
-    - field.field.node.places.field_rating_accomodation_
+    - field.field.node.places.field_rating_accomodation
     - field.field.node.places.field_rating_experience
     - field.field.node.places.field_rating_food
     - field.field.node.places.field_website_link
@@ -72,27 +72,23 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_rating_accomodation_:
-    weight: 9
+  field_rating_accomodation:
+    weight: 12
     label: above
     settings:
       thousand_separator: ''
-      decimal_separator: .
-      scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_decimal
+    type: number_integer
     region: content
   field_rating_experience:
-    weight: 11
+    weight: 13
     label: above
     settings:
       thousand_separator: ''
-      decimal_separator: .
-      scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_decimal
+    type: number_integer
     region: content
   field_rating_food:
     weight: 10

@@ -1,4 +1,4 @@
-uuid: bbef87f1-2066-4a37-9fc8-ac7bdf2f6fc8
+uuid: 9695e110-c2f3-4d09-918a-427409ff38c8
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
 id: node.field_rating_experience
 field_name: field_rating_experience
 entity_type: node
-type: decimal
+type: integer
 settings:
-  precision: 10
-  scale: 2
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

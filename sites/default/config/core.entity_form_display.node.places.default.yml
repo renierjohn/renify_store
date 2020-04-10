@@ -10,7 +10,7 @@ dependencies:
     - field.field.node.places.field_people_promote_display
     - field.field.node.places.field_place_image_thumbnail
     - field.field.node.places.field_places_details
-    - field.field.node.places.field_rating_accomodation_
+    - field.field.node.places.field_rating_accomodation
     - field.field.node.places.field_rating_experience
     - field.field.node.places.field_rating_food
     - field.field.node.places.field_website_link
@@ -90,22 +90,22 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_rating_accomodation_:
-    weight: 14
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
-  field_rating_experience:
+  field_rating_accomodation:
     weight: 15
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
-  field_rating_food:
+  field_rating_experience:
     weight: 16
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_rating_food:
+    weight: 14
     settings:
       placeholder: ''
     third_party_settings: {  }

@@ -1,16 +1,16 @@
-uuid: b00c1b04-0f12-4cc3-ae93-9c3389776e2f
+uuid: f876a433-7045-455a-a6c1-ae96511c7ce2
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_rating_accomodation_
-field_name: field_rating_accomodation_
+id: node.field_rating_accomodation
+field_name: field_rating_accomodation
 entity_type: node
-type: decimal
+type: integer
 settings:
-  precision: 10
-  scale: 2
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1
