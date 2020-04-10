@@ -14,7 +14,7 @@ use Drupal\Core\Ajax\OpenModalDialogCommand;
 use Symfony\Component\HttpFoundation\Request;
 
 use Drupal\contact\MailHandler;
-
+use Drupal\Core\Url;
 function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
   // ksm($form_id);
 
@@ -25,6 +25,12 @@ function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
         // $form_state->setErrorByName("WARNING","PLEASE LOGIN");
         // $form_state->setExecuted();
         // ksm($form);
+    }
+
+    if($form_id == 'user_login_form'){
+       
+         // $form_state->setRedirect("<front>");
+         // ksm($form_state);
     }
 }
 
