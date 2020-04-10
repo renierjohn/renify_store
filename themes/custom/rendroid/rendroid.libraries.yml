@@ -9,7 +9,7 @@ global:
       css/viewbox.css: {}
   js:
     # js/custom.js: {}
-    js/boostrap.min.js: {}
+    # js/boostrap.min.js: {}
     js/animate.js: {}
     js/jquery.viewbox.min.js: {}
     

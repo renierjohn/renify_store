@@ -8,44 +8,23 @@ use Drupal\Core\Ajax\AfterCommand;
 use Drupal\Core\Ajax\AddCssCommand;
 use Drupal\Core\Ajax\InsertCommand;
 use Drupal\image\Plugin\Field\FieldType\ImageItem;
-// use Drupal\Core\Ajax\AjaxResponse;
+
 use Drupal\Core\Ajax\ReplaceCommand;
 use Drupal\Core\Ajax\OpenModalDialogCommand;
 use Symfony\Component\HttpFoundation\Request;
+
+use Drupal\contact\MailHandler;
+
 function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
-  ksm($form_id);
+  // ksm($form_id);
 
-    if($form_id == 'node_airtist_form'){
-       // ksm($form_state);
-       // $ajax = \Drupal::service('ajax_response.attachments_processor');
-       $response = new AjaxResponse();  
-       // $response->addCommand(new AlertCommand('renierjohn hahahahahah'));
-       // // $Selector = '.myclass';
-       // $content = '<p>my htlm content</p>';
-       // $settings = ['my-setting' => 'setting',]; 
-       // $response->addCommand(new AfterCommand($Selector, $content, $settings));
-       // $response->addCommand(new AddCssCommand('<style>label{color:red;}</style>'));
-       // $response->addCommand(new InsertCommand($parking));
-       // $response->addCommand(new AlertCommand('renierjohn hahahahahah'));
-       // return $response;
-        // $form['field_car_company']['widget'][0]['value'] = array(
-        //     '#title' => 'Client company',
-        //     '#type' => 'textfield',
-        //     '#required' => TRUE,
-        //     '#ajax' => array(
-        //           'callback' => 'ajax_callback_custom',
-        //           'event' => 'keyup',
-        //           'wrapper'=>'field_artist_name',
-        //           'progress' => array(
-        //             'type' => 'throbber',
-        //             'message' => 'renier john',
-        //             ),
-        //     )
-        // );
+    if($form_id == 'contact_message_inquire_form'){
 
-        // $form['field_artist_name']['widget'][0]['value']['#default_value'] ='qwqwqwqwq';
-        // ksm($form['field_artist_main_image']['widget'][0]['#value_callback']);
-        // ksm($form_state);
+        // ksm($form_state::hasAnyErrors());
+        // ksm($form_state->getErrors());
+        // $form_state->setErrorByName("WARNING","PLEASE LOGIN");
+        // $form_state->setExecuted();
+        // ksm($form);
     }
 }
 
@@ -63,5 +42,7 @@ function random_sort_preprocess_page(&$variables) {
   //   ksm($variables);
   // }
 }
+
+
 
 
