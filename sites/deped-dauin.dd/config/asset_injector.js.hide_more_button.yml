@@ -1,0 +1,20 @@
+uuid: 8ed21728-fa5f-4575-a191-e06332fb27f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: hide_more_button
+label: 'Hide More Button'
+code: "blog = document.getElementById('blog');\r\nblog.getElementsByClassName('item-new')[0].hidden = true;"
+noscript: ''
+noscriptRegion: {  }
+jquery: false
+header: false
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    pages: /schools
+    negate: false
+conditions_require_all: true
