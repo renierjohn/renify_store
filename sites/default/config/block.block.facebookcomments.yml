@@ -1,0 +1,30 @@
+uuid: 0b2e3d73-5bfb-4283-b3bd-4c4d75a515dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - facebook_comments
+    - system
+  theme:
+    - rendroid
+id: facebookcomments
+theme: rendroid
+region: content
+weight: -1
+provider: null
+plugin: facebook_comments
+settings:
+  id: facebook_comments
+  label: 'Facebook comments'
+  provider: facebook_comments
+  label_display: '0'
+  facebook_comments_style: light
+  facebook_comments_width: '600'
+  facebook_comments_width_fluid: 1
+  facebook_comments_amount: '2'
+visibility:
+  request_path:
+    id: request_path
+    pages: /homepage
+    negate: false
+    context_mapping: {  }

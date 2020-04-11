@@ -12,7 +12,7 @@ dependencies:
 id: views_block__events_block_event_now
 theme: rendroid
 region: content
-weight: -5
+weight: -6
 provider: null
 plugin: 'views_block:events-block_event_now'
 settings:

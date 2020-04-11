@@ -12,7 +12,7 @@ dependencies:
 id: contactblock
 theme: rendroid
 region: content
-weight: -1
+weight: -2
 provider: null
 plugin: contact_block
 settings:

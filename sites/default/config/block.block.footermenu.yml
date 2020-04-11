@@ -11,7 +11,7 @@ dependencies:
 id: footermenu
 theme: rendroid
 region: footer
-weight: -9
+weight: -13
 provider: null
 plugin: 'system_menu_block:footer-menu'
 settings:

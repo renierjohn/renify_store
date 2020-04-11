@@ -11,7 +11,7 @@ _core:
 id: rendroid_messages
 theme: rendroid
 region: content
-weight: -8
+weight: -9
 provider: null
 plugin: system_messages_block
 settings:
