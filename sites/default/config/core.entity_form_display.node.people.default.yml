@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.people.feeds_item
     - field.field.node.people.field_people_gender
     - field.field.node.people.field_people_image
     - field.field.node.people.field_people_location
@@ -118,4 +119,5 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true

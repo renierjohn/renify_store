@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.people.feeds_item
     - field.field.node.people.field_people_gender
     - field.field.node.people.field_people_image
     - field.field.node.people.field_people_location
@@ -25,6 +26,7 @@ content:
     region: content
 hidden:
   addtoany: true
+  feeds_item: true
   field_people_gender: true
   field_people_image: true
   field_people_location: true
