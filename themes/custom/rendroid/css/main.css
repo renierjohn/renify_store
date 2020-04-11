@@ -2398,6 +2398,9 @@ Blog-page
         #blog .inner-contant{
             padding: 0 1em 1em 1em; 
         }
+        #weather{
+            height: 189px;
+        }
     }
     /*======== Media Query 425px ========*/
     @media only screen and (max-width: 425px) {
@@ -2601,6 +2604,9 @@ Blog-page
         #blog .inner-contant{
             padding: 0 1em 1em 1em; 
         }
+        #weather{
+            height: 189px;
+        }
     }
     /*======== Media Query 375px ========*/
     @media only screen and (max-width: 375px) {
@@ -2694,6 +2700,9 @@ Blog-page
         }
         #blog .inner-contant{
             padding: 0 1em 1em 1em; 
+        }
+        #weather{
+            height: 189px;
         }
     }
  

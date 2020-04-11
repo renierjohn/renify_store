@@ -1,0 +1,40 @@
+uuid: 5d313674-ccc3-411f-8046-d5d8b225289d
+langcode: en
+status: true
+dependencies:
+  module:
+    - fb_likebox
+    - system
+  theme:
+    - rendroid
+id: fblikebox
+theme: rendroid
+region: content
+weight: -8
+provider: null
+plugin: fb_likebox_block
+settings:
+  id: fb_likebox_block
+  label: 'FB Likebox'
+  provider: fb_likebox
+  label_display: '0'
+  url: 'https://www.facebook.com/pahimuKo/?__tn__=kC-R&eid=ARAM8XIrqlwt-8MnsqsNHrpTNVMn3ve5_a5oRDeakyyBvMYV_InnnNs7SyiKVeHtLysI4dUUkHCh91A2&hc_ref=ARSro3EvKphwJHd8W3eoC9ohjFvl94LRXIo67sXHzANqZ5phJ6x5KVwQ1DPE9qd8Wfk&fref=nf&__xts__[0]=68.ARDfq6c6ETGEJh2VNpyWYFJ7xK'
+  app_id: '221198119132924'
+  hide_header: 0
+  stream: 0
+  events: 0
+  messages: 0
+  show_faces: '0'
+  title: '<div>'
+  width: 180
+  height: 400
+  hide_cta: 0
+  small_header: 0
+  adapt_container_width: 0
+  language: en_US
+visibility:
+  request_path:
+    id: request_path
+    pages: /homepage
+    negate: false
+    context_mapping: {  }

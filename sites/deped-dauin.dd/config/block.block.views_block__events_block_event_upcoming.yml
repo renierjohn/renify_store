@@ -12,7 +12,7 @@ dependencies:
 id: views_block__events_block_event_upcoming
 theme: rendroid
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: 'views_block:events-block_event_upcoming'
 settings:

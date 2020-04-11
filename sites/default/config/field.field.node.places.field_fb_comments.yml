@@ -1,0 +1,22 @@
+uuid: 4e2ff5ac-ce61-4d4f-b348-7aaf00bc4e3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fb_comments
+    - node.type.places
+  module:
+    - facebook_comments
+id: node.places.field_fb_comments
+field_name: field_fb_comments
+entity_type: node
+bundle: places
+label: 'FB comments'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: facebook_comments

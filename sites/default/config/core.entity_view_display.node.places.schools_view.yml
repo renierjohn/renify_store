@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.schools_view
     - field.field.node.places.field_category
+    - field.field.node.places.field_fb_comments
     - field.field.node.places.field_iframe_link
     - field.field.node.places.field_image_map
     - field.field.node.places.field_people_location
@@ -45,6 +46,7 @@ content:
 hidden:
   addtoany: true
   field_category: true
+  field_fb_comments: true
   field_iframe_link: true
   field_people_promote_display: true
   field_place_image_thumbnail: true

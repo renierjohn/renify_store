@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.places.field_category
+    - field.field.node.places.field_fb_comments
     - field.field.node.places.field_iframe_link
     - field.field.node.places.field_image_map
     - field.field.node.places.field_people_location
@@ -16,6 +17,7 @@ dependencies:
     - field.field.node.places.field_website_link
     - node.type.places
   module:
+    - facebook_comments
     - image
     - options
     - text
@@ -32,6 +34,17 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_fb_comments:
+    weight: 14
+    label: hidden
+    settings:
+      facebook_comments_style: light
+      facebook_comments_width: 620
+      facebook_comments_width_fluid: true
+      facebook_comments_amount: 15
+    third_party_settings: {  }
+    type: facebook_comments_formatter
+    region: content
   field_iframe_link:
     weight: 7
     label: hidden
