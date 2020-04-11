@@ -131,8 +131,9 @@ a:hover {
 
 /*== Youtube ==*/
 .yt {
+    margin-top: 1em;
+    background-color: black;
     text-align: center;
-
 }
 
 
@@ -2280,7 +2281,7 @@ Blog-page
             width: 6vw;
         }
     }
-    /*======== Media Query 767px ========*/
+    /*======== Media Query 768px ========*/
     @media only screen and (max-width: 768px) {
         .navbar-inverse .navbar-nav > li > a {
             line-height: 1;
@@ -2295,7 +2296,18 @@ Blog-page
             padding-left: 0;
             padding-right: 0; 
         }
-        
+        #block-mainnavigation-3 .nav li a{
+            margin-top: 18px;
+        }
+        #blog .inner-contant{
+            padding: 0 1em 1em 1em; 
+        }
+        .about .item-new{
+            padding-top: 4em;
+        }
+        #blog .item-new{
+            margin-top: 0 2em;
+        }
     }
     /*======== Media Query 688px ========*/
     @media only screen and (max-width: 688px) {
@@ -2372,6 +2384,19 @@ Blog-page
         }
         #blog .item-new span{
              font-size: 1em;
+        }
+        .thumbnail {
+            height: 10em;
+        }
+        .team h4 {
+            margin:0 1em;
+        }
+        .team h6{
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #blog .inner-contant{
+            padding: 0 1em 1em 1em; 
         }
     }
     /*======== Media Query 425px ========*/
@@ -2562,6 +2587,20 @@ Blog-page
         #blog .item-new span{
              font-size: 1em;
         }
+
+        .thumbnail {
+            height: 10em;
+        }
+        .team h4 {
+            margin:0 1em;
+        }
+        .team h6{
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #blog .inner-contant{
+            padding: 0 1em 1em 1em; 
+        }
     }
     /*======== Media Query 375px ========*/
     @media only screen and (max-width: 375px) {
@@ -2641,6 +2680,20 @@ Blog-page
         }
         #blog .item-new span{
              font-size: 1em;
+        }
+
+        .thumbnail {
+            height: 10em;
+        }
+        .team h4 {
+            margin:0 1em;
+        }
+        .team h6{
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #blog .inner-contant{
+            padding: 0 1em 1em 1em; 
         }
     }
  
