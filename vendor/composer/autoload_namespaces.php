@@ -13,8 +13,6 @@ return array(
     'Peekmo\\JsonPath' => array($vendorDir . '/peekmo/jsonpath/src'),
     'PEAR' => array($vendorDir . '/pear/pear_exception'),
     'EasyRdf_' => array($vendorDir . '/easyrdf/easyrdf/lib'),
-    'Drupal\\' => array($vendorDir . '/drupal/coder/coder_sniffer/Drupal'),
-    'DrupalPractice\\' => array($vendorDir . '/drupal/coder/coder_sniffer/DrupalPractice'),
     'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/lib'),
     'Console' => array($vendorDir . '/pear/console_getopt'),
     'Archive_Tar' => array($vendorDir . '/pear/archive_tar'),
