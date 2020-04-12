@@ -7,11 +7,13 @@ dependencies:
     - field.field.node.events.field_event_discription
     - field.field.node.events.field_event_image
     - field.field.node.events.field_people_promote_display
+    - field.field.node.events.field_twitter_embed
     - image.style.wide_image
     - node.type.events
   module:
     - datetime
     - image
+    - text
     - user
 id: node.events.default
 targetEntityType: node
@@ -28,12 +30,12 @@ content:
     type: datetime_default
     region: content
   field_event_discription:
-    weight: 3
+    type: basic_string
+    weight: 4
+    region: content
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: content
   field_event_image:
     weight: 1
     label: visually_hidden
@@ -43,10 +45,18 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_twitter_embed:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  addtoany: true
   field_people_promote_display: true

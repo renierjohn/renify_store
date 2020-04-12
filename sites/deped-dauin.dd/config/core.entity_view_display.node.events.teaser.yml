@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.events.field_event_discription
     - field.field.node.events.field_event_image
     - field.field.node.events.field_people_promote_display
+    - field.field.node.events.field_twitter_embed
     - image.style.wide_image
     - node.type.events
   module:
@@ -33,6 +34,8 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  addtoany: true
   field_eve: true
   field_event_discription: true
   field_people_promote_display: true
+  field_twitter_embed: true

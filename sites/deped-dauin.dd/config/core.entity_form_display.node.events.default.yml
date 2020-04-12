@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.events.field_event_discription
     - field.field.node.events.field_event_image
     - field.field.node.events.field_people_promote_display
+    - field.field.node.events.field_twitter_embed
     - image.style.thumbnail
     - node.type.events
   module:
@@ -14,6 +15,7 @@ dependencies:
     - image
     - imce
     - path
+    - text
 id: node.events.default
 targetEntityType: node
 bundle: events
@@ -54,6 +56,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_twitter_embed:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   path:
     type: path
