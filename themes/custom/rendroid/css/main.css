@@ -254,7 +254,8 @@ a:hover {
 
 
 
-/* Details */
+/* Node Tourist Details */
+
 .detail-first {
     background: url('../images/banner.jpg');
     overflow: hidden;
@@ -394,6 +395,8 @@ margin-top: 20px;
 .about .item-new span{
     font-size: 50px;
 }
+
+
 /*== Technologies Section Start ==*/
 
 .technologies .col,
@@ -2584,7 +2587,7 @@ Blog-page
             font-size: 1em;
         }
         #blog .item-new{
-            margin-top: 1em;
+            margin-top: 4em;
             margin-bottom: 1em;
         }
         #blog .item-new span{
@@ -2681,7 +2684,7 @@ Blog-page
             font-size: 1em;
         }
         #blog .item-new{
-            margin-top: 1em;
+            margin-top: 4em;
             margin-bottom: 1em;
         }
         #blog .item-new span{
@@ -2703,6 +2706,12 @@ Blog-page
         }
         #weather{
             height: 189px;
+        }
+        #services .container{
+            padding: 0;
+        }
+        #services .col-md-5{
+            padding: 0;
         }
     }
  

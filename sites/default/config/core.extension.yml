@@ -26,8 +26,6 @@ module:
   devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
-  facebook_comments: 0
-  fb_likebox: 0
   feeds: 0
   feeds_ex: 0
   feeds_tamper: 0

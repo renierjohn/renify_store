@@ -420,7 +420,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12\" data-aos=\"fade-up\" data-aos-easing=\"linear\" data-aos-duration=\"500\">\r\n    {{ field_place_image_thumbnail }}\r\n    <div class=\"inner-contant\">\r\n       <h3>{{ title }} </h3>\r\n       <h5>{{ field_places_details }} </h5>\r\n       <p><a href=\"/node/{{nid}}\">+ read more</a></p>\r\n   </div>\r\n</div>"
+            text: "<div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12\" data-aos=\"fade-up\" data-aos-easing=\"linear\" data-aos-duration=\"500\">\r\n    {{ field_place_image_thumbnail }}\r\n    <div class=\"inner-contant\">\r\n       <div class=\"fb-like \" data-href=\"https://dev-deped-dauin.pantheonsite.io/node/{{nid}}\" data-width=\"\"  data-layout=\"standard\" data-action=\"like\" data-size=\"small\" data-share=\"true\"></div>\r\n       <h3>{{ title }} </h3>\r\n       <h5>{{ field_places_details }} </h5>\r\n       <p><a href=\"/node/{{nid}}\">+ read more</a></p>\r\n   </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

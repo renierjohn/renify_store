@@ -1,0 +1,127 @@
+/*== Navbar ==*/
+
+.navbar {
+    margin: 0;
+    border-radius: 0;
+}
+
+.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0.91);
+    border: none;
+}
+
+.navbar-brand > img {
+    padding: 7px 0;
+}
+
+.navbar li {
+    line-height: 5.5em;
+    color: white;
+}
+
+.navbar .hidden-xs {
+    font-weight: 700;
+    line-height: 72px;
+    font-size: 11px;
+    color: #d7d7d7;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: rgba(255, 255, 255, 0.92);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 4;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar .hidden-xs:hover {
+    color: rgb(2, 228, 230);
+}
+
+
+/*== Banner ==*/
+
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-top: 90px;
+    position: relative;
+    text-transform: uppercase;
+   /* background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/sites/default/files/header/header.jpg');*/
+}
+
+
+
+
+.banner .gradient {
+    background: -moz-linear-gradient(-45deg, rgba(255, 0, 251, 0.5) 0%, rgba(0, 24, 255, 0.5) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(255, 0, 251, 0.5) 0%, rgba(0, 24, 255, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(255, 0, 251, 0.5) 0%, rgba(0, 24, 255, 0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ff00fb', endColorstr='#800018ff', GradientType=1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.banner h1 {
+    font-size: 47px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    padding-bottom: 12px;
+}
+
+.banner p {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding-bottom: 35px;
+}
+
+.banner p .btn-primary,
+.btn-success {
+    width: 162px;
+    color: #000;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 10px;
+    padding: 19px 0;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    background-color:gray;
+}
+
+.btn:hover {
+        transition: .5s ease;
+        background-color: black;
+        color: white;
+}
+
+.banner p .btn-primary:hover {
+   transition: .5s ease;
+   background-color: black;
+   color: white;
+}
+
+.banner p .btn-success {
+    background-color: gray;
+    margin-right: 0;
+}
+
+
+/*== Youtube ==*/
+.yt {
+    margin-top: 1em;
+    background-color: black;
+    text-align: center;
+}
+
