@@ -27,6 +27,7 @@
         <div class="detail-first-text">
           <h2>Please Support Us</h2>
           <h5>Web Design </h5>
+          {{content.field_category}}
           <a href="#contact" class="btn btn-success">Contact us</a>
         </div>
       </div>
@@ -43,7 +44,7 @@
         <h3>Summary</h3>
         <p>{{content.field_places_details}}</p>
         <p>{{content.field_iframe_link}}</p>
-       <a href={{content.field_website_link.0}} class="btn btn-success">Visit Us</a>
+        <a href={{content.field_website_link.0}} class="btn btn-success">Visit Us</a>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-7 inner-content">
          <div class="part">
@@ -71,11 +72,18 @@
                </div>   
             </div>
       </div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-6">
+    </div>  
+</div>
+  <div class="row">
+       <div class="fb-like col-md-3" data-href="https://dev-deped-dauin.pantheonsite.io/{{url}}" data-width=""  data-layout="standard" data-action="like" data-size="small" data-share="true">
+     </div>
+  </div>
+  <div class="row">
+     <div class="col-xs-12 col-sm-6 col-md-5">
       {{ content.field_fb_comments}}
     </div>
-  </div>
+</div>
 
+</div>
 </section>
   
