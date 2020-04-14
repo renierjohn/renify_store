@@ -125,8 +125,9 @@
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me','GET',{"fields":"id,name,picture"}, function(response) {
           console.log('Successful login for: ' + response.name);
+          document.getElementById('profile-picture').innerHTML = '<img src= "'+response.picture.data.url+' alt ="fb ">' 
           document.getElementById('status-block').innerHTML =
-            'Thanks for logging in, ' + response.name + '!' + response.picture.data.url;
+            '<h3>Welcome ' + response.name + '</h3>';
         });
 
       }
