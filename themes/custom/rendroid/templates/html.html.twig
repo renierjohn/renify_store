@@ -57,6 +57,12 @@
 <!DOCTYPE html>
 <html {{ html_attributes }}>
   <head>
+      <meta property="fb:app_id" content="221198119132924">
+      <meta property="og:type" content="website"/>
+      <meta property="og:image" content="https://dev-deped-dauin.pantheonsite.io/sites/default/files/header/header.jpg"/>
+      <meta property="og:url" content="https://dev-deped-dauin.pantheonsite.io">
+      <meta property="og:title" content="Dauin Ni Bai">
+      <meta property="og:description" content="Lets Explore Dauin , Its More Fun in Dauin">
         <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163503291-1"></script>
     <script>
@@ -84,8 +90,8 @@
         if (response.status === 'connected') {   // Logged into your webpage and Facebook.
           testAPI();  
         } else {                                 // Not logged into your webpage or we are unable to tell.
-          document.getElementById('status-block').innerHTML = 'Please log ' +
-            'into this webpage.';
+          // document.getElementById('status-block').innerHTML = 'Please log ' +
+          //   'into this webpage.';
         }
       }
 
