@@ -196,7 +196,12 @@ a:hover {
 
 #profile-picture{
     padding-bottom: 1em;
+
 }
+#profile-picture img{
+    border-radius: 2em;
+}
+
 #status-block{
     text-align: center;
 }
