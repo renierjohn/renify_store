@@ -194,7 +194,12 @@ a:hover {
 }
 
 
-
+#profile-picture{
+    padding-bottom: 1em;
+}
+#status-block{
+    text-align: center;
+}
 
 .banner .gradient {
     background: -moz-linear-gradient(-45deg, rgba(255, 0, 251, 0.5) 0%, rgba(0, 24, 255, 0.5) 100%);
@@ -2711,6 +2716,12 @@ Blog-page
             padding: 0;
         }
         #services .col-md-5{
+            padding: 0;
+        }
+        #services .col-md-10{
+            padding: 0;
+        }
+        #services .col-xs-12{
             padding: 0;
         }
     }

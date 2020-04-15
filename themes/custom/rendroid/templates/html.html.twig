@@ -131,9 +131,9 @@
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me','GET',{"fields":"id,name,picture.width(150).height(150)"}, function(response) {
           console.log('Successful login for: ' + response.name);
-          document.getElementById('profile-picture').innerHTML = '<img src= "'+response.picture.data.url+'"" alt ="fb ">' 
+          document.getElementById('profile-picture').innerHTML = '<img src= "'+response.picture.data.url+'"" class="profile-circle" alt ="fb ">' 
           document.getElementById('status-block').innerHTML =
-            '<h6>Welcome ' + response.name + '</h6>';
+            '<h6>Welcome <p>' + response.name + '</p></h6>';
         });
 
       }
