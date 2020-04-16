@@ -199,6 +199,10 @@ a:hover {
 #block-headerimageschools{
     height: 12em;
 }
+#block-headerschool {
+  height: 12em;
+}
+
 
 #blog .fb-profile-picture img{
     margin-bottom: 0;
