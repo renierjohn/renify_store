@@ -90,11 +90,12 @@
         if (response.status === 'connected') {   // Logged into your webpage and Facebook.
           testAPI();  
         } else { 
-
-           document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src="/sites/default/files/header/fb_none.png" class="profile-circle" alt ="fb ">';
-           document.getElementsByClassName('fb-fullname')[0].innerHTML ='<h5>Welcome <p> Guest </p></h5>';
-
-           console.log('not login');
+          if(document.getElementsByClassName('fb-profile-picture') !== [] ){
+               document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src="/sites/default/files/header/fb_none.png" class="profile-circle" alt ="fb ">';
+               document.getElementsByClassName('fb-fullname')[0].innerHTML ='<h5>Welcome <p> Guest </p></h5>';
+                console.log('not login');
+         }
+          
         }
       }
 
@@ -134,12 +135,13 @@
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me','GET',{"fields":"id,name,picture.width(150).height(150)"}, function(response) {
           console.log('Successful login for: ' + response.name);
-            document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src= "'+response.picture.data.url+'" class="profile-circle" alt ="fb ">'
-            document.getElementsByClassName('fb-fullname')[0].innerHTML =
-            '<h5>Welcome <p>' + response.name + '</p></h5>';
-            
-        });
 
+            if(document.getElementsByClassName('fb-profile-picture') !== [] ){
+                document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src= "'+response.picture.data.url+'" class="profile-circle" alt ="fb ">'
+                document.getElementsByClassName('fb-fullname')[0].innerHTML =
+                '<h5>Welcome <p>' + response.name + '</p></h5>';
+            }
+        });
       }
 
 </script>
