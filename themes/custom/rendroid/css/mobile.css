@@ -1,0 +1,541 @@
+  /*======== Media Query 425px MOBILE L========*/
+    @media only screen and (max-width: 425px) {
+        .banner {
+            height: 500px;
+        }
+        .banner h1 {
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+        .banner p {
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        .banner p .btn-primary,
+        .btn-success {
+            width: 112px;
+            font-size: 10px;
+            margin-right: 5px;
+            padding: 16px 0;
+        }
+        .about .text-block {
+            position: absolute;
+            bottom: 83%;
+            height: 0;
+            left: 8%;
+            right: 13%;
+            justify-content: center;
+        }
+        .about .text-block a span {
+            font-size: 28px;
+        }
+        .about .text-block p {
+            line-height: 26px;
+        }
+        .about .inner-contant {
+            padding-left: 53px;
+            padding-top: 0;
+        }
+        .about i {
+            font-size: 2.5em;
+        }
+        .technologies {
+            padding-top: 50px;
+            padding-bottom: 0px;
+        }
+        .technologies .view-technologie .btn {
+            width: 100px;
+            margin-bottom: 50px;
+        }
+        .technologies .view-technologie .btn {
+            width: 70%;
+            font-size: 11px;
+        }
+        .technologies .technologie h3 {
+            font-size: 20px;
+        }
+        .specialities .inner-contant {
+            margin: 20px;
+        }
+        .specialities h2 {
+            font-size: 24px;
+        }
+        .specialities h4 {
+            font-size: 16px;
+        }
+        .specialities .specialitie h3 {
+            font-size: 18px;
+        }
+        .specialities .specialitie i {
+            font-size: 22px;
+        }
+        .specialities .part {
+            padding: 0 20px;
+        }
+        .team .inner-contant p {
+            padding-bottom: 20px;
+        }
+        .team h6 {
+            font-size: 14px;
+            letter-spacing: 0px;
+        }
+        blockquote {
+            font-size: 12.5px;
+        }
+        .customers blockquote {
+            border: none;
+            margin: 0;
+        }
+        #fade-quote-carousel blockquote p .name {
+            padding-top: 22px;
+        }
+        .customers {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .contact input {
+            height: 42px;
+        }
+        .form-control {
+            font-size: 11px;
+        }
+        footer ul {
+            padding-bottom: 20px;
+        }
+        footer {
+            padding-bottom: 50px;
+            padding-top: 20px;
+        }
+        footer li a {
+            padding: 8px;
+            font-size: 10px;
+        }
+        footer p {
+            font-size: 9px;
+            letter-spacing: 1px;
+        }
+        #blog h4 {
+            font-size: 26px;
+        }
+        #blog h6 {
+            font-size: 12px;
+            letter-spacing: 0px;
+            padding-bottom: 20px;
+        }
+        #blog {
+            padding-top: 30px;
+            padding-bottom: 0;
+        }
+        #footer-blog .bt {
+            padding-top: 0;
+        }
+        #services h3 {
+            font-size: 22px;
+        }
+        #services h4 {
+            font-size: 12px;
+            line-height: 20px;
+        }
+        #services p {
+            font-size: 12px;
+        }
+        #services {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        #services .part-1 img,
+        .part-2 img,
+        .part-3 img {
+            padding-bottom: 30px;
+        }
+        #services .socialmedia{
+            text-align: center;
+        }
+        .services h3 {
+            font-size: 32px;
+        }
+        .event-frontpage .col{
+            padding-bottom: 2em;
+        }
+        .specialities .part {
+          padding-top: 2em;
+          padding-left: 0;
+          padding-right: 1em;
+        }
+
+        .detail-first .detail-first-text{
+            margin:0px;
+        }
+
+        .detail-first iframe {
+          width: 100%;
+          height: 100%;
+        }
+          .yt .col-md-12{
+            padding-left: 0;
+            padding-right: 0; 
+        }
+        .about .item-new {
+            padding-top: 1em
+        }
+
+        .about .item-new span{
+            font-size: 1em;
+        }
+        #blog .item-new{
+            margin-top: 4em;
+            margin-bottom: 1em;
+        }
+        #blog .item-new span{
+             font-size: 1em;
+        }
+
+        .thumbnail {
+            height: 10em;
+        }
+        .team h4 {
+            margin:0 1em;
+        }
+        .team h6{
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #blog .inner-contant{
+            padding: 0 1em 1em 1em; 
+        }
+        #weather{
+            height: 189px;
+        }
+        #map > .container {
+          margin:0px;
+          padding: 0px ;
+          
+        }
+        #map > .container > .row {
+          margin:0px ;
+        }
+        .map-area {
+          padding: 0px;
+          margin: 0px;
+        }
+        .map-area-text{
+          margin-left: 1em;
+          margin-right: 1em;
+        }
+        #map iframe {
+          width:100vw;
+          height:50vh; 
+        }
+        #services .social-media{
+          text-align: center;
+          margin-left: 0;
+          padding-bottom: 2em;
+        }
+        
+        #services .social-media .fb-profile-picture img {
+          width: 5em;
+          margin-top: 1em;
+        }
+
+        #services .social-media .fb-fullname {
+            margin-top: 5px;
+        }
+        #services .social-media .fb-like {
+          margin-top: 5px;
+        }
+        #services .social-media .twitter {
+          margin-top: 5px;
+        }
+         #block-headerimagetouristspot-2 {
+          height: 12em;
+        }
+        #blog .social-media .fb-profile-picture img {
+          width: 5em;
+          margin-top: 1em;
+        }
+
+        #blog .social-media .fb-fullname {
+            margin-top: 5px;
+        }
+        #blog .social-media .fb-like {
+          margin-top: 5px;
+        }
+        #blog .social-media .twitter {
+          margin-top: 5px;
+        }
+        #blog .social-media {
+          text-align: center;
+          margin-left: 0;
+          padding-bottom: 2em;
+        }
+        #block-headerimageschools{
+          height: 12em;
+        }
+        
+    }
+
+   
+ /*======== Media Query 375px MOBILE M========*/
+    @media only screen and (max-width: 375px) {
+        .banner h1 {
+            font-size: 24px;
+        }
+        .banner p {
+            font-size: 12px;
+        }
+        .about .inner-contant {
+            padding-left: 0;
+        }
+        .inner-contant {
+            margin-left: 1em;
+        }
+        .about i {
+            font-size: 2em;
+        }
+        .about .text-block a span {
+            font-size: 24px;
+        }
+        .about .text-block {
+            bottom: 87%;
+        }
+        .services {
+            text-align: center;
+            padding-top: 30px;
+        }
+        .services h4 {
+            font-size: 12px;
+            color: #b7b7b7;
+            letter-spacing: 1px;
+            padding-bottom: 30px;
+        }
+        .services h3 {
+            font-size: 26px;
+            font-weight: 700;
+        }
+        #about-us p {
+            font-size: 12px;
+        }
+        #blog h4 {
+            font-size: 24px;
+        }
+        .event-frontpage .col{
+            padding-bottom: 2em;
+        }
+
+        .specialities .part {
+          padding-top: 2em;
+          padding-left: 0;
+          padding-right: 1em;
+        }
+
+        .detail-first .detail-first-text{
+            margin:0px;
+        }
+
+        .detail-first iframe {
+          width: 100%;
+          height: 100%;
+        }
+        
+        .about .item-new {
+            padding-top: 1em
+        }
+
+        .about .item-new span{
+            font-size: 1em;
+        }
+        #blog .item-new{
+            margin-top: 4em;
+            margin-bottom: 1em;
+        }
+        #blog .item-new span{
+             font-size: 1em;
+        }
+
+        .thumbnail {
+            height: 10em;
+        }
+        .team h4 {
+            margin:0 1em;
+        }
+        .team h6{
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #blog .inner-contant{
+            padding: 0 1em 1em 1em; 
+        }
+        #weather{
+            height: 189px;
+        }
+        #services .container{
+            padding: 0;
+        }
+        #services .col-md-5{
+            padding: 0;
+        }
+        #services .col-md-10{
+            padding: 0;
+        }
+        #services .col-xs-12{
+            padding: 0;
+        }
+
+        #services .socialmedia{
+            text-align: center;
+        }
+
+        .yt .col-md-12{
+            padding-left: 0;
+            padding-right: 0; 
+        }
+        #map > .container {
+          margin:0px;
+          padding: 0px ;
+      
+        }
+        #map > .container > .row {
+          margin:0px ;
+        }
+        .map-area {
+          padding: 0px;
+          margin: 0px;
+        }
+        .map-area-text{
+          margin-left: 1em;
+          margin-right: 1em;
+        }
+        #map iframe {
+          width:100vw;
+          height:50vh; 
+        }
+        #services .social-media {
+          text-align: center;
+          margin-left: 0;
+          padding-bottom: 2em;
+        }
+        
+        #services .social-media .fb-profile-picture img {
+          width: 5em;
+          margin-top: 1em;
+        }
+
+        #services .social-media .fb-fullname {
+            margin-top: 5px;
+        }
+        #services .social-media .fb-like {
+          margin-top: 5px;
+        }
+        #services .social-media .twitter {
+          margin-top: 5px;
+        }
+        #block-headerimagetouristspot-2 {
+          height: 12em;
+        }
+
+    #blog .social-media .fb-profile-picture img {
+      width: 5em;
+      margin-top: 1em;
+    }
+
+    #blog .social-media .fb-fullname {
+        margin-top: 5px;
+    }
+    #blog .social-media .fb-like {
+      margin-top: 5px;
+    }
+    #blog .social-media .twitter {
+      margin-top: 5px;
+    }
+    #blog .social-media {
+      text-align: center;
+      margin-left: 0;
+      padding-bottom: 2em;
+    }
+    #block-headerimageschools{
+      height: 12em;
+    }
+
+    }
+
+ /*======== Media Query 320px MOBILE S ========*/
+ @media only screen and (max-width: 320px) {
+    #map > .container {
+      margin:0px;
+      padding: 0px ;
+      
+    }
+    #map > .container > .row {
+      margin:0px ;
+    }
+    .map-area {
+      padding: 0px;
+      margin: 0px;
+    }
+    .map-area-text{
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+    #map iframe {
+      width:100vw;
+      height:50vh; 
+    }
+    
+    #services .social-media {
+      text-align: center;
+      margin-left: 0;
+      padding-bottom: 2em;
+    }
+   
+    
+    #services .social-media .fb-profile-picture img {
+      width: 5em;
+      margin-top: 1em;
+    }
+
+    #services .social-media .fb-fullname {
+        margin-top: 5px;
+    }
+    #services .social-media .fb-like {
+      margin-top: 5px;
+    }
+    #services .social-media .twitter {
+      margin-top: 5px;
+    }
+
+     #services .social-media {
+      text-align: center;
+      margin-left: 0;
+      padding-bottom: 2em;
+    }
+   
+    
+    #blog .social-media .fb-profile-picture img {
+      width: 5em;
+      margin-top: 1em;
+    }
+
+    #blog .social-media .fb-fullname {
+        margin-top: 5px;
+    }
+    #blog .social-media .fb-like {
+      margin-top: 5px;
+    }
+    #blog .social-media .twitter {
+      margin-top: 5px;
+    }
+    #blog .social-media {
+      text-align: center;
+      margin-left: 0;
+      padding-bottom: 2em;
+    }
+    #block-headerimageschools{
+      height: 12em;
+    }
+
+    #block-headerimagetouristspot-2 {
+      height: 12em;
+    }
+
+
+  }

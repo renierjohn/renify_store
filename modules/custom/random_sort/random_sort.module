@@ -16,8 +16,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Drupal\contact\MailHandler;
 use Drupal\Core\Url;
 
+use Drupal\Core\User;
 function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
-  ksm($form_id);
+  // ksm($form_id);
 
     if($form_id == 'contact_message_inquire_form'){
 
@@ -29,7 +30,73 @@ function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
     }
 
     if($form_id == 'user_login_form'){
-       
+      $email = "testsss1234@gmail.com";
+        // $name = substr($mail, 0, strpos($mail, '@'));
+
+       // Make sure the user name isn't already taken.
+        $query = db_select('users', 'u')
+          ->fields('u', array('uid'))->execute();
+          // ->condition('u.name', $name)
+        // ksm($query->fetchAll());
+        $results = $query->fetchAll();
+        foreach ($results as $key => $value) {
+          if($value->uid != '0') {
+            $user = Drupal\user\Entity\User::load($value->uid);
+            // ksm($user);
+            // ksm($user->getEmail());          
+
+            if($user->getEmail() !== $email ){
+                // $account = new stdClass();
+                // $account->name = "ren";
+                // $account->mail = $email;
+                // $account->init = $email;
+                // $account->status = 1;
+                // $account->timezone = "Asia/Manila";
+                // $account->roles = "authenticated";
+
+                $account = [];
+                // $account
+                // $account['uid'] = 
+                $account['preferred_langcode'] = "en";
+                $account['name'] = "test11";
+                $account['pass'] = "1234";
+                $account['mail'] = $email;
+                $account['init'] = $email;
+                $account['status'] = 1;
+                $account['timezone'] = "Asia/Manila";
+                $account["roles"] = "authenticated";
+                // ksm($account);
+
+
+                // ksm($account);
+                // Drupal\user\Entity\User::create($account)->save();
+                // $new_user->save();
+                // ksm($new_user);
+                // ksm($account);
+                // user_save($account);
+                
+            }
+          }
+        }
+
+      
+        // user_save($account);
+        // ksm($name);
+        // If the user name is taken, append a random string to the end of it.
+        if ($result->uid) { $name .= '-' . user_password(); }
+
+        // Build the user account object and then save it.
+        // $account = new stdClass();
+        // $account->name = $name;
+        // $account->mail = $mail;
+        // $account->init = $mail;
+        // $account->pass = user_password();
+        // $account->status = 1;
+        // user_save($account);
+        // if ($account->uid) {
+        //   drupal_set_message('Created new user with id %uid', array('%uid' => $account->uid));
+        // }
+        // ksm($account);
          // $form_state->setRedirect("<front>");
          // ksm($form_state);
     }
