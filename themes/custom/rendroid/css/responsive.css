@@ -234,7 +234,7 @@
     @media only screen and (max-width: 768px) {
         .navbar-brand > img {
             padding: 10px 0;
-            width: 82px;
+            height: 77px;
         }
         #about-us .image {
             width: 100%;
@@ -414,9 +414,7 @@
         #services p {
             font-size: 14px;
         }
-        .navbar-brand > img {
-            width: 6vw;
-        }
+      
     }
     /*======== Media Query 768px ========*/
     @media only screen and (max-width: 768px) {
