@@ -150,7 +150,8 @@ a:hover {
 }
 
 .navbar-brand > img {
-    padding: 7px 0;
+  margin-top: -25px;
+  height: 100px;
 }
 
 .navbar li {
@@ -1233,6 +1234,9 @@ footer .footer-logo {
     text-align: center;
 }
 
+footer .footer-logo img{
+    height:100px;
+}
 footer p a {
     padding: 0;
 }

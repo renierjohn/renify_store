@@ -72,6 +72,7 @@
       gtag('config', 'UA-163503291-1');
     </script>
     <script data-ad-client="ca-pub-7062341063801103" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
     <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">
@@ -85,17 +86,16 @@
   <script>
 
       function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-        console.log('statusChangeCallback');
-        console.log(response);                   // The current login status of the person.
+        // console.log('statusChangeCallback');
+        // console.log(response);                   // The current login status of the person.
         if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-          testAPI();  
+          getAPI();  
         } else { 
           if(document.getElementsByClassName('fb-profile-picture') !== [] ){
                document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src="/sites/default/files/header/fb_none.png" class="profile-circle" alt ="fb ">';
                document.getElementsByClassName('fb-fullname')[0].innerHTML ='<h5>Welcome <p> Guest </p></h5>';
                 console.log('not login');
-         }
-          
+          }
         }
       }
 
@@ -131,7 +131,7 @@
       }(document, 'script', 'facebook-jssdk'));
 
      
-      function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+      function getAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me','GET',{"fields":"id,name,picture.width(150).height(150)"}, function(response) {
           console.log('Successful login for: ' + response.name);

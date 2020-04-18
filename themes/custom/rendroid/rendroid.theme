@@ -28,6 +28,8 @@ function rendroid_preprocess_html(&$variables) {
  * Add template suggestions and classes
  */
 function rendroid_preprocess_node(&$variables) {
+	
+	// ksm($variables);
 }
 
 /**
@@ -38,7 +40,7 @@ function rendroid_preprocess_node(&$variables) {
 function rendroid_preprocess_page(&$variables) {
 
 	  // Add library with custom CSS.
-	   $variables['#attached']['library'][] = 'rendroid/css';
+	  $variables['#attached']['library'][] = 'rendroid/css';
 	  
 	  // // Add Open Sans font styles based on the theme setting.
 	  // if (!theme_get_setting('disable_google_fonts')) {
