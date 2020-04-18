@@ -15,6 +15,6 @@ preprocess: true
 conditions:
   request_path:
     id: request_path
-    pages: "/node/add/*\r\n/node/*/edit\r\n/admin/*\r\n/block/*\r\n/block/add/*\r\n/batch\r\n/feed/*"
+    pages: "/node/add/*\r\n/node/*/edit\r\n/admin/*\r\n/block/*\r\n/block/add/*\r\n/imce\r\n/batch\r\n/feed/*"
     negate: true
 conditions_require_all: true

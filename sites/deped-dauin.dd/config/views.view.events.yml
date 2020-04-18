@@ -921,7 +921,7 @@ display:
       style:
         type: default
         options:
-          row_class: col-md-4
+          row_class: ''
           default_row_class: false
           uses_fields: false
       row:
