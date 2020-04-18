@@ -4,14 +4,14 @@ features:
   favicon: 1
   node_user_picture: 1
 logo:
-  path: ''
+  path: 'public://header/favicon.png'
   url: ''
-  use_default: 1
+  use_default: 0
 favicon:
-  mimetype: image/vnd.microsoft.icon
-  path: ''
+  mimetype: image/png
+  path: 'public://header/favicon.png'
   url: 'http://deped-dauin.dd:81/themes/contrib/bootstrap/favicon.ico'
-  use_default: 1
+  use_default: 0
 zurb_foundation_status_in_reveal: 0
 zurb_foundation_use_respondjs: 1
 zurb_foundation_meta_header_grid: 1
@@ -31,3 +31,22 @@ zurb_foundation_disable_base_js: 1
 schemas:
   bootstrap: 8000
   rendroid: 8000
+table_responsive: '-1'
+region_wells:
+  meta_header: ''
+  header: ''
+  help: ''
+  highlighted: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: well
+  footer: ''
+  left_off_canvas: ''
+  right_off_canvas: ''
+cdn_theme: bootstrap
+cdn_cache_ttl_versions: '604800'
+cdn_cache_ttl_themes: '604800'
+cdn_cache_ttl_assets: '0'
+cdn_cache_ttl_library: '0'
+reset_http_request_cache: ''
+table: ''
