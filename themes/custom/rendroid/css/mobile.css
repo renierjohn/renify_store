@@ -70,8 +70,16 @@
             font-size: 22px;
         }
         .specialities .part {
-            padding: 0 20px;
+            padding: 20px 0px;
         }
+        .specialities .col-xs-12{
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .specialities  .paragraph {
+              padding: 0px 1em;
+        }
+
         .team .inner-contant p {
             padding-bottom: 20px;
         }
@@ -168,11 +176,7 @@
         .event-frontpage .col{
             padding-bottom: 2em;
         }
-        .specialities .part {
-          padding-top: 2em;
-          padding-left: 0;
-          padding-right: 1em;
-        }
+        
 
         .detail-first .detail-first-text{
             margin:0px;
@@ -330,11 +334,7 @@
             padding-bottom: 2em;
         }
 
-        .specialities .part {
-          padding-top: 2em;
-          padding-left: 0;
-          padding-right: 1em;
-        }
+      
 
         .detail-first .detail-first-text{
             margin:0px;

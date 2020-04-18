@@ -1,0 +1,18 @@
+<ol class="carousel-indicators">
+	{% for item in items %}
+		{% if loop.first %}
+			<li data-target="#div-image" data-slide-to={{loop.index0}} class="active"></li>
+		{% else %}
+			<li data-target="#div-image" data-slide-to={{loop.index0}} ></li>
+		{% endif %}
+	{% endfor %}
+</ol>
+{% for item in items %}
+	{% if loop.first %}
+		<div class="item active">
+	{% else %}
+		<div class="item">
+	{% endif %}
+			<img class="" src={{item}} alt="">
+		</div>	
+{% endfor %}
