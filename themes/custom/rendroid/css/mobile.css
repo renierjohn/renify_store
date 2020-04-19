@@ -71,6 +71,7 @@
         }
         .specialities .part {
             padding: 20px 0px;
+            height: auto;
         }
         .specialities .col-xs-12{
           padding-left: 0;
@@ -284,6 +285,9 @@
           margin-left: 0;
           padding-bottom: 2em;
         }    
+        #div-image img{
+            height: 300px;
+        }
     }
 
    
@@ -423,5 +427,8 @@
     #map iframe {
       width:100vw;
       height:50vh; 
+    }
+    #div-image img{
+      height: 250px;
     } 
   }
