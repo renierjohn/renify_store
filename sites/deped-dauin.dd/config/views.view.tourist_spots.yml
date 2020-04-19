@@ -9,6 +9,7 @@ dependencies:
     - image.style.event_image_size_400x200_
     - image.style.wide_image
     - node.type.places
+    - views.view.events
   module:
     - image
     - node
@@ -1028,6 +1029,30 @@ display:
           plugin_id: custom
       defaults:
         fields: false
+        header: false
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<h2 style="align-items:center;">Event Now</h2>'
+          plugin_id: text_custom
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          view_to_insert: 'events:side_bar'
+          inherit_arguments: false
+          plugin_id: view
     cache_metadata:
       max-age: -1
       contexts:
