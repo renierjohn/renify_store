@@ -59,10 +59,10 @@
   <head>
       <meta property="fb:app_id" content="221198119132924">
       <meta property="og:type" content="website"/>
-      <meta property="og:image" content="https://dev-deped-dauin.pantheonsite.io/sites/default/files/header/header.jpg"/>
-      <meta property="og:url" content="https://dev-deped-dauin.pantheonsite.io">
+      <meta property="og:image" content="/sites/default/files/header/header.jpg/">
+      <meta property="og:url" content="https://dev-deped-dauin.pantheonsite.io/">
       <meta property="og:title" content="Dauin Ni Bai">
-      <meta property="og:description" content="Lets Explore Dauin , Its More Fun in Dauin">
+      <meta property="og:description" content="Its More Fun in Dauin">
         <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163503291-1"></script>
     <script>
@@ -71,6 +71,7 @@
       gtag('js', new Date());
       gtag('config', 'UA-163503291-1');
     </script>
+
     <script data-ad-client="ca-pub-7062341063801103" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     <head-placeholder token="{{ placeholder_token|raw }}">
@@ -86,8 +87,6 @@
   <script>
 
       function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-        // console.log('statusChangeCallback');
-        // console.log(response);                   // The current login status of the person.
         if (response.status === 'connected') {   // Logged into your webpage and Facebook.
           getAPI();  
         } else { 
@@ -98,15 +97,11 @@
           }
         }
       }
-
-
       function checkLoginState() {               // Called when a person is finished with the Login Button.
         FB.getLoginStatus(function(response) {   // See the onlogin handler
           statusChangeCallback(response);
         });
       }
-
-
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '221198119132924',
@@ -114,9 +109,7 @@
           xfbml      : true,                     // Parse social plugins on this webpage.
           version    : 'v6.0'           // Use this Graph API version for this call.
         });
-
-
-        FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
+      FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
           statusChangeCallback(response);        // Returns the login status.
         });
       };
@@ -129,10 +122,7 @@
         js.src = "https://connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-
-     
-      function getAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-        console.log('Welcome!  Fetching your information.... ');
+     function getAPI() {
         FB.api('/me','GET',{"fields":"id,name,picture.width(150).height(150)"}, function(response) {
           console.log('Successful login for: ' + response.name);
 
@@ -145,7 +135,7 @@
       }
 
 </script>
-
+   
 
 
     <a href="#main-content" class="visually-hidden focusable skip-link">
@@ -154,6 +144,7 @@
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
+     {# {{kint(page.content.rendroid_content)}} #}
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 </html>
