@@ -248,9 +248,9 @@ a:hover {
 }
 
 .banner .gradient {
-    background: -moz-linear-gradient(-45deg, rgba(255, 0, 251, 0.5) 0%, rgba(0, 24, 255, 0.5) 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(255, 0, 251, 0.5) 0%, rgba(0, 24, 255, 0.5) 100%);
-    background: linear-gradient(135deg, rgba(255, 0, 251, 0.5) 0%, rgba(0, 24, 255, 0.5) 100%);
+    background: -moz-linear-gradient(0deg,rgba(239, 218, 185, .5) 0%,rgba(0,24,255,0.5) 100%);
+    background: -webkit-linear-gradient(0deg,rgba(239, 218, 185, .5) 0%,rgba(0,24,255,0.5) 100%);
+    background: linear-gradient(0deg,rgba(239, 218, 185, .5) 0%,rgba(0,24,255,0.5) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ff00fb', endColorstr='#800018ff', GradientType=1);
     position: absolute;
     width: 100%;
