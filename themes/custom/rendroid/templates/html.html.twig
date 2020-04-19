@@ -82,19 +82,19 @@
   <body{{ attributes.addClass(body_classes) }} >
 
     {# For FB #}
-   
+
 
   <script>
 
       function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
         if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-          getAPI();  
-        } else { 
+          getAPI();
+        } else {
           if(document.getElementsByClassName('fb-profile-picture') !== [] ){
                document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src="/sites/default/files/header/fb_none.png" class="profile-circle" alt ="fb ">';
                document.getElementsByClassName('fb-fullname')[0].innerHTML ='<h5>Welcome <p> Guest </p></h5>';
                 console.log('not login');
-          }
+              }
         }
       }
       function checkLoginState() {               // Called when a person is finished with the Login Button.
@@ -105,8 +105,8 @@
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '221198119132924',
-          cookie     : true,                     // Enable cookies to allow the server to access the session.
           xfbml      : true,                     // Parse social plugins on this webpage.
+          cookie     : true,                     // Enable cookies to allow the server to access the session.
           version    : 'v6.0'           // Use this Graph API version for this call.
         });
       FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
@@ -114,7 +114,7 @@
         });
       };
 
-      
+
       (function(d, s, id) {                      // Load the SDK asynchronously
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
@@ -135,7 +135,7 @@
       }
 
 </script>
-   
+
 
 
     <a href="#main-content" class="visually-hidden focusable skip-link">

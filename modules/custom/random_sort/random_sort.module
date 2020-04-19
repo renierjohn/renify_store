@@ -43,7 +43,7 @@ function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
           if($value->uid != '0') {
             $user = Drupal\user\Entity\User::load($value->uid);
             // ksm($user);
-            // ksm($user->getEmail());          
+            // ksm($user->getEmail());
 
             if($user->getEmail() !== $email ){
                 // $account = new stdClass();
@@ -56,7 +56,7 @@ function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
 
                 $account = [];
                 // $account
-                // $account['uid'] = 
+                // $account['uid'] =
                 $account['preferred_langcode'] = "en";
                 $account['name'] = "test11";
                 $account['pass'] = "1234";
@@ -74,12 +74,12 @@ function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
                 // ksm($new_user);
                 // ksm($account);
                 // user_save($account);
-                
+
             }
           }
         }
 
-      
+
         // user_save($account);
         // ksm($name);
         // If the user name is taken, append a random string to the end of it.
@@ -116,7 +116,3 @@ function random_sort_preprocess_page(&$variables) {
   //   ksm($variables);
   // }
 }
-
-
-
-
