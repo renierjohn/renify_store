@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.places.field_rating_accomodation
     - field.field.node.places.field_rating_experience
     - field.field.node.places.field_rating_food
+    - field.field.node.places.field_views_nearby_places
     - field.field.node.places.field_website_link
     - node.type.places
   module:
@@ -49,4 +50,5 @@ hidden:
   field_rating_accomodation: true
   field_rating_experience: true
   field_rating_food: true
+  field_views_nearby_places: true
   field_website_link: true

@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.places.field_rating_accomodation
     - field.field.node.places.field_rating_experience
     - field.field.node.places.field_rating_food
+    - field.field.node.places.field_views_nearby_places
     - field.field.node.places.field_website_link
     - node.type.places
   module:
@@ -20,6 +21,7 @@ dependencies:
     - options
     - text
     - user
+    - viewfield
 id: node.places.default
 targetEntityType: node
 bundle: places
@@ -52,10 +54,9 @@ content:
   field_people_location:
     weight: 1
     label: hidden
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_id
     region: content
   field_place_image_thumbnail:
     weight: 3
@@ -74,7 +75,7 @@ content:
     third_party_settings: {  }
   field_rating_accomodation:
     weight: 12
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -83,7 +84,7 @@ content:
     region: content
   field_rating_experience:
     weight: 13
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -92,16 +93,26 @@ content:
     region: content
   field_rating_food:
     weight: 10
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
     region: content
+  field_views_nearby_places:
+    weight: 14
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: true
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
   field_website_link:
     weight: 8
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

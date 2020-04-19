@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.places.field_rating_accomodation
     - field.field.node.places.field_rating_experience
     - field.field.node.places.field_rating_food
+    - field.field.node.places.field_views_nearby_places
     - field.field.node.places.field_website_link
     - image.style.thumbnail
     - node.type.places
@@ -21,6 +22,7 @@ dependencies:
     - imce
     - path
     - text
+    - viewfield
 id: node.places.default
 targetEntityType: node
 bundle: places
@@ -110,6 +112,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_views_nearby_places:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: viewfield_select
     region: content
   field_website_link:
     weight: 17

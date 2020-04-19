@@ -10,7 +10,7 @@ logo:
 favicon:
   mimetype: image/png
   path: 'public://header/favicon.png'
-  url: 'http://deped-dauin.dd:81/themes/contrib/bootstrap/favicon.ico'
+  url: 'http://deped-dauin.dd:81/sites/deped-dauin.dd/files/header/favicon.png'
   use_default: 0
 zurb_foundation_status_in_reveal: 0
 zurb_foundation_use_respondjs: 1
@@ -39,7 +39,7 @@ region_wells:
   highlighted: ''
   content: ''
   sidebar_first: ''
-  sidebar_second: well
+  sidebar_second: ''
   footer: ''
   left_off_canvas: ''
   right_off_canvas: ''

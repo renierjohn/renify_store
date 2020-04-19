@@ -42,6 +42,13 @@ module:
   link: 0
   media: 0
   menu_ui: 0
+  metatag: 0
+  metatag_facebook: 0
+  metatag_mobile: 0
+  metatag_open_graph: 0
+  metatag_twitter_cards: 0
+  metatag_verification: 0
+  metatag_views: 0
   node: 0
   official_facebook_pixel: 0
   options: 0
@@ -65,6 +72,7 @@ module:
   tour: 0
   update: 0
   user: 0
+  viewfield: 0
   views_ui: 0
   menu_link_content: 1
   pathauto: 1

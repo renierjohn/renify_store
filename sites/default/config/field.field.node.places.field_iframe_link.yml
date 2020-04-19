@@ -9,7 +9,7 @@ id: node.places.field_iframe_link
 field_name: field_iframe_link
 entity_type: node
 bundle: places
-label: 'Iframe Link'
+label: 'Google Map Location'
 description: ''
 required: false
 translatable: false
