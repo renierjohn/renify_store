@@ -250,12 +250,31 @@ a:hover {
 .card img{
   width: 100%;
 }
-.card h4{
-  padding-bottom: 1em;
+
+.card h4:nth-child(1){
+  padding-bottom: 0;
+  margin-right: 5em;
+  float: left;
 }
+
+.card h4:nth-child(2){
+  padding-bottom: 0;
+  margin-right: 4px;
+  float: left;
+}
+
+.card h6{
+  padding-top: 6px;
+}
+
 .card-row{
   margin-bottom: 1em;
 }
+
+.card-row .container{
+  padding:0;
+}
+
 .card-row h5{
   font-size: xx-large;
   text-align: center;
@@ -669,12 +688,14 @@ margin-top: 20px;
     text-transform: uppercase;
 }
 
-.inner-part {
-    position: relative;
+
+
+.services .img-responsive {
     width: 100%;
 }
 
-.services .img-responsive {
+.inner-part {
+    position: relative;
     width: 100%;
 }
 
@@ -1865,7 +1886,6 @@ Blog-page
 ---------------- */
 
 #services .part-1,
-.part-2,
 .part-3 {
     padding-bottom: 50px;
 }
@@ -1907,6 +1927,12 @@ Blog-page
 
 #services .heading {
     padding-bottom: 30px;
+}
+
+#services .part-2 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 10px 0;
+  margin-bottom: 2em;
 }
 
 /*========================================================================================*/

@@ -70,7 +70,7 @@
             font-size: 22px;
         }
         .specialities .part {
-            padding: 20px 0px;
+            padding: 1em 1em 0 1em;
             height: auto;
         }
         .specialities .col-xs-12{
@@ -157,7 +157,7 @@
         .part-3 img {
             padding-bottom: 30px;
         }
-        
+
         #services .container{
             padding: 0;
         }
@@ -170,14 +170,14 @@
         #services .col-xs-12{
             padding: 0;
         }
-        
+
         .services h3 {
             font-size: 32px;
         }
         .event-frontpage .col{
             padding-bottom: 2em;
         }
-        
+
 
         .detail-first .detail-first-text{
             margin:0px;
@@ -189,7 +189,7 @@
         }
           .yt .col-md-12{
             padding-left: 0;
-            padding-right: 0; 
+            padding-right: 0;
         }
         .about .item-new {
             padding-top: 1em
@@ -217,7 +217,7 @@
             padding-right: 1em;
         }
         #blog .inner-contant{
-            padding: 0 1em 1em 1em; 
+            padding: 0 1em 1em 1em;
         }
         #weather{
             height: 189px;
@@ -225,7 +225,7 @@
         #map > .container {
           margin:0px;
           padding: 0px ;
-          
+
         }
         #map > .container > .row {
           margin:0px ;
@@ -240,7 +240,7 @@
         }
         #map iframe {
           width:100vw;
-          height:50vh; 
+          height:50vh;
         }
 
         #services .social-media{
@@ -248,7 +248,7 @@
           margin-left: 0;
           padding-bottom: 2em;
         }
-        
+
         #services .social-media .fb-profile-picture img {
           width: 8em;
           margin-top: 1em;
@@ -284,13 +284,13 @@
           text-align: center;
           margin-left: 0;
           padding-bottom: 2em;
-        }    
+        }
         #div-image img{
             height: 300px;
         }
     }
 
-   
+
  /*======== Media Query 375px MOBILE M========*/
     @media only screen and (max-width: 375px) {
         .banner h1 {
@@ -338,7 +338,7 @@
             padding-bottom: 2em;
         }
 
-      
+
 
         .detail-first .detail-first-text{
             margin:0px;
@@ -348,7 +348,7 @@
           width: 100%;
           height: 100%;
         }
-        
+
         .about .item-new {
             padding-top: 1em
         }
@@ -363,7 +363,7 @@
         #blog .item-new span{
              font-size: 1em;
         }
-     
+
         #services .container{
             padding: 0;
         }
@@ -377,16 +377,16 @@
             padding: 0;
         }
 
-      
+
 
         .yt .col-md-12{
             padding-left: 0;
-            padding-right: 0; 
+            padding-right: 0;
         }
         #map > .container {
           margin:0px;
           padding: 0px ;
-      
+
         }
         #map > .container > .row {
           margin:0px ;
@@ -401,9 +401,9 @@
         }
         #map iframe {
           width:100vw;
-          height:50vh; 
+          height:50vh;
         }
-   
+
     }
 
  /*======== Media Query 320px MOBILE S ========*/
@@ -411,7 +411,7 @@
     #map > .container {
       margin:0px;
       padding: 0px ;
-      
+
     }
     #map > .container > .row {
       margin:0px ;
@@ -426,9 +426,9 @@
     }
     #map iframe {
       width:100vw;
-      height:50vh; 
+      height:50vh;
     }
     #div-image img{
       height: 250px;
-    } 
+    }
   }
