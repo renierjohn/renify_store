@@ -111,6 +111,7 @@
         });
       FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
           statusChangeCallback(response);        // Returns the login status.
+
         });
       };
 
@@ -133,7 +134,11 @@
             }
         });
       }
-
+      window.onload = function(){
+        var a = document.getElementById('loader-wrapper');
+        a.style.display = 'none';
+        console.log("loader ready");
+      }
 </script>
 
 
@@ -144,7 +149,11 @@
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
-     {# {{kint(page.content.rendroid_content)}} #}
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 </html>
