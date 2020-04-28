@@ -28,7 +28,9 @@ function rendroid_preprocess_html(&$variables) {
  * Add template suggestions and classes
  */
 function rendroid_preprocess_node(&$variables) {
-	
+	// ksm($variables);
+	// ksm($variables['elements']['#node']);
+	// $variables['#attached']['library'][] = 'rendroid/flex-js';
 	// ksm($variables);
 }
 
@@ -38,10 +40,14 @@ function rendroid_preprocess_node(&$variables) {
  * Add convenience variables and template suggestions
  */
 function rendroid_preprocess_page(&$variables) {
-
-	  // Add library with custom CSS.
-	  $variables['#attached']['library'][] = 'rendroid/css';
-	  
+		// $variables['elements']['#children']['name'] = 'renier';
+		// $variables['img_tag'] = theme_get_setting('/sites/default/files/places/school/boyscout.jpg');
+		// $variables['page']['meta_header'] = 'test meta';
+		// $variables['page']['#children']['img_tags'] = '/sites/default/files/places/school/boyscout.jpg';
+		//
+	  // // Add library with custom CSS.
+	  // $variables['#attached']['library'][] = 'rendroid/css';
+		// ksm($variables);
 	  // // Add Open Sans font styles based on the theme setting.
 	  // if (!theme_get_setting('disable_google_fonts')) {
 	  //   $variables['#attached']['library'][] = 'adminimal_theme/google-fonts';

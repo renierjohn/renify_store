@@ -10,9 +10,7 @@ global:
       css/mobile.css: {}
       css/viewbox.css: {}
       css/loader.css: {}
-      # css/flexslider-rtl-min.css: {}
-      # css/flexslider-rtl.css: {}
-      # css/flexslider.css: {}
+      
 
   js:
     # js/custom.js: {}
