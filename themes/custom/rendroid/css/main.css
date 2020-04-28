@@ -142,6 +142,8 @@ hr{
 #div-image img{
     height: 500px;
     width: 100%;
+    border-radius: 1em;
+    padding: 3px;
 }
 
 /*== Youtube ==*/
