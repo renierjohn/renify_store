@@ -2,6 +2,7 @@
     @media only screen and (max-width: 425px) {
         .banner {
             height: 500px;
+            margin-bottom: -5em;
         }
         .banner h1 {
             font-size: 30px;
@@ -245,27 +246,27 @@
           height:50vh;
         }
 
-        #services .social-media{
+         .social-media{
           text-align: center;
           margin-left: 0;
           padding-bottom: 2em;
         }
 
-        #services .social-media .fb-profile-picture img {
+         .social-media .fb-profile-picture img {
           width: 8em;
           margin-top: 1em;
         }
 
-        #services .social-media .fb-fullname {
+         .social-media .fb-fullname {
             margin-top: 5px;
         }
-        #services .social-media .fb-like {
+         .social-media .fb-like {
           margin-top: 5px;
         }
-        #services .social-media .twitter {
+         .social-media .twitter {
           margin-top: 5px;
         }
-         #block-headerimagetouristspot-2 {
+         /* #block-headerimagetouristspot-2 {
           height: 14em;
         }
         #blog .social-media .fb-profile-picture img {
@@ -286,7 +287,8 @@
           text-align: center;
           margin-left: 0;
           padding-bottom: 2em;
-        }
+        } */
+
         #div-image img{
             height: 300px;
         }
