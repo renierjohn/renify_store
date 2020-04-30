@@ -212,7 +212,7 @@ hr{
     background-image: url('/sites/default/files/header/header.jpg');*/
 }
 
-/* #block-headerimagetouristspot-2{
+#block-headerimagetouristspot-2{
     height: 9em;
 }
 #block-headerimageschools{
@@ -220,7 +220,7 @@ hr{
 }
 #block-headerschool {
   height: 12em;
-} */
+}
 
 
 #blog .fb-profile-picture img{
@@ -616,7 +616,7 @@ margin-top: 20px;
     background: white;
     margin-bottom: 3em;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding: 1em 1em 0 2em;
+    padding: 1px;
 }
 
 .specialities .inner-contant {
