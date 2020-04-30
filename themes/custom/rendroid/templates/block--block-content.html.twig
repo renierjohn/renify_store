@@ -7,6 +7,7 @@
   ]
 %}
 <section {{ attributes.addClass(classes) }}>
+
   <div class="text-center banner"  style="
   	height: 50vh;
   	background-position: center;
@@ -14,6 +15,7 @@
       background-repeat: no-repeat;
       background-image:  url({{ content.field_block_image.0 }});
       background-attachment:fixed;
+      margin-bottom: -7em;
      ">
     <div class="gradient"></div>
       <div class="container">
@@ -24,4 +26,23 @@
          </div>
       </div>
   </div>
+  <div class="social-media">
+   <div class="row">
+         <div class="col-md-12 col-sm-12 col-xs-12 fb-profile-picture" ></div>
+
+     </div>
+     <div class="row">
+         <div class="col-md-12 col-sm-12 col-xs-12 fb-fullname" ></div>
+     </div>
+     <div class="row">
+         <div class="col-md-12 col-sm-12 col-xs-12 fb-like" data-href="https://dev-deped-dauin.pantheonsite.io/schools" data-width=""  data-layout="button_count" data-action="like" data-size="small" data-share="true">
+         </div>
+     </div>
+     <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 twitter">
+           <a href="https://twitter.com/intent/tweet?button_hashtag=DauinNiBai&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #DauinNiBai</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+         </div>
+     </div>
+   </div>
+</div>
 </section>
