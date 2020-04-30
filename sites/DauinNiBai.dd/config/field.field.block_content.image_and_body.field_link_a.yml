@@ -1,0 +1,23 @@
+uuid: 5befbff7-2eb0-4944-83fa-fef449b27710
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_and_body
+    - field.storage.block_content.field_link_a
+  module:
+    - link
+id: block_content.image_and_body.field_link_a
+field_name: field_link_a
+entity_type: block_content
+bundle: image_and_body
+label: 'Link A'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 1
+field_type: link

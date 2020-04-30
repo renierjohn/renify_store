@@ -1,0 +1,21 @@
+uuid: 4115fc8c-ff95-40a9-92a3-c3c2a327a9c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_json_text
+    - node.type.weather
+  module:
+    - text
+id: node.weather.field_json_text
+field_name: field_json_text
+entity_type: node
+bundle: weather
+label: JSON_text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

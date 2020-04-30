@@ -1,0 +1,15 @@
+uuid: df1e540b-52ec-4050-a2de-bc9248bc022d
+langcode: en
+status: true
+dependencies: {  }
+name: wide_image
+label: 'wide image ( Full width x 300 )'
+effects:
+  c24965ce-ef6f-4d21-8b36-29f79499d6ba:
+    uuid: c24965ce-ef6f-4d21-8b36-29f79499d6ba
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1500
+      height: 300
+      anchor: center-center

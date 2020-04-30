@@ -1,0 +1,31 @@
+uuid: cae63b07-a80c-43a5-ad90-7d31f67b7e51
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_and_body:797c9bde-354e-445f-8a16-eccd26a49402'
+  module:
+    - block_content
+    - system
+  theme:
+    - zurb_foundation
+id: headerimagetouristspot
+theme: zurb_foundation
+region: meta_header
+weight: -10
+provider: null
+plugin: 'block_content:797c9bde-354e-445f-8a16-eccd26a49402'
+settings:
+  id: 'block_content:797c9bde-354e-445f-8a16-eccd26a49402'
+  label: 'Header Image Tourist Spot'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /tourist_spots
+    negate: false
+    context_mapping: {  }

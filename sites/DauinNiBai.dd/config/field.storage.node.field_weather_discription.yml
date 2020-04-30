@@ -1,0 +1,21 @@
+uuid: b0931048-a72a-4717-bb55-7deaf45fba04
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_weather_discription
+field_name: field_weather_discription
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

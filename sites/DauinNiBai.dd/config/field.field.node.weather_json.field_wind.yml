@@ -1,0 +1,21 @@
+uuid: d056c1bc-cee1-49e4-8933-a1897ecfef4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wind
+    - node.type.weather_json
+  module:
+    - text
+id: node.weather_json.field_wind
+field_name: field_wind
+entity_type: node
+bundle: weather_json
+label: Wind
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

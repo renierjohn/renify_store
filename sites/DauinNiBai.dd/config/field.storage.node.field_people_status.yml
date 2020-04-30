@@ -1,0 +1,39 @@
+uuid: 2ad2804d-b3b8-4a9e-9293-97e0b9767d4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_people_status
+field_name: field_people_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Student
+      label: Student
+    -
+      value: Teacher
+      label: Teacher
+    -
+      value: Principal
+      label: Principal
+    -
+      value: Others
+      label: Others
+    -
+      value: Admin
+      label: Admin
+    -
+      value: Designer
+      label: Designer
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

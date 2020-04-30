@@ -1,0 +1,10 @@
+uuid: 7be5cc01-818a-48e5-80d6-8d341c46a001
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.schools_view
+label: 'Schools View'
+targetEntityType: node
+cache: true

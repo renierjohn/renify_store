@@ -1,0 +1,20 @@
+uuid: c55ff7da-82f4-4176-bfc6-74a496025fc1
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_eve
+field_name: field_eve
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

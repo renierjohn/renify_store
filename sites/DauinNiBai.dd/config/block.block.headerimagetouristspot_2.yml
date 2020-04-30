@@ -1,23 +1,23 @@
-uuid: e09fe527-e17e-459c-a3bc-879dc58ab815
+uuid: f1d81c2a-3224-40a4-b994-527db247e008
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:image_and_body:c4cb850e-1af4-4f5e-9f8c-1299bb19e924'
+    - 'block_content:image_and_body:797c9bde-354e-445f-8a16-eccd26a49402'
   module:
     - block_content
     - system
   theme:
     - rendroid
-id: headerimageschools
+id: headerimagetouristspot_2
 theme: rendroid
 region: content
-weight: -13
+weight: -10
 provider: null
-plugin: 'block_content:c4cb850e-1af4-4f5e-9f8c-1299bb19e924'
+plugin: 'block_content:797c9bde-354e-445f-8a16-eccd26a49402'
 settings:
-  id: 'block_content:c4cb850e-1af4-4f5e-9f8c-1299bb19e924'
-  label: 'Header  Image Schools'
+  id: 'block_content:797c9bde-354e-445f-8a16-eccd26a49402'
+  label: 'Header Image Tourist Spot'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/schools\r\n/aggregator/*"
+    pages: /tourist_spots
     negate: false
     context_mapping: {  }

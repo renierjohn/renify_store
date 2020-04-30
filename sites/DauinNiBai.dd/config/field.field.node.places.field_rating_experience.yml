@@ -1,0 +1,25 @@
+uuid: d82a4212-7847-49c9-a540-ffbb0174bf56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating_experience
+    - node.type.places
+id: node.places.field_rating_experience
+field_name: field_rating_experience
+entity_type: node
+bundle: places
+label: 'Rating Experience'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

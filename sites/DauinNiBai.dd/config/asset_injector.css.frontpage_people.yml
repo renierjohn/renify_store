@@ -1,0 +1,17 @@
+uuid: bbc18552-ef5b-4b53-ac03-eceb05b6b6a9
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+id: frontpage_people
+label: 'FrontPage People'
+code: ".block-frontpage-people{\r\n  text-align:center;\r\n}\r\n.block-frontpage-header-people{\r\n  margin-bottom: 4%;\r\n  border-bottom-style: groove;\r\n  border-bottom-color: black;\r\n  border-bottom-width: 1px;\r\n}\r\n\r\n.field-frontpage-people-image{\r\n  margin-bottom: 2%;\r\n}\r\n.field-frontpage-people-body{\r\n  margin-bottom: 5%;\r\n  padding-left: 2%;\r\n  padding-right: 2%;\r\n}"
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    pages: /home
+    negate: false
+conditions_require_all: true
