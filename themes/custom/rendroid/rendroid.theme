@@ -28,9 +28,11 @@ function rendroid_preprocess_html(&$variables) {
   $image = $content->field_place_image_thumbnail[0];
   $img_id = $content->field_place_image_thumbnail[0]->target_id;
   $file = File::load($img_id);
+  ksm($file);
   $path = $file->uri[0]->value;
+  $abs_path = file_create_url($path)
   // $variables['#html']['#children']['path'] = $path;
-  $variables['img_path'] = $path;
+  $variables['img_path'] = $abs_path;
   // ksm($variables);
 }
 
