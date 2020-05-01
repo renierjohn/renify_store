@@ -5,6 +5,8 @@
 /**
  * Implements hook_preprocess_block()
  */
+
+use Drupal\file\Entity\File;
 function rendroid_preprocess_block(&$variables) {
 }
 
@@ -20,6 +22,16 @@ function rendroid_preprocess_field(&$variables, $hook) {
  * Adds additional classes
  */
 function rendroid_preprocess_html(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $nid = $node->id();
+  $content = \Drupal\node\Entity\Node::load($nid);
+  $image = $content->field_place_image_thumbnail[0];
+  $img_id = $content->field_place_image_thumbnail[0]->target_id;
+  $file = File::load($img_id);
+  $path = $file->uri[0]->value;
+  // $variables['#html']['#children']['path'] = $path;
+  $variables['img_path'] = $path;
+  // ksm($variables);
 }
 
 /**
@@ -32,6 +44,7 @@ function rendroid_preprocess_node(&$variables) {
 	// ksm($variables['elements']['#node']);
 	// $variables['#attached']['library'][] = 'rendroid/flex-js';
 	// ksm($variables);
+  // $variables['node_preprop'] = 'test_node';
 }
 
 /**
@@ -52,6 +65,18 @@ function rendroid_preprocess_page(&$variables) {
 	  // if (!theme_get_setting('disable_google_fonts')) {
 	  //   $variables['#attached']['library'][] = 'adminimal_theme/google-fonts';
 	  // }
+
+    // $node = \Drupal::routeMatch()->getParameter('node');
+    // $nid = $node->id();
+    // $content = \Drupal\node\Entity\Node::load($nid);
+    // $image = $content->field_place_image_thumbnail[0];
+    // $img_id = $content->field_place_image_thumbnail[0]->target_id;
+    // $file = File::load($img_id);
+    // $path = $file->uri[0]->value;
+    // $variables['#html']['#children']['path'] = $path;
+    // $variables['img_path'] = 'dummy_test_path';
+    // ksm($variables);
+    // $variables['page_preprop'] = 'test_page';
 }
 
 /**

@@ -57,6 +57,11 @@
 <!DOCTYPE html>
 <html {{ html_attributes }}>
   <head>
+    {% if img_path %}
+      <meta property="og:image" content={{ img_path }} >
+    {% else %}
+        <meta property="og:image" content="https://dev-deped-dauin.pantheonsite.io/" >
+    {% endif %}
       <!-- <meta property="fb:app_id" content="221198119132924">
       <meta property="og:type" content="website"/>
        <meta property="og:image" content= > -->
@@ -82,7 +87,6 @@
   <body{{ attributes.addClass(body_classes) }} >
 
     {# For FB #}
-
 
   <script>
 
