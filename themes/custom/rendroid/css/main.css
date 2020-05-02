@@ -257,6 +257,7 @@ hr{
 
 .card .container {
   padding: 2em;
+  max-width: 100%;
 }
 .card img{
   width: 100%;
