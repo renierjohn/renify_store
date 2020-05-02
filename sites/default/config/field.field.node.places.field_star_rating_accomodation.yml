@@ -1,0 +1,29 @@
+uuid: 1f8fea2f-ac1e-425e-88bd-74661d61c060
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_star_rating_accomodation
+    - node.type.places
+  module:
+    - fivestar
+id: node.places.field_star_rating_accomodation
+field_name: field_star_rating_accomodation
+entity_type: node
+bundle: places
+label: 'Star Rating Accomodation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  stars: '10'
+  allow_clear: 0
+  allow_revote: 1
+  allow_ownvote: 1
+  rated_while: viewing
+  enable_voting_target: 0
+  target_bridge_field: field_star_rating_food
+  target_fivestar_field: field_star_rating_food
+field_type: fivestar

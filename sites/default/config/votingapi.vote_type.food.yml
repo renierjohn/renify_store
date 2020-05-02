@@ -1,0 +1,8 @@
+uuid: a5a75a66-3f2d-4cb3-83f5-47d1791b2f68
+langcode: en
+status: true
+dependencies: {  }
+id: food
+label: Food
+value_type: percentage
+description: ''

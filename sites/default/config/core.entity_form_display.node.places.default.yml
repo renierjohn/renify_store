@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.places.field_category
     - field.field.node.places.field_iframe_link
     - field.field.node.places.field_image_map
+    - field.field.node.places.field_node_metatag
     - field.field.node.places.field_people_location
     - field.field.node.places.field_people_promote_display
     - field.field.node.places.field_place_image_thumbnail
@@ -13,13 +14,18 @@ dependencies:
     - field.field.node.places.field_rating_accomodation
     - field.field.node.places.field_rating_experience
     - field.field.node.places.field_rating_food
+    - field.field.node.places.field_star_rating_accomodation
+    - field.field.node.places.field_star_rating_experience
+    - field.field.node.places.field_star_rating_food
     - field.field.node.places.field_views_nearby_places
     - field.field.node.places.field_website_link
     - image.style.thumbnail
     - node.type.places
   module:
+    - fivestar
     - image
     - imce
+    - metatag
     - path
     - text
     - viewfield
@@ -57,6 +63,13 @@ content:
       imce:
         enabled: true
     type: image_image
+    region: content
+  field_node_metatag:
+    weight: 27
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_people_location:
     weight: 9
@@ -112,6 +125,30 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_star_rating_accomodation:
+    weight: 29
+    settings:
+      display_format: average
+      text_format: none
+      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+  field_star_rating_experience:
+    weight: 30
+    settings:
+      display_format: average
+      text_format: none
+      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+  field_star_rating_food:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: fivestar_select
     region: content
   field_views_nearby_places:
     weight: 26

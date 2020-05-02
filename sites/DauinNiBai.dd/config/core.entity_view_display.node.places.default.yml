@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.places.field_category
     - field.field.node.places.field_iframe_link
     - field.field.node.places.field_image_map
+    - field.field.node.places.field_node_metatag
     - field.field.node.places.field_people_location
     - field.field.node.places.field_people_promote_display
     - field.field.node.places.field_place_image_thumbnail
@@ -13,10 +14,14 @@ dependencies:
     - field.field.node.places.field_rating_accomodation
     - field.field.node.places.field_rating_experience
     - field.field.node.places.field_rating_food
+    - field.field.node.places.field_star_rating_accomodation
+    - field.field.node.places.field_star_rating_experience
+    - field.field.node.places.field_star_rating_food
     - field.field.node.places.field_views_nearby_places
     - field.field.node.places.field_website_link
     - node.type.places
   module:
+    - fivestar
     - image
     - options
     - text
@@ -29,13 +34,13 @@ mode: default
 content:
   field_category:
     type: list_default
-    weight: 6
+    weight: 5
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_iframe_link:
-    weight: 7
+    weight: 6
     label: hidden
     settings:
       link_to_entity: false
@@ -68,13 +73,13 @@ content:
     region: content
   field_places_details:
     type: text_default
-    weight: 5
+    weight: 4
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_rating_accomodation:
-    weight: 12
+    weight: 9
     label: hidden
     settings:
       thousand_separator: ''
@@ -83,15 +88,6 @@ content:
     type: number_integer
     region: content
   field_rating_experience:
-    weight: 13
-    label: hidden
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_rating_food:
     weight: 10
     label: hidden
     settings:
@@ -100,8 +96,47 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
-  field_views_nearby_places:
+  field_rating_food:
+    weight: 8
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_star_rating_accomodation:
+    weight: 13
+    label: hidden
+    settings:
+      text_format: average
+      display_format: average
+      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+  field_star_rating_experience:
     weight: 14
+    label: hidden
+    settings:
+      text_format: average
+      display_format: average
+      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+  field_star_rating_food:
+    weight: 12
+    label: hidden
+    settings:
+      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
+      display_format: average
+      text_format: average
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+  field_views_nearby_places:
+    weight: 11
     label: hidden
     settings:
       view_title: hidden
@@ -111,7 +146,7 @@ content:
     type: viewfield_default
     region: content
   field_website_link:
-    weight: 8
+    weight: 7
     label: hidden
     settings:
       link_to_entity: false
@@ -125,4 +160,5 @@ content:
     third_party_settings: {  }
 hidden:
   addtoany: true
+  field_node_metatag: true
   field_people_promote_display: true

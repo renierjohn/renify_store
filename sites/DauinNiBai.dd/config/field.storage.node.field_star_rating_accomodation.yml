@@ -1,0 +1,20 @@
+uuid: 0fa260e7-fe3f-4248-bb7c-d54f10f2f40f
+langcode: en
+status: true
+dependencies:
+  module:
+    - fivestar
+    - node
+id: node.field_star_rating_accomodation
+field_name: field_star_rating_accomodation
+entity_type: node
+type: fivestar
+settings:
+  vote_type: vote
+module: fivestar
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

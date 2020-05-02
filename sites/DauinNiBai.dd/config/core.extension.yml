@@ -32,6 +32,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  fivestar: 0
   hal: 0
   help: 0
   history: 0
@@ -74,6 +75,7 @@ module:
   user: 0
   viewfield: 0
   views_ui: 0
+  votingapi: 0
   menu_link_content: 1
   pathauto: 1
   views: 10

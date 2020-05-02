@@ -1,0 +1,21 @@
+uuid: d34c45bf-dbdf-40c6-96e6-363f0ecea37f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_node_metatag
+    - node.type.places
+  module:
+    - metatag
+id: node.places.field_node_metatag
+field_name: field_node_metatag
+entity_type: node
+bundle: places
+label: node_metatag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag
