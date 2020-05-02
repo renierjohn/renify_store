@@ -612,11 +612,14 @@ margin-top: 20px;
 
 .specialities .part {
     width: 100%;
-    height: 505px;
+    height: 700px;
     background: white;
     margin-bottom: 3em;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding: 1px;
+    padding: 1em;
+}
+.specialities .part .star-rating-vote {
+  padding-left:4em;
 }
 
 .specialities .inner-contant {
