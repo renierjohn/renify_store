@@ -88,13 +88,18 @@
   <script>
 
       function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-        if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-          getAPI();
-          document.getElementsByClassName('fb-login-button')[0].style.display = 'none'
-        } else {
 
+        if(document.getElementsByClassName('user-logged-in').length > 0 ){
+              document.getElementsByClassName('fb-login-button')[0].style.display = 'none';
+        }
+        else{
+          if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+            document.getElementsByClassName('fb-login-button')[0].style.display = 'none';
+            getAPI();
+          }
         }
       }
+      
       function checkLoginState() {               // Called when a person is finished with the Login Button.
         FB.getLoginStatus(function(response) {   // See the onlogin handler
           statusChangeCallback(response);
@@ -120,12 +125,14 @@
         js.src = "https://connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
+
      function getAPI() {
         FB.api('/me','GET',{"fields":"id,name,email,picture.width(150).height(150)"}, function(response) {
+
           console.log('Successful login for: ' + response.name + " " + response.email +  " " + response.picture);
         });
       }
-      
+
       window.onload = function(){
         var a = document.getElementById('loader-wrapper');
         a.style.display = 'none';
