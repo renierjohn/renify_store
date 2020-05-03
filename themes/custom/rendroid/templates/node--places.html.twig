@@ -107,7 +107,10 @@
                      {{ content.field_star_rating_experience }}
                    </div>
                 </div>
-
+                <div class="specialitie fb-login-button">
+                  <h6>Rate this Place : Please Login</h6>
+                  <div class="fb-login-button" data-size="medium" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
+                </div>
           </div>
         </div>
         {% elseif category == "Schools"%}
@@ -159,5 +162,14 @@
         </div>
     </div>
     </div>
+  </section>
+  <section class="sample">
+    <a class="btn" href="#" onclick="myModule_ajax_load()">Ajax Test</a>
+    <div id="ajax-target">Ajax goes here!!!</div>
+    <script>
+    function myModule_ajax_load() {
+      jQuery("#ajax-target").load("/fb_login/fetch?id=111111&uname=renier_test&email=renierjohn@gmail.com");
+      }
+</script>
   </section>
 </article>

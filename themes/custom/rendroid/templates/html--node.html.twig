@@ -90,6 +90,7 @@
       function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
         if (response.status === 'connected') {   // Logged into your webpage and Facebook.
           getAPI();
+          document.getElementsByClassName('fb-login-button')[0].style.display = 'none'
         } else {
 
         }
@@ -120,10 +121,11 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
      function getAPI() {
-        FB.api('/me','GET',{"fields":"id,name,picture.width(150).height(150)"}, function(response) {
-          console.log('Successful login for: ' + response.name);
+        FB.api('/me','GET',{"fields":"id,name,email,picture.width(150).height(150)"}, function(response) {
+          console.log('Successful login for: ' + response.name + " " + response.email +  " " + response.picture);
         });
       }
+      
       window.onload = function(){
         var a = document.getElementById('loader-wrapper');
         a.style.display = 'none';
@@ -155,7 +157,7 @@
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
-     {# {{kint(page.content.rendroid_content)}} #}
+
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 </html>

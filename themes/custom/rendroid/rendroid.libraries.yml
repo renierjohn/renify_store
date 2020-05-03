@@ -10,11 +10,11 @@ global:
       css/mobile.css: {}
       css/viewbox.css: {}
       css/loader.css: {}
-      
+
 
   js:
     # js/custom.js: {}
     # js/boostrap.min.js: {}
     js/animate.js: {}
     js/jquery.viewbox.min.js: {}
-    js/jquery.flexslider.js: {}
+    
