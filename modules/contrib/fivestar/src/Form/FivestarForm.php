@@ -32,6 +32,14 @@ class FivestarForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, array $context = []) {
+    $current_user = \Drupal::currentUser();
+    if($current_user->id() > 0){
+      $hide_vote = FALSE;
+    }
+    else{
+      $hide_vote =  TRUE;
+    }
+
     $entity = $context['entity'];
     $uniq_id = Html::getUniqueId('vote');
     $field_definition = $context['field_definition'];
@@ -50,31 +58,34 @@ class FivestarForm extends FormBase {
       '#default_value' => $entity->get($field_name)->rating,
       '#values' => $result_manager->getResultsByVoteType($entity, $field_settings['vote_type']),
       '#settings' => $context['display_settings'],
-      '#show_static_result' => !$voting_is_allowed,
+      // '#show_static_result' => !$voting_is_allowed,
+      '#show_static_result' => $hide_vote,
       '#attributes' => [
         'class' => ['vote'],
       ],
     ];
 
+      // ksm($current_user->id());
+        $form['submit'] = [
+          '#type' => 'submit',
+          '#ajax' => [
+            'event' => 'click',
+            'callback' => '::fivestarAjaxVote',
+            'method' => 'replace',
+            'wrapper' => $uniq_id,
+            'effect' => 'fade',
+          ],
+          '#attributes' => [
+            'style' => 'display:none',
+          ],
+        ];
+
     // Click on this element triggered from JS side.
-    $form['submit'] = [
-      '#type' => 'submit',
-      '#ajax' => [
-        'event' => 'click',
-        'callback' => '::fivestarAjaxVote',
-        'method' => 'replace',
-        'wrapper' => $uniq_id,
-        'effect' => 'fade',
-      ],
-      '#attributes' => [
-        'style' => 'display:none',
-      ],
-    ];
+
 
     $form_state->set('context', $context);
     $form_state->set('uniq_id', $uniq_id);
     $form['#attributes']['id'] = $uniq_id;
-
     return $form;
   }
 
@@ -97,7 +108,6 @@ class FivestarForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $context = $form_state->get('context');
-    
     if (isset($context['entity'])) {
       $entity = $context['entity'];
       $fivestar_field_name = $context['field_definition']->getName();

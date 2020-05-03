@@ -124,7 +124,7 @@ if (isset($_SERVER['PRESSFLOW_SETTINGS'])) {
       $databases = array_replace_recursive($databases, $value);
     }
     else {
-      $$key = $value;
+      $key = $value;
     }
   }
 }
@@ -201,4 +201,3 @@ if (empty($settings['file_scan_ignore_directories'])) {
     'bower_components',
   ];
 }
-

@@ -57,11 +57,8 @@
 <!DOCTYPE html>
 <html {{ html_attributes }}>
   <head>
-    {% if img_path %}
       <meta property="og:image" content={{ img_path }} >
-    {% else %}
-        <meta property="og:image" content="https://dev-deped-dauin.pantheonsite.io/" >
-    {% endif %}
+
       <!-- <meta property="fb:app_id" content="221198119132924">
       <meta property="og:type" content="website"/>
        <meta property="og:image" content= > -->
@@ -130,8 +127,18 @@
       window.onload = function(){
         var a = document.getElementById('loader-wrapper');
         a.style.display = 'none';
-        console.log("loader ready");
+        // console.log("loader ready");
       }
+
+      // (function($) {
+      //   Drupal.AjaxCommands.prototype.fivestarUpdate = function(ajax, response, status) {
+      //     console.log(status);
+      //     console.log(response);
+      //     console.log(ajax);
+      //     // response.selector = $('.fivestar-form-item', ajax.element.form);
+      //     // ajax.commands.insert(ajax, response, status);
+      //   };
+      // })(jQuery);
 
     </script>
 

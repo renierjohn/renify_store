@@ -13,9 +13,16 @@
  */
 (function($) {
   Drupal.behaviors.fivestar = {
+    // name: function(context){
+    //     Drupal.behaviors.fivestar.attach(context);
+    //     console.log('my name is ' + context);
+    //
+    // },
+
     attach: function(context) {
       $('.vote').on('change', function() {
         if (!$(this).prop('disabled')) {
+           // if (!$(this).prop('enable')) {
           $(this).closest('form').find('.form-submit').trigger('click');
         }
       });
@@ -49,8 +56,11 @@
         $container.find('a').bind('click', $this, Drupal.behaviors.fivestar.rate).bind('mouseover', $this, Drupal.behaviors.fivestar.hover);
         $container.bind('mouseover mouseout', $this, Drupal.behaviors.fivestar.hover);
         $select.after($container).css('display', 'none');
+
       });
     },
+
+
     rate: function(event) {
       var $this, $this_star, $widget, value;
       $this = $(this);
@@ -69,6 +79,7 @@
       }
       event.preventDefault();
     },
+
     hover: function(event) {
       var $stars, $target, $this, $widget, index;
       $this = $(this);
