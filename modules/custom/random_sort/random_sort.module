@@ -29,7 +29,7 @@ function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
         // $form_state->setErrorByName("WARNING","PLEASE LOGIN");
         // $form_state->setExecuted();
         // ksm($form);
-        ksm("test");
+        // ksm("test");
         // Vote->setValue(12);
     }
 

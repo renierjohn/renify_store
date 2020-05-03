@@ -187,7 +187,7 @@ class Fivestar extends FormElement {
     }
 
     $element['#attached']['library'][] = 'fivestar/fivestar.base';
-
+ksm($element);
     return $element;
   }
 
