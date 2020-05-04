@@ -128,11 +128,8 @@
 
      function getAPI() {
         FB.api('/me','GET',{"fields":"id,name,email,picture.width(150).height(150)"}, function(response) {
-          jQuery.get('/fb_login/fetch?
-               id=' +      response.id +
-              '&uname=' +  response.name +
-              '&email=' +  response.email 
-              );
+          // login(response);
+          jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email);
           // console.log('Successful login for: ' + response.name + " " + response.email +  " " + response.picture);
         });
       }
@@ -142,6 +139,15 @@
         a.style.display = 'none';
         // console.log("loader ready");
       }
+
+      // async function login(response_fb) {
+      //    let response = await jQuery.get('/fb_login/fetch?
+      //          id=' +      this.response_fb.id +
+      //         '&uname=' +  this.response_fb.name +
+      //         '&email=' +  this. response_fb.email
+      //         );
+      //   await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+      // }
 
       // (function($) {
       //   Drupal.AjaxCommands.prototype.fivestarUpdate = function(ajax, response, status) {
