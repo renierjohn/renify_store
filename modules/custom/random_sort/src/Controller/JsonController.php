@@ -25,12 +25,17 @@ use Drupal\Component\Utility\Unicode;
  * Class MyWebService.
  */
 class JsonController extends ControllerBase {
-  
+
   public function login_fb() {
     $request = \Drupal::request();
     $output['id'] = $request->get('id');
-    $output['uname'] = $request->get('uname');
-    $output['email'] = $request->get('email');
+    $output['uname'] = urldecode($request->get('uname'));
+    if($request->get('email')){
+      $output['email'] = $request->get('email');
+    }
+    else{
+      $output['email'] = 'no_email@gmail.com';
+    }
 
     $query = \Drupal::entityQuery('user');
     $query->condition('field_fb_id', $output['id']);
