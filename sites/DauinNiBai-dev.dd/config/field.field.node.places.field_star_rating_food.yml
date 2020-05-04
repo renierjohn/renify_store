@@ -1,0 +1,32 @@
+uuid: 5fe2eef7-7933-42ab-8ee4-dc32345d9085
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_star_rating_food
+    - node.type.places
+  module:
+    - fivestar
+id: node.places.field_star_rating_food
+field_name: field_star_rating_food
+entity_type: node
+bundle: places
+label: 'Star Rating Food'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    rating: '10'
+    target: null
+default_value_callback: ''
+settings:
+  stars: '10'
+  allow_clear: 0
+  allow_revote: 1
+  allow_ownvote: 1
+  rated_while: viewing
+  enable_voting_target: 0
+  target_bridge_field: ''
+  target_fivestar_field: ''
+field_type: fivestar

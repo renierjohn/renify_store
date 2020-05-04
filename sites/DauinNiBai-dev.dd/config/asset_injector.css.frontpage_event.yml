@@ -1,0 +1,17 @@
+uuid: 2c7cc0c2-7624-43ba-86e9-b530dd14c99d
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+id: frontpage_event
+label: 'FrontPage Event'
+code: ".block-frontpage-header-events{\r\n  margin-top: 3%;\r\n  margin-bottom: 5%;\r\n  border-bottom-style: groove;\r\n  border-bottom-color: black;\r\n  border-bottom-width: 1px;\r\n}\r\n\r\n.column-event-left{\r\n    float: left;\r\n    width: 50%;\r\n}\r\n.row-event-left{\r\n  content: \"\";\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.column-event-right{\r\n    float: right;\r\n    width: 50%;\r\n}\r\n\r\n.row-event-right{\r\n  content: \"\";\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.block-frontpage-events{\r\n  margin-bottom:5%;\r\n}\r\n\r\n.field-frontpage-event-left-title{\r\n  text-align:left;\r\n  padding-left:1em;\r\n  margin-bottom:2em;\r\n}\r\n\r\n.field-frontpage-event-left-body{\r\n  text-align:left;\r\n  padding-left:1em;\r\n}\r\n\r\n.field-frontpage-event-right-title{\r\n  text-align:right;\r\n  padding-right:1em;\r\n  margin-bottom:2em;\r\n}\r\n\r\n.field-frontpage-event-right-body{\r\n  text-align:right;\r\n  padding-right:1em;\r\n}"
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    pages: /home
+    negate: false
+conditions_require_all: true

@@ -1,0 +1,28 @@
+uuid: 67ccb389-99f8-4eba-b03f-715aa677a5f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rendroid
+id: mapofdauin
+theme: rendroid
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:70f3602a-dfca-44b5-a0d1-da1a71b52121'
+settings:
+  id: 'block_content:70f3602a-dfca-44b5-a0d1-da1a71b52121'
+  label: 'Map Of Dauin'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /homepage
+    negate: false
+    context_mapping: {  }

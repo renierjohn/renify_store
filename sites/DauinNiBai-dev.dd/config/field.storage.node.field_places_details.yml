@@ -1,0 +1,19 @@
+uuid: 5d45f678-65d6-4181-80f1-5834fbe00580
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_places_details
+field_name: field_places_details
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

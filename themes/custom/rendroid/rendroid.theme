@@ -33,6 +33,7 @@ function rendroid_preprocess_html(&$variables) {
     $abs_path = file_create_url($path);
     $variables['img_path'] = $abs_path;
   }
+
 }
 
 /**

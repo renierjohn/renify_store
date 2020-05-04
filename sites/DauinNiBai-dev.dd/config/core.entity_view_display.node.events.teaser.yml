@@ -1,0 +1,41 @@
+uuid: 3ca771ca-cde6-4518-b460-ecf0b8f7a2eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.events.field_eve
+    - field.field.node.events.field_event_discription
+    - field.field.node.events.field_event_image
+    - field.field.node.events.field_people_promote_display
+    - field.field.node.events.field_twitter_embed
+    - image.style.wide_image
+    - node.type.events
+  module:
+    - image
+    - user
+id: node.events.teaser
+targetEntityType: node
+bundle: events
+mode: teaser
+content:
+  field_event_image:
+    type: image
+    weight: 1
+    region: content
+    label: visually_hidden
+    settings:
+      image_style: wide_image
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_eve: true
+  field_event_discription: true
+  field_people_promote_display: true
+  field_twitter_embed: true

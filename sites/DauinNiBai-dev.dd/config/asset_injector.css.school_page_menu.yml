@@ -1,0 +1,11 @@
+uuid: 9065ae0e-9893-45a9-954a-6b692ec0a444
+langcode: en
+status: false
+dependencies: {  }
+id: school_page_menu
+label: 'School Page Menu'
+code: ".block-home-menu,\r\n.block-home-menu ul,\r\n.block-home-menu li,\r\n.block-home-menu a {\r\n    margin: 0;\r\n    padding: 0;\r\n    border: none;\r\n    outline: none;\r\n}\r\n \r\n\r\n \r\n.block-home-menu li {\r\n    position: relative;\r\n    list-style: none;\r\n    float: left;\r\n    display: block;\r\n    height: 40px;\r\n}\r\n\r\n\r\n.block-home-menu li a {\r\n    display: block;\r\n    padding: 0 14px;\r\n    margin: 6px 0;\r\n    line-height: 28px;\r\n    text-decoration: none;\r\n \r\n    border-left: 1px solid #393942;\r\n    border-right: 1px solid #4f5058;\r\n \r\n    font-weight: bold;\r\n    font-size: 14px;\r\n \r\n    color: #f3f3f3;\r\n    text-shadow: 1px 1px 1px rgba(0,0,0,.6);\r\n \r\n    -webkit-transition: color .2s ease-in-out;\r\n    -moz-transition: color .2s ease-in-out;\r\n    -o-transition: color .2s ease-in-out;\r\n    -ms-transition: color .2s ease-in-out;\r\n    transition: color .2s ease-in-out;\r\n}\r\n \r\n.block-home-menu li:first-child a { border-left: none; }\r\n.block-home-menu li:last-child a{ border-right: none; }\r\n.block-home-menu li:hover  a { color: #8fde62; }"
+media: all
+preprocess: true
+conditions: {  }
+conditions_require_all: true

@@ -1,0 +1,24 @@
+uuid: 848ba44a-9ddb-4dcc-8e96-80f05c18c61e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.students
+  module:
+    - views
+  theme:
+    - rendroid
+id: views_block__students_block_1
+theme: rendroid
+region: footer
+weight: -14
+provider: null
+plugin: 'views_block:students-block_1'
+settings:
+  id: 'views_block:students-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

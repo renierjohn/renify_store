@@ -1,0 +1,21 @@
+uuid: 6f15b5f3-06f5-43ac-a87d-338902f1619f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_people_message
+    - node.type.people
+  module:
+    - text
+id: node.people.field_people_message
+field_name: field_people_message
+entity_type: node
+bundle: people
+label: 'People Message'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

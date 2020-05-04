@@ -1,0 +1,44 @@
+uuid: b9b8b4d3-9ab9-4d0e-8df2-9f4ee9254138
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  referrer: same-origin
+  geo_region: asia
+  news_keywords: Travel
+  robots: index
+  geo_placename: 'Dauin,Negros Oriental Philippines'
+  canonical_url: '[current-page:url]'
+  shortlink: homepage
+  geo_position: '''9.1894803;123.2661339 '''
+  title: '[current-page:title] | Dauin'
+  content_language: en
+  icbm: '''9.1894803,123.2661339 '''
+  fb_pages: '102875864644890'
+  fb_admins: rsediego
+  fb_app_id: '221198119132924'
+  android_app_link_alternative: '[current-page:url]'
+  alternate_handheld: '[current-page:url]'
+  og_locality: Dauin
+  og_longitude: '123.2661339'
+  og_image_url: 'https://dev-deped-dauin.pantheonsite.io/sites/default/files/header/header.jpg'
+  og_locale: fil_PH
+  og_title: '[current-page:title] | Dauin'
+  og_latitude: '9.1894803'
+  og_country_name: Philippines
+  og_image_secure_url: 'https://dev-deped-dauin.pantheonsite.io/sites/default/files/header/header.jpg'
+  og_site_name: 'Dauin '
+  og_postal_code: '6217'
+  og_description: 'Its More Fun in Dauin , Explore Dauin'
+  og_type: travel
+  og_email: renierjohnsediego@gmail.com
+  og_phone_number: '09263870560'
+  og_image_alt: dauin_photos
+  og_url: '[current-page:url]'
+  og_determiner: Travel
+  og_region: Asia
+  og_image: 'https://dev-deped-dauin.pantheonsite.io/sites/default/files/header/header.jpg'

@@ -19,6 +19,33 @@ use Drupal\Core\Url;
 use Drupal\Core\User;
 use Drupal\votingapi\Entity\Vote;
 
+function random_sort_menu() {
+  $items['node/get/ajax/%'] = array(
+    'page callback' => 'random_sort_ajax_get_ajax', // Render HTML.
+    'page arguments' => array(3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    'delivery callback' => 'random_sort_ajax_callback',  // Magic goes here.
+  );
+  return $items;
+}
+
+function random_sort_ajax_get_ajax($nid) {
+  // This example loads a node and returns the teaser.
+  // You can return whatever you want, including forms.
+    $node = node_load($nid);
+    return node_view($node, 'teaser');
+}
+
+function random_sort_ajax_callback($page_callback_result) {
+  // Only render content
+    $content = drupal_render($page_callback_result);
+    // Add CSS and JS files, add some markup
+    $html = '<html><head><title></title>' . drupal_get_css() . drupal_get_js() . '</head><body class="jquery-ajax-load">' . $content . '</body></html>';
+    print $html;
+    drupal_page_footer();
+}
+
 function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
   // ksm($form_id);
 

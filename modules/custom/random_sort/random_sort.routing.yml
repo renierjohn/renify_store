@@ -1,7 +1,13 @@
-custom_ajax_link.routing:
-  path: '/custom_ajax_link/{name}'
+random_sort.node.create:
+  path: '/ajax/login'
 defaults:
    _title: 'Custom Ajax Link'
-   _controller: '\Drupal\custom_ajax_link\Controller\CustomAjaxLinkController :: customAjaxLinkAlert'
-requirements:
-   _permission: 'access content'
+   _controller: 'Drupal\random_sort\Controller\UserManageController::create'
+
+random_sort.login_fb:
+  path: '/fb_login/fetch'
+  defaults:
+    _controller: '\Drupal\random_sort\Controller\JsonController::login_fb'
+    _title: 'Custom FB Login'
+  requirements:
+    _permission: 'access content'

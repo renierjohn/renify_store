@@ -66,19 +66,19 @@ class FivestarForm extends FormBase {
     ];
 
       // ksm($current_user->id());
-        $form['submit'] = [
-          '#type' => 'submit',
-          '#ajax' => [
-            'event' => 'click',
-            'callback' => '::fivestarAjaxVote',
-            'method' => 'replace',
-            'wrapper' => $uniq_id,
-            'effect' => 'fade',
-          ],
-          '#attributes' => [
-            'style' => 'display:none',
-          ],
-        ];
+    $form['submit'] = [
+      '#type' => 'submit',
+      '#ajax' => [
+        'event' => 'click',
+        'callback' => '::fivestarAjaxVote',
+        'method' => 'replace',
+        'wrapper' => $uniq_id,
+        'effect' => 'fade',
+      ],
+      '#attributes' => [
+        'style' => 'display:none',
+      ],
+    ];
 
     // Click on this element triggered from JS side.
 

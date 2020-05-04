@@ -1,0 +1,30 @@
+uuid: 6a90dbdf-b09b-4463-9bf8-ae5405704ded
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.schools
+  module:
+    - system
+    - views
+  theme:
+    - rendroid
+id: views_block__schools_view_block_school
+theme: rendroid
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:schools-view_block_school'
+settings:
+  id: 'views_block:schools-view_block_school'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /homepage
+    negate: false
+    context_mapping: {  }

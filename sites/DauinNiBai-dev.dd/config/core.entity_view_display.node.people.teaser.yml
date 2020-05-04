@@ -1,0 +1,35 @@
+uuid: 02d84a10-c2d7-44ff-a3c2-61031b8b6777
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.people.feeds_item
+    - field.field.node.people.field_people_gender
+    - field.field.node.people.field_people_image
+    - field.field.node.people.field_people_location
+    - field.field.node.people.field_people_message
+    - field.field.node.people.field_people_promote_display
+    - field.field.node.people.field_people_status
+    - node.type.people
+  module:
+    - user
+id: node.people.teaser
+targetEntityType: node
+bundle: people
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  feeds_item: true
+  field_people_gender: true
+  field_people_image: true
+  field_people_location: true
+  field_people_message: true
+  field_people_promote_display: true
+  field_people_status: true

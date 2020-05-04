@@ -1,0 +1,62 @@
+uuid: 5e2bc2c3-1cc1-47d4-bac4-c46a65230190
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.places.field_category
+    - field.field.node.places.field_iframe_link
+    - field.field.node.places.field_image_map
+    - field.field.node.places.field_node_metatag
+    - field.field.node.places.field_people_location
+    - field.field.node.places.field_people_promote_display
+    - field.field.node.places.field_place_image_thumbnail
+    - field.field.node.places.field_places_details
+    - field.field.node.places.field_rating_accomodation
+    - field.field.node.places.field_rating_experience
+    - field.field.node.places.field_rating_food
+    - field.field.node.places.field_star_rating_accomodation
+    - field.field.node.places.field_star_rating_experience
+    - field.field.node.places.field_star_rating_food
+    - field.field.node.places.field_views_nearby_places
+    - field.field.node.places.field_website_link
+    - node.type.places
+  module:
+    - image
+    - user
+id: node.places.teaser
+targetEntityType: node
+bundle: places
+mode: teaser
+content:
+  field_image_map:
+    type: image
+    weight: 1
+    region: content
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_category: true
+  field_iframe_link: true
+  field_node_metatag: true
+  field_people_location: true
+  field_people_promote_display: true
+  field_place_image_thumbnail: true
+  field_places_details: true
+  field_rating_accomodation: true
+  field_rating_experience: true
+  field_rating_food: true
+  field_star_rating_accomodation: true
+  field_star_rating_experience: true
+  field_star_rating_food: true
+  field_views_nearby_places: true
+  field_website_link: true
