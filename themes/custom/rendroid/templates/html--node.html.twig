@@ -129,8 +129,21 @@
      function getAPI() {
         FB.api('/me','GET',{"fields":"id,name,email,picture.width(150).height(150)"}, function(response) {
           // login(response);
-          jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email);
-          // console.log('Successful login for: ' + response.name + " " + response.email +  " " + response.picture);
+          jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email , function(){
+            // LOGIN
+             jQuery.post('/user/login',
+                 {
+                   name:response.name,
+                   pass:'1234',
+                   form_build_id:'form-JZ3Zvl6-ASvl5YRoXrNXxFBEUpRpKdm5jvwz8zHq7eE',
+                   form_id:'user_login_form',
+                   op:'Log+in',
+                 },function( data, status, xhr) {
+                     console.log(xhr.getResponseHeader("Set-Cookie"))
+                   }
+                 )
+
+            });
         });
       }
 

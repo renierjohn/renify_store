@@ -19,14 +19,16 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\GenericEvent;
 use Drupal\Core\Entity\EntityStorageException;
 use Drupal\Component\Utility\Unicode;
-
-
+use  Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Cookie;
 /**
  * Class MyWebService.
  */
 class JsonController extends ControllerBase {
 
   public function login_fb() {
+    // return new Response('',200,new Cookie('SESSc8a29b3530221fefd97ca0f2616a2096', 'ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKE'));
+
     $request = \Drupal::request();
     $output['id'] = $request->get('id');
     $output['uname'] = urldecode($request->get('uname'));
@@ -40,13 +42,26 @@ class JsonController extends ControllerBase {
     $query = \Drupal::entityQuery('user');
     $query->condition('field_fb_id', $output['id']);
     $id = $query->execute();
-    if($id){
-        return new JsonResponse('already login');
-    }
-    // $output['result'] = $output['a'] * $output['b'];
-    // return "hello";
-    $res = $this->createUser($output['id'],$output['uname'],$output['email']);
-    return new JsonResponse($res);
+    // $this->loggerFactory->info('sample');
+    // if($id){
+    //     // $session = new \Symfony\Component\HttpFoundation\Session\Session();
+    //     // $session->set('uid',94);
+    //     // $session->start();
+    //     // SESSc8a29b3530221fefd97ca0f2616a2096 ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKE
+        $response = new Response();
+        $response->setStatusCode(309);
+        $response->send();
+    //     return $response;
+    //     // $response->headers->setCookie(new Cookie('SESSc8a29b3530221fefd97ca0f2616a2096', 'ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKE'));
+    //     // $response->send();
+    //     // return new JsonResponse('ok');
+    // }
+    // else{
+    //   $res = $this->createUser($output['id'],$output['uname'],$output['email']);
+    //   return new JsonResponse($res);
+    // }
+    $this->createUser($output['id'],$output['uname'],$output['email']);
+    return $response;
   }
 
 private function createUser($fb_id = "" ,$username = "",$email = ""){
