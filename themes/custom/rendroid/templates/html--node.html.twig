@@ -151,11 +151,19 @@
         FB.login(function(response){
             console.log(response);
             if(response.status === 'connected' ){
+              console.log(response.email);
               getAPI();
-            }
-        });
-      }
 
+            }
+        },{scope: 'email'});
+      }
+      function logout_fb(){
+          FB.logout(function(response){
+            jQuery.get('/user/logout',function(data,status,xhr){
+              location.reload(true);
+            });
+          });
+      }
    //    FB.logout(function(response) {
    // // Person is now logged out
    //    });

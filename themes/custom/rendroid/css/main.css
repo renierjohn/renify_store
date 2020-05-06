@@ -675,6 +675,26 @@ margin-top: 20px;
     color: #2e3192;
 }
 
+.specialities .specialitie .fb-logout-button{
+  margin-top:1em;
+}
+.specialities .specialitie .fb-login-button{
+  margin-top:1em;
+}
+
+.specialities .specialitie .fb-logout-button a{
+  background-color: gray;
+  color: white;
+  padding: 1em;
+  border-radius: 1em;
+}
+.specialities .specialitie .fb-login-button a{
+  background-color: gray;
+  color: white;
+  padding: 1em;
+  border-radius: 1em;
+}
+
 /*== services ==*/
 
 .services {
