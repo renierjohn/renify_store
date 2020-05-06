@@ -18,36 +18,35 @@ use Drupal\Core\Url;
 
 use Drupal\Core\User;
 use Drupal\votingapi\Entity\Vote;
+use  Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Cookie;
 
-function random_sort_menu() {
-  $items['node/get/ajax/%'] = array(
-    'page callback' => 'random_sort_ajax_get_ajax', // Render HTML.
-    'page arguments' => array(3),
-    'type' => MENU_CALLBACK,
-    'access arguments' => array('access content'),
-    'delivery callback' => 'random_sort_ajax_callback',  // Magic goes here.
-  );
-  return $items;
-}
-
-function random_sort_ajax_get_ajax($nid) {
-  // This example loads a node and returns the teaser.
-  // You can return whatever you want, including forms.
-    $node = node_load($nid);
-    return node_view($node, 'teaser');
-}
-
-function random_sort_ajax_callback($page_callback_result) {
-  // Only render content
-    $content = drupal_render($page_callback_result);
-    // Add CSS and JS files, add some markup
-    $html = '<html><head><title></title>' . drupal_get_css() . drupal_get_js() . '</head><body class="jquery-ajax-load">' . $content . '</body></html>';
-    print $html;
-    drupal_page_footer();
-}
 
 function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
   // ksm($form_id);
+    if ($form_id == 'user_form') {
+       $services = \Drupal::getContainer()->getServiceIds(); // get all services
+        $current_user = \Drupal::currentUser();
+        $user =   Drupal\user\Entity\User::load(101);
+        $session = new \Symfony\Component\HttpFoundation\Session\Session();
+
+        // $session->start();
+        // $var = \Drupal::service('user.auth');
+        // $var = \Drupal::service('user.authentication.cookie');
+        $var = \Drupal::service('csrf_token');
+        $private_key = \Drupal::service('private_key');
+        $request = \Drupal::request();
+        $response = new Response();
+        // $var = \Drupal::service('html_response.attachments_processor');
+        // $response = new Response();
+        // $response->headers->setCookie(new Cookie('SESSc8a29b3530221fefd97ca0f2616a2096e', 'ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKEe'));
+        // $response->send();
+        // ksm(new Cookie('a','a'));
+        // $sessio
+        // ksm();
+        // ksm($var);
+        // ksm($session);
+    }
 
     if($form_id == 'contact_message_inquire_form'){
 
