@@ -147,7 +147,18 @@
           )
         });
       }
+      function login_fb(){
+        FB.login(function(response){
+            console.log(response);
+            if(response.status === 'connected' ){
+              getAPI();
+            }
+        });
+      }
 
+   //    FB.logout(function(response) {
+   // // Person is now logged out
+   //    });
       window.onload = function(){
         var a = document.getElementById('loader-wrapper');
         a.style.display = 'none';
