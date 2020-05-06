@@ -32,6 +32,7 @@ class JsonController extends ControllerBase {
     $request = \Drupal::request();
     $output['id'] = $request->get('id');
     $output['uname'] = urldecode($request->get('uname'));
+    $output['profile_picture'] = response->get('profile_picture');
     if($request->get('email')){
       $output['email'] = $request->get('email');
     }
@@ -50,7 +51,7 @@ class JsonController extends ControllerBase {
     //     // SESSc8a29b3530221fefd97ca0f2616a2096 ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKE
         $response = new Response();
         $response->setStatusCode(309);
-        $response->send();
+        $response->sendHeaders();
     //     return $response;
     //     // $response->headers->setCookie(new Cookie('SESSc8a29b3530221fefd97ca0f2616a2096', 'ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKE'));
     //     // $response->send();
@@ -60,11 +61,11 @@ class JsonController extends ControllerBase {
     //   $res = $this->createUser($output['id'],$output['uname'],$output['email']);
     //   return new JsonResponse($res);
     // }
-    $this->createUser($output['id'],$output['uname'],$output['email']);
+    $this->createUser($output['id'],$output['uname'],$output['email'],$output['profile_picture']);
     return $response;
   }
 
-private function createUser($fb_id = "" ,$username = "",$email = ""){
+private function createUser($fb_id = "" ,$username = "",$email = "",$profile_picture = ""){
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $user = \Drupal\user\Entity\User::create();
   $user->setPassword('1234');
@@ -75,6 +76,7 @@ private function createUser($fb_id = "" ,$username = "",$email = ""){
   $user->set("langcode", $language);
   $user->set("preferred_langcode", $language);
   $user->set('field_fb_id',$fb_id);
+  $user->set('field_fb_profile_picture');
   $user->addRole('guest');
   $user->activate();
   $res = $user->save();
