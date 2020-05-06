@@ -2,6 +2,7 @@
 //
 namespace Drupal\random_sort\Controller;
 //
+use Drupal\Core\DrupalKernel;
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Drupal\user\Entity\User;
@@ -21,11 +22,23 @@ use Drupal\Core\Entity\EntityStorageException;
 use Drupal\Component\Utility\Unicode;
 use  Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\Serializer\Serializer;
+use Drupal\Core\Access\CsrfTokenGenerator;
 /**
  * Class MyWebService.
  */
 class JsonController extends ControllerBase {
 
+
+  /**
+   * Logs in a user.
+   *
+   * @param \Symfony\Component\HttpFoundation\Request $request
+   *   The request.
+   *
+   * @return \Symfony\Component\HttpFoundation\Response
+   *   A response which contains the ID and CSRF token.
+   */
   public function login_fb() {
     // return new Response('',200,new Cookie('SESSc8a29b3530221fefd97ca0f2616a2096', 'ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKE'));
 
@@ -45,21 +58,46 @@ class JsonController extends ControllerBase {
     $id = $query->execute();
     // $this->loggerFactory->info('sample');
     if($id){
+      $response = new Response();
+      $response->setStatusCode(309);
+      $response->sendHeaders();
+    }
     //     // $session = new \Symfony\Component\HttpFoundation\Session\Session();
     //     // $session->set('uid',94);
     //     // $session->start();
     //     // SESSc8a29b3530221fefd97ca0f2616a2096 ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKE
-    $response = new Response();
-    $response->setStatusCode(309);
-    $response->sendHeaders();
     //     return $response;
     //     // $response->headers->setCookie(new Cookie('SESSc8a29b3530221fefd97ca0f2616a2096', 'ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKE'));
     //     // $response->send();
     //     // return new JsonResponse('ok');
-    }
+
     else{
-      $this->createUser($output['id'],$output['uname'],$output['email'],$output['profile_picture']);
+      $user = $this->createUser($output['id'],$output['uname'],$output['email'],$output['profile_picture']);
+      // $this->userLoginFinalize($user);
+
+      // $autoloader = require_once 'autoload.php';
+      // $kernel = new DrupalKernel('prod', $autoloader);
+
+
+      // $query->condition('field_fb_id', $output['id']);
+      // $uid = $query->execute();
+      $uid = \Drupal::service('user.auth')->authenticate($output['uname'], '1234');
+      $user = \Drupal\user\Entity\User::load($uid);
+      user_login_finalize($user);
+      $response->send();
       return $response;
+      // $format = $this->getRequestFormat($request);
+      // $content = $request->getContent();
+      //
+      // $response_data = [];
+      // $response_data['current_user']['uid'] = $id;
+      // $response_data['current_user']['roles'] = 'guest';
+      // $response_data['current_user']['name'] = $output['uname'];
+      // $response_data['csrf_token'] = $this->csrfToken->get('rest');
+      // $encoded_response_data = $this->serializer->encode($response_data, 'json');
+      // return new Response($encoded_response_data);
+
+      // return $response;
       }
 
   }
@@ -79,7 +117,7 @@ private function createUser($fb_id = "" ,$username = "",$email = "",$profile_pic
   $user->addRole('guest');
   $user->activate();
   $res = $user->save();
-  $this->loggerFactory->warning($res);
+  // $this->loggerFactory->warning($res);
   return $res;
  }
 }
