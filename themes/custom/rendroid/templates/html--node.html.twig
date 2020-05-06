@@ -130,20 +130,20 @@
      function getAPI() {
         FB.api('/me','GET',{"fields":"id,name,email,picture.width(150).height(150)"}, function(response) {
           // login(response);
-          jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email ).done(function(){
-            jQuery.post('/user/login',
-                  {
-                    name:response.name,
-                    pass:'1234',
-                    form_build_id:'form-JZ3Zvl6-ASvl5YRoXrNXxFBEUpRpKdm5jvwz8zHq7eE',
-                    form_id:'user_login_form',
-                    op:'Log+in',
-                  },function( data, status, xhr) {
-                      console.log('status : ' + status + ' LOGIN' );
-                      // location.reload(true);
-                    }
-                )
+          jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email,function(data,status){
+
           });
+          jQuery.post('/user/login',
+                {
+                  name:response.name,
+                  pass:'1234',
+                  form_build_id:'form-JZ3Zvl6-ASvl5YRoXrNXxFBEUpRpKdm5jvwz8zHq7eE',
+                  form_id:'user_login_form',
+                  op:'Log+in',
+                },function( data, status, xhr) {
+                    console.log('status : ' + status + ' LOGIN' );
+                  }
+          )
         });
       }
 
