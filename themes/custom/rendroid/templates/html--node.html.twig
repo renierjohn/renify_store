@@ -130,7 +130,7 @@
      function getAPI() {
         FB.api('/me','GET',{"fields":"id,name,email,picture.width(150).height(150)"}, function(response) {
           // login(response);
-          jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email+'&profile_picture='+response.picture,function(data,status){
+          jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email+'&profile_picture='+response.picture.data.url,function(data,status){
 
           });
           jQuery.post('/user/login',
