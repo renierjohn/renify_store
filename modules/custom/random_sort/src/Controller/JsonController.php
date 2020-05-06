@@ -32,7 +32,7 @@ class JsonController extends ControllerBase {
     $request = \Drupal::request();
     $output['id'] = $request->get('id');
     $output['uname'] = urldecode($request->get('uname'));
-    $output['profile_picture'] = $response->get('profile_picture');
+    $output['profile_picture'] = $request->get('profile_picture');
     if($request->get('email')){
       $output['email'] = $request->get('email');
     }
@@ -44,25 +44,24 @@ class JsonController extends ControllerBase {
     $query->condition('field_fb_id', $output['id']);
     $id = $query->execute();
     // $this->loggerFactory->info('sample');
-    // if($id){
+    if($id){
     //     // $session = new \Symfony\Component\HttpFoundation\Session\Session();
     //     // $session->set('uid',94);
     //     // $session->start();
     //     // SESSc8a29b3530221fefd97ca0f2616a2096 ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKE
-        $response = new Response();
-        $response->setStatusCode(309);
-        $response->sendHeaders();
+    $response = new Response();
+    $response->setStatusCode(309);
+    $response->sendHeaders();
     //     return $response;
     //     // $response->headers->setCookie(new Cookie('SESSc8a29b3530221fefd97ca0f2616a2096', 'ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKE'));
     //     // $response->send();
     //     // return new JsonResponse('ok');
-    // }
-    // else{
-    //   $res = $this->createUser($output['id'],$output['uname'],$output['email']);
-    //   return new JsonResponse($res);
-    // }
-    $this->createUser($output['id'],$output['uname'],$output['email'],$output['profile_picture']);
-    return $response;
+    }
+    else{
+      $this->createUser($output['id'],$output['uname'],$output['email'],$output['profile_picture']);
+      return $response;
+      }
+
   }
 
 private function createUser($fb_id = "" ,$username = "",$email = "",$profile_picture = ""){
