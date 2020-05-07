@@ -85,10 +85,13 @@
       function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
         if(document.getElementsByClassName('user-logged-in').length > 0 ){
               // document.getElementsByClassName('fb-login-button')[0].style.display = 'none';
+              if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+                  getAPI(true);
+              }
         }
         else {
           if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-            getAPI();
+            getAPI(false);
           } else {
             if(document.getElementsByClassName('fb-profile-picture') !== [] ){
                  document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src="/sites/default/files/header/fb_none.png" class="profile-circle" alt ="fb " onclick="login_fb()">';
@@ -126,41 +129,42 @@
         js.src = "https://connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-     function getAPI() {
-        FB.api('/me','GET',{"fields":"id,name,picture.width(150).height(150)"}, function(response) {
-          console.log('Successful login for: ' + response.name);
 
-            if(document.getElementsByClassName('fb-profile-picture') !== [] ){
-                document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src= "'+response.picture.data.url+'" class="profile-circle" alt ="fb ">'
-                document.getElementsByClassName('fb-fullname')[0].innerHTML =
-                '<h5>Welcome <p>' + response.name + '</p></h5>';
-            }
+      function getAPI(setLogin) {
+         FB.api('/me','GET',{"fields":"id,name,picture.width(150).height(150)"}, function(response) {
+           console.log('Successful login for: ' + response.name);
 
-            jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email+'&profile_picture='+response.picture.data.url,function(data,status){
+             if(document.getElementsByClassName('fb-profile-picture') !== [] ){
+                 document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src= "'+response.picture.data.url+'" class="profile-circle" alt ="fb ">'
+                 document.getElementsByClassName('fb-fullname')[0].innerHTML =
+                 '<h5>Welcome <p>' + response.name + '</p></h5>';
+             }
+             // register or login user
+             if(this.setLogin){
+                 jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email+'&profile_picture='+response.picture.data.url,function(data,status){
 
-            });
-            jQuery.post('/user/login',
-                  {
-                    name:response.name,
-                    pass:'1234',
-                    form_build_id:'form-JZ3Zvl6-ASvl5YRoXrNXxFBEUpRpKdm5jvwz8zHq7eE',
-                    form_id:'user_login_form',
-                    op:'Log+in',
-                  },function( data, status, xhr) {
-                      console.log('status : ' + status + ' LOGIN' );
-                      location.reload(true);
-            });
-
-
-        });
-      }
+                 });
+                 jQuery.post('/user/login',
+                       {
+                         name:response.name,
+                         pass:'1234',
+                         form_build_id:'form-JZ3Zvl6-ASvl5YRoXrNXxFBEUpRpKdm5jvwz8zHq7eE',
+                         form_id:'user_login_form',
+                         op:'Log+in',
+                       },function( data, status, xhr) {
+                           console.log('status : ' + status + ' LOGIN' );
+                           location.reload(true);
+                 });
+             }
+          });
+       }
 
       function login_fb(){
         FB.login(function(response){
             console.log(response);
             if(response.status === 'connected' ){
               console.log(response.email);
-              getAPI();
+              getAPI(true);
 
             }
         },{scope: 'email'});
