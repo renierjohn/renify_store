@@ -22,7 +22,9 @@ function rendroid_preprocess_field(&$variables, $hook) {
  * Adds additional classes
  */
 function rendroid_preprocess_html(&$variables) {
+  // ksm($variables);
   $node = \Drupal::routeMatch()->getParameter('node');
+
   if($node){
     $nid = $node->id();
     $content = \Drupal\node\Entity\Node::load($nid);

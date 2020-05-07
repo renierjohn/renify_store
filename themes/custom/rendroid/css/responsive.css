@@ -414,7 +414,7 @@
         #services p {
             font-size: 14px;
         }
-      
+
     }
     /*======== Media Query 768px ========*/
     @media only screen and (max-width: 768px) {
@@ -429,13 +429,13 @@
         }
         .yt .col-md-12{
             padding-left: 0;
-            padding-right: 0; 
+            padding-right: 0;
         }
         #block-mainnavigation-3 .nav li a{
             margin-top: 18px;
         }
         #blog .inner-contant{
-            padding: 0 1em 1em 1em; 
+            padding: 0 1em 1em 1em;
         }
         .about .item-new{
             padding-top: 4em;
@@ -446,7 +446,7 @@
         #map > .container {
           margin:0px;
           padding: 0px ;
-          
+
         }
         #map > .container > .row {
           margin:0px ;
@@ -461,7 +461,7 @@
         }
         #map iframe {
           width:100vw;
-          height:50vh; 
+          height:50vh;
         }
         #blog .social-media {
             margin-left: 3em;
@@ -527,7 +527,7 @@
         }
         .yt .col-md-12{
             padding-left: 0;
-            padding-right: 0; 
+            padding-right: 0;
         }
         .about .item-new {
             padding-top: 1em
@@ -554,10 +554,9 @@
             padding-right: 1em;
         }
         #blog .inner-contant{
-            padding: 0 1em 1em 1em; 
+            padding: 0 1em 1em 1em;
         }
         #weather{
-            height: 189px;
+            height: 100%;
         }
     }
-   

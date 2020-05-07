@@ -1,5 +1,0 @@
-{{ items }}
-{{ kint(items)}}
-<div>
-
-</div>

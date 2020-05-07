@@ -57,8 +57,8 @@
 <!DOCTYPE html>
 <html {{ html_attributes }}>
   <head>
-      <meta property="fb:app_id" content="221198119132924">
-      <meta property="og:type" content="website"/>
+      <!-- <meta property="fb:app_id" content="221198119132924">
+      <meta property="og:type" content="website"/> -->
       {# <meta property="og:image" content="/sites/default/files/header/header.jpg/"> #}
       {# <meta property="og:url" content="https://dev-deped-dauin.pantheonsite.io/"> #}
       {# <meta property="og:title" content="Dauin Ni Bai">
@@ -86,6 +86,9 @@
         if(document.getElementsByClassName('user-logged-in').length > 0 ){
               if (response.status === 'connected') {   // Logged into your webpage and Facebook.
                   getAPI(false);
+              }
+              else{
+
               }
         }
         else {
