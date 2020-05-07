@@ -74,7 +74,7 @@
       gtag('config', 'UA-163503291-1');
     </script>
 
-    <script data-ad-client="ca-pub-7062341063801103" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- <script data-ad-client="ca-pub-7062341063801103" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
     <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
@@ -130,21 +130,20 @@
      function getAPI() {
         FB.api('/me','GET',{"fields":"id,name,email,picture.width(150).height(150)"}, function(response) {
           // login(response);
-          jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email+'&profile_picture='+response.picture.data.url,function(data,status){
+              jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email+'&profile_picture='+response.picture.data.url,function(data,status){
 
-          });
-          jQuery.post('/user/login',
-                {
-                  name:response.name,
-                  pass:'1234',
-                  form_build_id:'form-JZ3Zvl6-ASvl5YRoXrNXxFBEUpRpKdm5jvwz8zHq7eE',
-                  form_id:'user_login_form',
-                  op:'Log+in',
-                },function( data, status, xhr) {
-                    console.log('status : ' + status + ' LOGIN' );
-                    location.reload(true);
-                  }
-          )
+              });
+              jQuery.post('/user/login',
+                    {
+                      name:response.name,
+                      pass:'1234',
+                      form_build_id:'form-JZ3Zvl6-ASvl5YRoXrNXxFBEUpRpKdm5jvwz8zHq7eE',
+                      form_id:'user_login_form',
+                      op:'Log+in',
+                    },function( data, status, xhr) {
+                        console.log('status : ' + status + ' LOGIN' );
+                        location.reload(true);
+              });
         });
       }
       function login_fb(){
@@ -157,6 +156,7 @@
             }
         },{scope: 'email'});
       }
+      
       function logout_fb(){
           FB.logout(function(response){
             jQuery.get('/user/logout',function(data,status,xhr){

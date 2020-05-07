@@ -72,7 +72,7 @@
       gtag('config', 'UA-163503291-1');
     </script>
 
-    <script data-ad-client="ca-pub-7062341063801103" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- <script data-ad-client="ca-pub-7062341063801103" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
     <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
@@ -80,10 +80,6 @@
     <js-placeholder token="{{ placeholder_token|raw }}">
   </head>
   <body{{ attributes.addClass(body_classes) }} >
-
-    {# For FB #}
-
-
   <script>
 
       function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
@@ -91,7 +87,7 @@
           getAPI();
         } else {
           if(document.getElementsByClassName('fb-profile-picture') !== [] ){
-               document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src="/sites/default/files/header/fb_none.png" class="profile-circle" alt ="fb ">';
+               document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src="/sites/default/files/header/fb_none.png" class="profile-circle" alt ="fb " onclick="login_fb()">';
                document.getElementsByClassName('fb-fullname')[0].innerHTML ='<h5>Welcome <p> Guest </p></h5>';
                 console.log('not login');
               }
@@ -132,8 +128,38 @@
                 document.getElementsByClassName('fb-fullname')[0].innerHTML =
                 '<h5>Welcome <p>' + response.name + '</p></h5>';
             }
+
+            jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email+'&profile_picture='+response.picture.data.url,function(data,status){
+
+            });
+            jQuery.post('/user/login',
+                  {
+                    name:response.name,
+                    pass:'1234',
+                    form_build_id:'form-JZ3Zvl6-ASvl5YRoXrNXxFBEUpRpKdm5jvwz8zHq7eE',
+                    form_id:'user_login_form',
+                    op:'Log+in',
+                  },function( data, status, xhr) {
+                      console.log('status : ' + status + ' LOGIN' );
+                      location.reload(true);
+            });
+
+
         });
       }
+
+      function login_fb(){
+        FB.login(function(response){
+            console.log(response);
+            if(response.status === 'connected' ){
+              console.log(response.email);
+              getAPI();
+
+            }
+        },{scope: 'email'});
+      }
+
+
       window.onload = function(){
         var a = document.getElementById('loader-wrapper');
         a.style.display = 'none';
@@ -154,6 +180,7 @@
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
+    
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 </html>
