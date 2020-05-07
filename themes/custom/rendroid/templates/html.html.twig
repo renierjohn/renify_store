@@ -89,24 +89,22 @@
               }
         }
         else {
-          if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-            getAPI(true);
-          } else {
-            if(document.getElementsByClassName('fb-profile-picture') !== [] ){
-                 document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src="/sites/default/files/header/fb_none.png" class="profile-circle" alt ="fb " onclick="login_fb()">';
-                 document.getElementsByClassName('fb-fullname')[0].innerHTML ='<h5>Welcome <p> Guest </p></h5>';
-                  console.log('not login');
-                }
-          }
+            if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+               getAPI(true);
+            }
+            else {
+                   document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src="/sites/default/files/header/fb_none.png" class="profile-circle" alt ="fb " onclick="login_fb()">';
+                   document.getElementsByClassName('fb-fullname')[0].innerHTML ='<h5>Welcome <p> Guest </p></h5>';
+           }
         }
-
-
       }
+
       function checkLoginState() {               // Called when a person is finished with the Login Button.
         FB.getLoginStatus(function(response) {   // See the onlogin handler
           statusChangeCallback(response);
         });
       }
+
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '221198119132924',
@@ -116,7 +114,6 @@
         });
       FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
           statusChangeCallback(response);        // Returns the login status.
-
         });
       };
 
@@ -138,7 +135,7 @@
                  '<h5>Welcome <p>' + response.name + '</p></h5>';
              }
              // register or login user
-             if(this.setLogin){
+             if(setLogin === true){
                  jQuery.get('/fb_login/fetch?id=' +response.id+'&uname=' +  response.name +'&email=' + response.email+'&profile_picture='+response.picture.data.url,function(data,status){
 
                  });
@@ -153,9 +150,9 @@
                            console.log('status : ' + status + ' LOGIN' );
                            location.reload(true);
                  });
-             }
-          });
-       }
+            }
+        });
+      }
 
       function login_fb(){
         FB.login(function(response){
