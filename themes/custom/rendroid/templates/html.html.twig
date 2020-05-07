@@ -83,15 +83,22 @@
   <script>
 
       function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-        if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-          getAPI();
-        } else {
-          if(document.getElementsByClassName('fb-profile-picture') !== [] ){
-               document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src="/sites/default/files/header/fb_none.png" class="profile-circle" alt ="fb " onclick="login_fb()">';
-               document.getElementsByClassName('fb-fullname')[0].innerHTML ='<h5>Welcome <p> Guest </p></h5>';
-                console.log('not login');
-              }
+        if(document.getElementsByClassName('user-logged-in').length > 0 ){
+              // document.getElementsByClassName('fb-login-button')[0].style.display = 'none';
         }
+        else {
+          if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+            getAPI();
+          } else {
+            if(document.getElementsByClassName('fb-profile-picture') !== [] ){
+                 document.getElementsByClassName('fb-profile-picture')[0].innerHTML = '<img src="/sites/default/files/header/fb_none.png" class="profile-circle" alt ="fb " onclick="login_fb()">';
+                 document.getElementsByClassName('fb-fullname')[0].innerHTML ='<h5>Welcome <p> Guest </p></h5>';
+                  console.log('not login');
+                }
+          }
+        }
+
+
       }
       function checkLoginState() {               // Called when a person is finished with the Login Button.
         FB.getLoginStatus(function(response) {   // See the onlogin handler
@@ -180,7 +187,7 @@
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
-    
+
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 </html>
