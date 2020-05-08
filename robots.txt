@@ -15,6 +15,7 @@
 
 User-agent: *
 # CSS, JS, Images
+Allow: /sites/default/files/*
 Allow: /core/*.css$
 Allow: /core/*.css?
 Allow: /core/*.js$
