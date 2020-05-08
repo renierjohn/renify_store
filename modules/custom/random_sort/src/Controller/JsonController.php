@@ -29,7 +29,17 @@ use Drupal\Core\Access\CsrfTokenGenerator;
  */
 class JsonController extends ControllerBase {
 
+  const VERIFY_TOKEN = "pahimu_ko_renier" ;
 
+  public function webhook(){
+      $request = \Drupal::request();
+      $fb_token = $request->get('verify_token');
+      if($fb_token == $this.VERIFY_TOKEN){
+        $response = new Response();
+        $response->setStatusCode(200);
+        return $response;
+      }
+  }
   /**
    * Logs in a user.
    *

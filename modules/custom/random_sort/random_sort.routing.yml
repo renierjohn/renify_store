@@ -11,3 +11,11 @@ random_sort.login_fb:
     _title: 'Custom FB Login'
   requirements:
     _permission: 'access content'
+
+random_sort.webhook:
+  path: '/webhook'
+  defaults:
+    _controller: '\Drupal\random_sort\Controller\JsonController::webhook'
+    _title: 'Custom FB Login'
+  requirements:
+    _permission: 'access content'
