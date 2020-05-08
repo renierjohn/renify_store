@@ -33,10 +33,13 @@ class JsonController extends ControllerBase {
 
   public function webhook(){
       $request = \Drupal::request();
-      $fb_token = $request->get('verify_token');
-      if($fb_token == $this.VERIFY_TOKEN){
-        $response = new Response();
+      $challenge = $request->get('hub_challenge');
+      $fb_token = $request->get('hub_verify_token');
+
+      if($fb_token == JsonController::VERIFY_TOKEN){
+        $response = new Response($challenge);
         $response->setStatusCode(200);
+        // $response->sendBody($challenge);
         return $response;
       }
   }
