@@ -37,8 +37,10 @@ class JsonController extends ControllerBase {
       $challenge = $request->get('hub_challenge');
       $fb_token = $request->get('hub_verify_token');
 
-      $data = file_get_contents("php:input");
+      $data = file_get_contents("php://input");
+      // $data = $request->getContent();
       file_put_contents("sites/default/files/data.txt",$data);
+
       if($fb_token == JsonController::VERIFY_TOKEN){
         $response = new Response($challenge);
         $response->setStatusCode(200);
