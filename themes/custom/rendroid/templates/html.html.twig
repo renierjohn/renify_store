@@ -115,9 +115,14 @@
           cookie     : true,                     // Enable cookies to allow the server to access the session.
           version    : 'v6.0'           // Use this Graph API version for this call.
         });
-      FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
-          statusChangeCallback(response);        // Returns the login status.
-        });
+          FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
+              statusChangeCallback(response);        // Returns the login status.
+            });
+          FB.Event.subscribe('send_to_messenger', function(e) {
+          // callback for events triggered by the plugin
+            console.log(e);
+
+          });
       };
 
 
@@ -167,6 +172,7 @@
             }
         },{scope: 'email'});
       }
+
 
 
       window.onload = function(){
