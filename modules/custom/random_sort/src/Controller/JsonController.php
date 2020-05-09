@@ -94,6 +94,47 @@ class JsonController extends ControllerBase {
         file_put_contents("sites/default/files/data/".Date("H-i-s").".txt",$status);
         return $status;
   }
+
+  /**
+   * Edit route title callback.
+   *
+   * @return string
+   *   The title of the contact form.
+   */
+  public function send_message_curl(){
+
+    $request = \Drupal::request();
+    $message = $request->get('message');
+    $data = array(
+      'messaging_type'=> "UPDATE",
+      'recipient' => '3769505946454041',
+      'message' => ['text'=>$message],
+    );
+
+    $payload = json_encode($data);
+    $url = "https://graph.facebook.com/v7.0/me/messages?access_token=".JsonController::ACCESS_TOKEN;
+
+
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLINFO_HEADER_OUT, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+
+      // Set HTTP Header for POST request
+      curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Content-Type: application/json',
+        'Content-Length: ' . strlen($payload))
+      );
+
+      $result = curl_exec($ch);
+      curl_close($ch);
+      return $result;
+  }
+
+
+
+
   /**
    * Logs in a user.
    *
