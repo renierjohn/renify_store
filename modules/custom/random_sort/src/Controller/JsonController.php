@@ -67,6 +67,10 @@ class JsonController extends ControllerBase {
         // $response->sendBody($challenge);
         return $response;
       }
+
+      $response = new Response();
+      $response->setStatusCode(200);
+      return $response;
   }
 
   public function send_message(){
