@@ -107,7 +107,7 @@ class JsonController extends ControllerBase {
     $message = $request->get('message');
     $data = array(
       'messaging_type'=> "UPDATE",
-      'recipient' => '3769505946454041',
+      'recipient' => ['id'=>'3769505946454041'],
       'message' => ['text'=>$message],
     );
 
