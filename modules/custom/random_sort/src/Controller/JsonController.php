@@ -30,7 +30,7 @@ use Drupal\Core\Access\CsrfTokenGenerator;
 class JsonController extends ControllerBase {
 
   const VERIFY_TOKEN = "pahimu_ko_renier" ;
-  const ACCESS_TOKEN = "EAADJLbNQ3vwBAHvbLAHqxt9mx5wXz7ZAPL15Y7jHPYUw40kuN3qFfxjrz7n69lSvWLQHLkvqvrzkabGMc9MBLAyJXKriftdcWaUcfNVx3EcR2NJaKOn3UnzgGyaBYK7YRPMynzlL2CD2NijCYwJUIXAhXdNUXIsRI0cm0FyB4TZBWzWyZCuWKVIVrmvZBCUZD";
+  const ACCESS_TOKEN = "EAADJLbNQ3vwBAIJhy7ZCPHZA2nCJFB7acsTv9JK5jeFILp9ZA5aJmPfTflIGTiQVs7WUJuzkRKhqhVDz3N5ubZCITYUCrTPkbrpSdgGQI7XKQPQxJpflVRa9wp53eXOcmqzD528hAXGjUiZCU7QYFID07gHNI2cRz0K8ZA79DoJs8ROZBZCoeZCX5LlBZBlNimrmoZD";
 
 
 
@@ -49,17 +49,17 @@ class JsonController extends ControllerBase {
       $challenge = $request->get('hub_challenge');
       $fb_token = $request->get('hub_verify_token');
 
-      $data['query'] = $request->query->all();
-      $data['header'] = $request->headers->all();
-      $data['request'] = $request->request->all();
+      // $data['query'] = $request->query->all();
+      // $data['header'] = $request->headers->all();
+      // $data['request'] = $request->request->all();
 
 
-      $data['input'] = file_get_contents("php://input");
+      $data  = file_get_contents("php://input");
       // $text = json_decode($data,true);
       // $text[]
       // $data = $request->getContent();
       // file_put_contents("sites/default/files/data.txt",$data);
-      file_put_contents("sites/default/files/data/".Date("H-i-s").".txt",json_encode($data));
+      file_put_contents("sites/default/files/data/".Date("H-i-s").".txt",$data);
 
       if($fb_token == JsonController::VERIFY_TOKEN){
         $response = new Response($challenge);
