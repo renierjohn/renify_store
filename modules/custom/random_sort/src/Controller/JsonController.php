@@ -74,22 +74,25 @@ class JsonController extends ControllerBase {
   }
 
   public function send_message(){
+
         $request = \Drupal::request();
         $message = $request->get('message');
-        $reply_message  = '{
-              "messaging_type": "UPDATE",
-              "recipient": {
-                "id": "3769505946454041"
-              },
-              "message": {
-                "text": "$message"
-              }
-            }';
-        $url = "https://graph.facebook.com/v7.0/me/messages?access_token=$JsonController::ACCESS_TOKEN";
+        $text_message = [
+      			'messaging_type'=>'UPDATE',
+      			'recipient' => '3769505946454041',
+      			'message' => ['text'=>$message],
+				];
+        $url = "https://graph.facebook.com/v7.0/me/messages?access_token=".JsonController::ACCESS_TOKEN;
         $client = \Drupal::httpClient();
-        $request = $client->request('POST',$url,$reply_message);
+        $request = $client->request('POST',$url,$text_message);
         $status = $request->getStatusCode();
+        // $data = file_get_contents("php://input");
+        // $data['query'] = $request->query->all();
+        // $data['header'] = $request->headers->all();
+        // $data['request'] = $request->request->all();
 
+        file_put_contents("sites/default/files/data/".Date("H-i-s").".txt",$status);
+        return $status;
   }
   /**
    * Logs in a user.
