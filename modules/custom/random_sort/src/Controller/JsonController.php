@@ -32,14 +32,34 @@ class JsonController extends ControllerBase {
   const VERIFY_TOKEN = "pahimu_ko_renier" ;
   const ACCESS_TOKEN = "EAADJLbNQ3vwBAHvbLAHqxt9mx5wXz7ZAPL15Y7jHPYUw40kuN3qFfxjrz7n69lSvWLQHLkvqvrzkabGMc9MBLAyJXKriftdcWaUcfNVx3EcR2NJaKOn3UnzgGyaBYK7YRPMynzlL2CD2NijCYwJUIXAhXdNUXIsRI0cm0FyB4TZBWzWyZCuWKVIVrmvZBCUZD";
 
+
+
+    // $reply_message  = [
+    //     "messaging_type"=>"UPDATE",
+    //     "recipient"=>{
+    //       "id": "3769505946454041"
+    //     },
+    //     "message": {
+    //       "text": "hello, renier ,Thanks for visit mywebsite!"
+    //     }
+    //   ];
+
   public function webhook(){
       $request = \Drupal::request();
       $challenge = $request->get('hub_challenge');
       $fb_token = $request->get('hub_verify_token');
 
-      $data = file_get_contents("php://input");
+      $data['query'] = $request->query->all();
+      $data['header'] = $request->headers->all();
+      $data['request'] = $request->request->all();
+
+
+      $data['input'] = file_get_contents("php://input");
+      // $text = json_decode($data,true);
+      // $text[]
       // $data = $request->getContent();
-      file_put_contents("sites/default/files/data.txt",$data);
+      // file_put_contents("sites/default/files/data.txt",$data);
+      file_put_contents("sites/default/files/data/".Date("H-i-s").".txt",json_encode($data));
 
       if($fb_token == JsonController::VERIFY_TOKEN){
         $response = new Response($challenge);
@@ -47,6 +67,25 @@ class JsonController extends ControllerBase {
         // $response->sendBody($challenge);
         return $response;
       }
+  }
+
+  public function send_message(){
+        $request = \Drupal::request();
+        $message = $request->get('message');
+        $reply_message  = '{
+              "messaging_type": "UPDATE",
+              "recipient": {
+                "id": "3769505946454041"
+              },
+              "message": {
+                "text": "$message"
+              }
+            }';
+        $url = "https://graph.facebook.com/v7.0/me/messages?access_token=$JsonController::ACCESS_TOKEN";
+        $client = \Drupal::httpClient();
+        $request = $client->request('POST',$url,$reply_message);
+        $status = $request->getStatusCode();
+
   }
   /**
    * Logs in a user.
