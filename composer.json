@@ -25,6 +25,7 @@
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
+        "drupal/graphql": "^3.0",
         "drupal/imce": "^1.7",
         "drupal/pathauto": "^1.6",
         "drupal/random_number_field": "^1.0@beta",

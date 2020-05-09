@@ -31,12 +31,14 @@ function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
         $session = new \Symfony\Component\HttpFoundation\Session\Session();
 
         // $session->start();
-        // $var = \Drupal::service('user.auth');
+        $var = \Drupal::service('user.auth');
         // $var = \Drupal::service('user.authentication.cookie');
-        $var = \Drupal::service('csrf_token');
+        // $var = \Drupal::service('csrf_token');
         $private_key = \Drupal::service('private_key');
-        $request = \Drupal::request();
+
         $response = new Response();
+        $client = \Drupal::httpClient();
+        $request = \Drupal::request();
         // $var = \Drupal::service('html_response.attachments_processor');
         // $response = new Response();
         // $response->headers->setCookie(new Cookie('SESSc8a29b3530221fefd97ca0f2616a2096e', 'ZUVMqiSmHj2LKqNqBxXlIMiVRMxFZLazPZ9lkH_ckKEe'));
@@ -44,7 +46,8 @@ function random_sort_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
         // ksm(new Cookie('a','a'));
         // $sessio
         // ksm();
-        // ksm($var);
+        ksm($request);
+        ksm($client);
         // ksm($session);
     }
 

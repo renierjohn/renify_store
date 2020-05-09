@@ -1452,7 +1452,12 @@ Blog Section
 #blog .col-md-3 {
     padding: 0;
 }
-
+#blog .col-md-3 a{
+  background-color: black;
+}
+#blog .col-md-3 img{
+  opacity: .6;
+}
 #blog {
     width: 100%;
     color: black;

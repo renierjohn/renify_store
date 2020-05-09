@@ -1,8 +1,0 @@
-uuid: 071ad90a-717f-41a8-bfea-c2baba1ff0c7
-langcode: en
-status: true
-dependencies: {  }
-name: Location
-vid: location
-description: ''
-weight: 0

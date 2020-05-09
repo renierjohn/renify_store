@@ -18,13 +18,13 @@ random_sort.webhook:
     _controller: '\Drupal\random_sort\Controller\JsonController::webhook'
     _title: 'Messenger Service'
   requirements:
-    _permission: 'access content'
+    _permission: 'access administration pages'
 
 random_sort.send_message:
   path: '/send_message_fb'
   defaults:
     _controller: '\Drupal\random_sort\Controller\JsonController::send_message'
-    _title: 'Messenger Send'
+    _title: 'access administration pages'
   requirements:
     _permission: 'access content'
 
@@ -34,4 +34,4 @@ random_sort.send_message_curl:
     _controller: '\Drupal\random_sort\Controller\JsonController::send_message_curl'
     _title: 'Messenger Send via Curl'
   requirements:
-    _permission: 'access content'
+    _permission: 'access administration pages'
