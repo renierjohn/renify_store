@@ -105,9 +105,11 @@ class JsonController extends ControllerBase {
 
     $request = \Drupal::request();
     $message = $request->get('message');
+    $fb_id= $request->get('id');
+    // 3769505946454041 renier
     $data = array(
       'messaging_type'=> "UPDATE",
-      'recipient' => ['id'=>'3769505946454041'],
+      'recipient' => ['id'=>$fb_id],
       'message' => ['text'=>$message],
     );
 
