@@ -25,16 +25,19 @@
 		        </div>
 		      </div>
 		        {{ content.subject }}
-			    {{ content.message }}
-				{{ content.form_build_id }}
-				{{ content.form_token }}
-				{{ content.form_id }}
-				{# {{ kint(content) }} #}
-		      <div class="row">
+			      {{ content.message }}
+			    	{{ content.form_build_id }}
+			    	{{ content.form_token }}
+			    	{{ content.form_id }}
+				  <div class="row">
 		        <div class="col-sm-12 col form-group">
-		          {{content.actions.submit}}
-		        </div>
-		      </div>
+              {% if logged_in %}
+		            {{content.actions.submit}}
+              {% else %}
+                <button type="button" name="" class="btn" onclick="login_fb()">Login With Facebook</button>
+              {% endif %}
+            </div>
+          </div>
 		    </div>
 	    </form>
     </div>
