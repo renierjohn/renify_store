@@ -5,6 +5,7 @@
     {header}
   </head>
   <body id="top">
+     <?=$this->e($name)?>
     {preloader}
     {header}
     {main}

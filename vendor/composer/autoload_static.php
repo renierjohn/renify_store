@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInitfcf058cab7a04fbf1ddfd74c87f61e9a
 {
     public static $prefixLengthsPsr4 = array (
+        'L' => 
+        array (
+            'League\\Plates\\' => 14,
+        ),
         'F' => 
         array (
             'Functions\\' => 10,
@@ -14,6 +18,10 @@ class ComposerStaticInitfcf058cab7a04fbf1ddfd74c87f61e9a
     );
 
     public static $prefixDirsPsr4 = array (
+        'League\\Plates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/plates/src',
+        ),
         'Functions\\' => 
         array (
             0 => __DIR__ . '/../..' . '/functions',
@@ -23,6 +31,19 @@ class ComposerStaticInitfcf058cab7a04fbf1ddfd74c87f61e9a
     public static $classMap = array (
         'Functions\\renify\\Controller' => __DIR__ . '/../..' . '/functions/Controller.php',
         'Functions\\renify\\Render' => __DIR__ . '/../..' . '/functions/Render.php',
+        'League\\Plates\\Engine' => __DIR__ . '/..' . '/league/plates/src/Engine.php',
+        'League\\Plates\\Extension\\Asset' => __DIR__ . '/..' . '/league/plates/src/Extension/Asset.php',
+        'League\\Plates\\Extension\\ExtensionInterface' => __DIR__ . '/..' . '/league/plates/src/Extension/ExtensionInterface.php',
+        'League\\Plates\\Extension\\URI' => __DIR__ . '/..' . '/league/plates/src/Extension/URI.php',
+        'League\\Plates\\Template\\Data' => __DIR__ . '/..' . '/league/plates/src/Template/Data.php',
+        'League\\Plates\\Template\\Directory' => __DIR__ . '/..' . '/league/plates/src/Template/Directory.php',
+        'League\\Plates\\Template\\FileExtension' => __DIR__ . '/..' . '/league/plates/src/Template/FileExtension.php',
+        'League\\Plates\\Template\\Folder' => __DIR__ . '/..' . '/league/plates/src/Template/Folder.php',
+        'League\\Plates\\Template\\Folders' => __DIR__ . '/..' . '/league/plates/src/Template/Folders.php',
+        'League\\Plates\\Template\\Func' => __DIR__ . '/..' . '/league/plates/src/Template/Func.php',
+        'League\\Plates\\Template\\Functions' => __DIR__ . '/..' . '/league/plates/src/Template/Functions.php',
+        'League\\Plates\\Template\\Name' => __DIR__ . '/..' . '/league/plates/src/Template/Name.php',
+        'League\\Plates\\Template\\Template' => __DIR__ . '/..' . '/league/plates/src/Template/Template.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

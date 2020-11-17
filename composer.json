@@ -3,5 +3,8 @@
         "psr-4": {
             "Functions\\": "functions/"
         }
+    },
+    "require": {
+        "league/plates": "^3.3"
     }
 }
