@@ -1,8 +1,0 @@
-uuid: 608a1d25-45e3-4582-9e62-c675e1481cb2
-langcode: en
-status: true
-dependencies: {  }
-name: Position
-vid: position
-description: ''
-weight: 0
