@@ -1,8 +1,8 @@
 <header class="s-header">
     <div class="row">
         <div class="header-logo">
-            <a class="site-logo" href="index.html">
-                <img src="images/logo.svg" alt="Homepage">
+            <a class="site-logo" href="index.php">
+                <img src="../favicon.ico" alt="Homepage">
             </a>
         </div>
         <nav class="header-nav-wrap">
@@ -13,9 +13,8 @@
                 <li><a class="smoothscroll" href="#pricing" title="pricing">Pricing</a></li>
                 <li><a class="smoothscroll" href="#download" title="download">Download</a></li>
             </ul>
-
             <div class="header-cta">
-                <a href="#download" class="btn btn--primary header-cta__btn smoothscroll">Get The App</a>
+                <a href="#download" class="btn btn--primary header-cta__btn smoothscroll"><?=$this->e($label)?></a>
             </div>
         </nav> <!-- end header-nav-wrap -->
         <a class="header-menu-toggle" href="#"><span>Menu</span></a>
