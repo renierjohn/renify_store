@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <style type="text/css" media="screen">
-        .s-styles { 
+        .s-styles {
             background-color: #ffffff;
             padding-top: 21.6rem;
             padding-bottom: 14.8rem;
@@ -52,7 +52,7 @@
     </div>
 
 
-    <!-- header 
+    <!-- header
     ================================================== -->
     <header class="s-header">
 
@@ -62,21 +62,21 @@
                     <img src="images/logo.svg" alt="Homepage">
                 </a>
             </div>
-    
+
             <nav class="header-nav-wrap">
                 <ul class="header-main-nav">
                     <li class="current"><a href="index.html" title="intro">Intro</a></li>
                     <li><a href="index.html#about" title="about">About</a></li>
                     <li><a href="index.html#features" title="features">Features</a></li>
                     <li><a href="index.html#pricing" title="pricing">Pricing</a></li>
-                    <li><a href="index.html#download" title="download">Download</a></li>	
+                    <li><a href="index.html#download" title="download">Download</a></li>
                 </ul>
-    
+
                 <div class="header-cta">
                     <a href="#0" class="btn btn--primary header-cta__btn">Get The App</a>
                 </div>
             </nav>
-    
+
             <a class="header-menu-toggle" href="#"><span>Menu</span></a>
         </div>
 
@@ -98,12 +98,12 @@
                     An Amazing App <br>
                     That Does It All.
                     </h1>
-    
+
                     <h3>
-                    Voluptatem ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explica. Nemo enim ipsam voluptatem quia. 
+                    Voluptatem ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explica. Nemo enim ipsam voluptatem quia.
                     Ut quis enim.
                     </h3>
-    
+
                     <div class="home-content__btn-wrap">
                         <a href="#0" class="btn btn--primary home-content__btn">
                             Get The App
@@ -128,7 +128,7 @@
         <a href="#styles" class="home-scroll smoothscroll">
             <span class="home-scroll__text">Scroll</span>
             <span class="home-scroll__icon"></span>
-        </a> 
+        </a>
 
     </section> <!-- end s-home -->
 
@@ -136,7 +136,7 @@
     <!-- styles
     ================================================== -->
     <section id="styles" class="s-styles">
-        
+
         <div class="row narrow section-intro add-bottom text-center">
 
             <div class="col-twelve tab-full">
@@ -160,7 +160,7 @@
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque posuere nunc justo tempus leo. </p>
 
                 <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentumodio, ac blandit ante orci ut diam.	
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentumodio, ac blandit ante orci ut diam.
                 </p>
 
                 <p>A <a href="#">link</a>,
@@ -283,7 +283,7 @@
                 </p>
 
                 <h3>Skill Bars</h3>
-                
+
                 <ul class="skill-bars">
                     <li>
                     <div class="progress percent90"><span>90%</span></div>
@@ -318,33 +318,33 @@
         <div class="row half-bottom">
 
             <div class="col-six tab-full">
-                    
+
                 <h1>H1 Heading</h1>
-                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel. 
+                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel.
                 Voluptas odit at vitae minima. In assumenda ut. Voluptatem totam impedit accusantium reiciendis excepturi aut qui accusamus praesentium.</p>
 
                 <h2>H2 Heading</h2>
-                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel. 
+                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel.
                 Voluptas odit at vitae minima. In assumenda ut. Voluptatem totam impedit accusantium reiciendis excepturi aut qui accusamus praesentium.</p>
 
                 <h3>H3 Heading</h3>
-                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel. 
+                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel.
                 Voluptas odit at vitae minima. In assumenda ut. Voluptatem totam impedit accusantium reiciendis excepturi aut qui accusamus praesentium.</p>
 
             </div>
 
             <div class="col-six tab-full">
-                    
+
                 <h4>H4 Heading</h4>
-                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel. 
+                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel.
                 Voluptas odit at vitae minima. In assumenda ut. Voluptatem totam impedit accusantium reiciendis excepturi aut qui accusamus praesentium.</p>
 
                 <h5>H5 Heading</h5>
-                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel. 
+                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel.
                 Voluptas odit at vitae minima. In assumenda ut. Voluptatem totam impedit accusantium reiciendis excepturi aut qui accusamus praesentium.</p>
 
                 <h6>H6 Heading</h6>
-                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel. 
+                <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel.
                 Voluptas odit at vitae minima. In assumenda ut. Voluptatem totam impedit accusantium reiciendis excepturi aut qui accusamus praesentium.</p>
 
             </div>
@@ -375,9 +375,9 @@
             <div class="col-six tab-full">
 
                 <h3>Responsive Image</h3>
-                <p><img src="images/wheel-500.jpg" 
-                    srcset="images/wheel-1000.jpg 1000w, 
-                    images/wheel-500.jpg 500w" 
+                <p><img src="images/wheel-500.jpg"
+                    srcset="images/wheel-1000.jpg 1000w,
+                    images/wheel-500.jpg 500w"
                     sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
 
             </div>
@@ -387,11 +387,11 @@
                 <h3>Responsive video</h3>
 
                 <div class="video-container">
-                <iframe src="https://player.vimeo.com/video/14592941?color=00a650&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+                <iframe src="https://player.vimeo.com/video/14592941?color=00a650&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
 
             </div>
-            
+
         </div> <!-- end row -->
 
         <div class="row add-bottom">
@@ -431,8 +431,8 @@
                 </div>
 
             </div>
-            
-        </div> <!-- end row -->    
+
+        </div> <!-- end row -->
 
         <div class="row">
 
@@ -455,7 +455,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <label for="exampleMessage">Message</label>
                     <textarea class="full-width" placeholder="Your message" id="exampleMessage"></textarea>
 
@@ -463,7 +463,7 @@
                         <input type="checkbox">
                         <span class="label-text">Send a copy to yourself</span>
                     </label>
-                
+
                     <input class="btn--primary full-width" type="submit" value="Submit">
                 </form>
 
@@ -474,27 +474,27 @@
                 <h3>Alert Boxes</h3>
 
                 <br>
-                
+
                 <div class="alert-box alert-box--error hideit">
                     <p>Error Message. Your Message Goes Here.</p>
                     <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
                 </div><!-- end error -->
-                        
+
                 <div class="alert-box alert-box--success hideit">
                     <p>Success Message. Your Message Goes Here.</p>
                     <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
                 </div><!-- end success -->
-                        
+
                 <div class="alert-box alert-box--info hideit">
                     <p>Info Message. Your Message Goes Here.</p>
                     <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
                 </div><!-- end info -->
-                        
+
                 <div class="alert-box alert-box--notice hideit">
                     <p>Notice Message. Your Message Goes Here.</p>
                     <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
                 </div><!-- end notice -->
-            
+
             </div>
 
         </div> <!-- end row -->
@@ -524,11 +524,11 @@
                     <form id="mc-form" class="group" novalidate="true">
 
                         <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-            
+
                         <input type="submit" name="subscribe" value="Sign Up">
-            
+
                         <label for="mc-email" class="subscribe-message"></label>
-            
+
                     </form>
                 </div>
             </div>
@@ -542,9 +542,9 @@
                 <h4>About Kairos.</h4>
 
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex consectetur adipisicing elit do eiusmod tempor.
                 </p>
 
@@ -588,7 +588,7 @@
             </div>
 
             <div class="col-full ss-copyright">
-                <span>&copy; Copyright Kairos 2018</span> 
+                <span>&copy; Copyright Kairos 2018</span>
                 <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>
             </div>
 
