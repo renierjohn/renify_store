@@ -5,6 +5,7 @@
         }
     },
     "require": {
-        "league/plates": "^3.3"
+        "league/plates": "^3.3",
+        "klein/klein": "^2.1"
     }
 }
