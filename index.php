@@ -4,6 +4,7 @@ use Functions\renify\Controller;
 use League\Plates\Engine;
 use Klein\Klein;
 
+include './functions/Controller.php';
 include './vendor/autoload.php';
 
 $app      = new Klein();
@@ -28,7 +29,12 @@ $app->respond('GET','/style', function ($request, $response, $service) {
 
 $app->with('/products', function () use ($app) {
     $app->respond('GET', '/?', function ($request, $response,$service) {
-        return 'All Users';
+      $render   = new Engine('./templates');
+      $render->addData(['title' => 'Renify'],'meta');
+      $render->addData(['label' => 'Sign Up Now'],'header');
+      $template = $render->render('products');
+      return $template;
+
     });
     $app->respond('GET', '/[:id]', function ($request, $response,$service) {
         return 'User id : '.$request->id;
@@ -47,8 +53,21 @@ $app->with('/blogs', function () use ($app) {
 });
 
 
-$app->respond('GET','/debug/[:name]', function ($request, $response, $service) {
-  return $response->dump($request->name);
+$app->respond('GET','/debug', function ($request, $response, $service) {
+  $controller = new Controller(__DIR__);
+  $path = $controller->getJson();
+  $json = file_get_contents($path);
+  // $val = [];
+  // foreach ( as $key => $value) {
+  //   $val = $value;
+  // }
+  // var_dump($json);
+  // $decoded = json_decode($json,TRUE);
+  // var_dump($path);
+  // return $decoded;
+  // $response->dump([$json,$decoded]);
+  $response->dump($path);
+  // return ;
 });
 
 $app->dispatch();
