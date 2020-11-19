@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '3f17fc5f01da1293b05f71ecf3fb71baa4830f9e',
+    'reference' => '19032f81251606190bcfa96036e51ab28c45acc4',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '3f17fc5f01da1293b05f71ecf3fb71baa4830f9e',
+      'reference' => '19032f81251606190bcfa96036e51ab28c45acc4',
     ),
     'klein/klein' => 
     array (

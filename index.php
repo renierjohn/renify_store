@@ -11,6 +11,7 @@ $app      = new Klein();
 $render   = new Engine('./templates');
 $template = $render->render('layout');
 
+// echo 'renier';//
 $app->respond('GET','/', function ($request, $response, $service) {
     $render   = new Engine('./templates');
     $render->addData(['title' => 'Renify'],'meta');
@@ -54,19 +55,15 @@ $app->with('/blogs', function () use ($app) {
 
 
 $app->respond('GET','/debug', function ($request, $response, $service) {
-  $controller = new Controller(__DIR__);
+  $controller = new Controller(__DIR__,'places.json');
   $path = $controller->getJson();
-  $json = file_get_contents($path);
-  // $val = [];
-  // foreach ( as $key => $value) {
-  //   $val = $value;
-  // }
-  // var_dump($json);
-  // $decoded = json_decode($json,TRUE);
-  // var_dump($path);
-  // return $decoded;
-  // $response->dump([$json,$decoded]);
-  $response->dump($path);
+  $contents = file_get_contents($path);
+  // $url = 'https://live-deped-dauin.pantheonsite.io/api/places';
+  // $contents = file_get_contents($json);
+  $decoded = json_decode($contents,TRUE);
+  // file_put_contents("./files/json/places.json", $contents);
+
+  $response->dump($decoded);
   // return ;
 });
 

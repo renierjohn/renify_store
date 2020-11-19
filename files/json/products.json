@@ -2,11 +2,11 @@
   "1":{
     "id" :"1",
     "title" : "adobo",
-    "description" : "manok",
+    "description" : "manok"
   },
-  "2":{
+  "3":{
     "id" :"2",
     "title" : "paksiw",
-    "description" : "baboy",
+    "description" : "baboy"
   }
 }
