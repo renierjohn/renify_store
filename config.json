@@ -1,0 +1,18 @@
+{
+  "path" : {
+    "asssets" : {
+      "base": "assets/",
+      "css" : "assets/css/",
+      "js" :  "assets/js/"
+    },
+    "files" : {
+      "contents" : {
+        "base"      : "files/contents/",    
+        "places"    : "files/contents/places.json",
+        "users"     : "files/contents/users.json"   ,
+        "products"  : "files/contents/products.json"
+      },
+      "configs" : "files/contents/configs"
+    }
+  }
+}

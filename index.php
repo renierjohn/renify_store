@@ -55,15 +55,16 @@ $app->with('/blogs', function () use ($app) {
 
 
 $app->respond('GET','/debug', function ($request, $response, $service) {
-  $controller = new Controller(__DIR__,'places.json');
-  $path = $controller->getJson();
-  $contents = file_get_contents($path);
+  $controller = new Controller(__DIR__);
+  // $path = $controller->getPlaces();
+  $path = $controller->getContentsPagination('places',1,1);
+  // $contents = file_get_contents($path);
   // $url = 'https://live-deped-dauin.pantheonsite.io/api/places';
   // $contents = file_get_contents($json);
-  $decoded = json_decode($contents,TRUE);
+  // $decoded = json_decode($contents,TRUE);
   // file_put_contents("./files/json/places.json", $contents);
 
-  $response->dump($decoded);
+  $response->dump($path);
   // return ;
 });
 
