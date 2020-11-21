@@ -1,6 +1,7 @@
 <?php
 use Functions\renify\Render;
 use Functions\renify\Controller;
+use Functions\renify\SEO;
 use League\Plates\Engine;
 use Klein\Klein;
 
@@ -13,58 +14,42 @@ $template = $render->render('layout');
 
 // echo 'renier';//
 $app->respond('GET','/', function ($request, $response, $service) {
-    $render   = new Engine('./templates');
-    $render->addData(['title' => 'Renify'],'meta');
-    $render->addData(['label' => 'Sign Up Now'],'header');
-    $template = $render->render('layout');
+    $render    = new Render(__DIR__);
+    $template = $render->render();
     return $template;
 });
 
 $app->respond('GET','/style', function ($request, $response, $service) {
-    $render   = new Engine('./templates');
-    $template = $render->render('styles');
-    return $template;
+  $render    = new Render(__DIR__);
+  $template = $render->render('styles');
+  return $template;
 });
 
 
-
-$app->with('/products', function () use ($app) {
+$app->with('/places', function () use ($app) {
     $app->respond('GET', '/?', function ($request, $response,$service) {
-      $render   = new Engine('./templates');
-      $render->addData(['title' => 'Renify'],'meta');
-      $render->addData(['label' => 'Sign Up Now'],'header');
-      $template = $render->render('products');
+      $render    = new Render(__DIR__);
+      $template = $render->render('places');
       return $template;
-
     });
+
     $app->respond('GET', '/[:id]', function ($request, $response,$service) {
-        return 'User id : '.$request->id;
-    });
-
-});
-
-$app->with('/blogs', function () use ($app) {
-    $app->respond('GET', '/?', function ($request, $response,$service) {
-        return 'All Blogs';
-    });
-    $app->respond('GET', '/[:id]', function ($request, $response,$service) {
-        return 'Blog id : '.$request->id;
+      $render    = new Render(__DIR__);
+      $template = $render->render('places',$request->id);
+      return $template;
     });
 
 });
 
 
 $app->respond('GET','/debug', function ($request, $response, $service) {
-  $controller = new Controller(__DIR__);
-  // $path = $controller->getPlaces();
-  $path = $controller->getContentsPagination('places',1,1);
-  // $contents = file_get_contents($path);
-  // $url = 'https://live-deped-dauin.pantheonsite.io/api/places';
-  // $contents = file_get_contents($json);
-  // $decoded = json_decode($contents,TRUE);
-  // file_put_contents("./files/json/places.json", $contents);
+  // $controller = new Controller(__DIR__);
+  // $data = $controller->getContentsPagination('users',1,0);
 
-  $response->dump($path);
+
+  $render    = new Render(__DIR__);
+  $data = $render->getPagesMetaData();
+  $response->dump($data);
   // return ;
 });
 

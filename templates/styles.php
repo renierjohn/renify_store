@@ -1,87 +1,12 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Style Guide - Kairos</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <style type="text/css" media="screen">
-        .s-styles {
-            background-color: #ffffff;
-            padding-top: 21.6rem;
-            padding-bottom: 14.8rem;
-        }
-    </style>
-
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
-
-    <!-- favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+  <?php $this->insert('meta') ?>
 </head>
 
 <body id="top">
-
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-jump">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-
-
-    <!-- header
-    ================================================== -->
-    <header class="s-header">
-
-        <div class="row">
-            <div class="header-logo">
-                <a class="site-logo" href="index.html">
-                    <img src="images/logo.svg" alt="Homepage">
-                </a>
-            </div>
-
-            <nav class="header-nav-wrap">
-                <ul class="header-main-nav">
-                    <li class="current"><a href="index.html" title="intro">Intro</a></li>
-                    <li><a href="index.html#about" title="about">About</a></li>
-                    <li><a href="index.html#features" title="features">Features</a></li>
-                    <li><a href="index.html#pricing" title="pricing">Pricing</a></li>
-                    <li><a href="index.html#download" title="download">Download</a></li>
-                </ul>
-
-                <div class="header-cta">
-                    <a href="#0" class="btn btn--primary header-cta__btn">Get The App</a>
-                </div>
-            </nav>
-
-            <a class="header-menu-toggle" href="#"><span>Menu</span></a>
-        </div>
-
-    </header> <!-- end header -->
-
+    <?php $this->insert('preloader') ?>
+    <?php $this->insert('header') ?>
 
     <!-- home
     ================================================== -->
@@ -603,8 +528,8 @@
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <?php foreach ($assetsJsSuffix as $key => $value): ?>
+      <script src=<?=$this->e($value['path'])?>></script>
+    <?php endforeach; ?>
 
 </body>

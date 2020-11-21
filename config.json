@@ -7,12 +7,23 @@
     },
     "files" : {
       "contents" : {
-        "base"      : "files/contents/",    
+        "base"      : "files/contents/",
         "places"    : "files/contents/places.json",
         "users"     : "files/contents/users.json"   ,
         "products"  : "files/contents/products.json"
       },
       "configs" : "files/contents/configs"
     }
+  },
+  "meta" : {
+    "sitename" : "Renify Store",
+    "favicon" : "favicon.ico"
+  },
+  "pages":{
+    "styles":"Styles",
+    "places":"Places",
+    "users":"Users",
+    "products":"products",
+    "layout":"Home"
   }
 }

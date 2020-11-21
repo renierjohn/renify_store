@@ -75,3 +75,7 @@
         <a class="smoothscroll" title="Back to Top" href="#top"></a>
     </div>
 </footer>
+
+<?php foreach ($footer['assetsJsSuffix'] as $key => $value): ?>
+  <script src=<?=$this->e($value['path'])?>></script>
+<?php endforeach; ?>

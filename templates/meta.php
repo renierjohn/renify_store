@@ -1,15 +1,18 @@
 <head>
-    <?php $dir = __DIR__ ?>
+    <?php $dir = __DIR__  ?>
     <meta charset="utf-8">
-    <title>Home | <?=$this->e($title)?></title>
+    <title><?=$this->e($meta['title'])?> | <?=$this->e($meta['siteName'])?> </title>
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Rendroid">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/vendor.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <script src="./assets/js/modernizr.js"></script>
-    <script src="./assets/js/pace.min.js"></script>
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+
+    <?php foreach ($meta['assetsCss'] as $key => $value): ?>
+      <link rel="stylesheet" href=<?=$this->e($value['path'])?>>
+    <?php endforeach; ?>
+    <?php foreach ($meta['assetsJsPrefix'] as $key => $value): ?>
+      <script src=<?=$this->e($value['path'])?>></script>
+    <?php endforeach; ?>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>

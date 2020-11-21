@@ -4,7 +4,7 @@
   <body id="top">
     <?php $this->insert('preloader') ?>
     <?php $this->insert('header') ?>
-    <?php $this->insert('mainindex') ?>
+    <?php $this->insert('main') ?>
     <?php $this->insert('footer') ?>
  </body>
 </html>
