@@ -1,7 +1,7 @@
 <header class="s-header">
     <div class="row">
         <div class="header-logo">
-            <a class="site-logo" href="index.php">
+            <a class="site-logo" href="/">
                 <img src="../favicon.ico" alt="Homepage">
             </a>
         </div>

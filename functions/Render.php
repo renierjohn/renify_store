@@ -38,10 +38,15 @@ class Render extends Controller
    }
 
    $meta = $this->getMetaData($title);
-   $header = $this->getHeaderData();
-   $contents = $this->getContentsPagination($pageId,$pager,$limit);
-   $footer = $this->getFooterData();
-   $footer['assetsJsSuffix'] = $meta['assetsJsSuffix'];
+
+   $array['pageId'] = $pageId;
+   $array['limit']  = $limit;
+   $array['pager']  = $pager;
+   $array['assetsJsSuffix'] = $meta['assetsJsSuffix'];
+
+   $header = $this->getHeaderData($array);
+   $contents = $this->getContentData($array);
+   $footer = $this->getFooterData($array);
 
    $this->engine->addData(['meta' => $meta],'meta');
    $this->engine->addData(['header' => $header],'header');
@@ -50,7 +55,7 @@ class Render extends Controller
    return  $this->engine->render($pageId);
  }
 
-  public function getMetaData($title){
+  private function getMetaData($title){
     $pathLevel = 2;
     $jsPrefixArr = ['modernizr','pace'];
     $jsSuffixArr = ['jquery-3.2.1.min','plugins','main'];
@@ -74,14 +79,18 @@ class Render extends Controller
 
     return $meta;
   }
+  public function getContentData($array){
+      return $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
+  }
 
-  public function getHeaderData(){
+  private function getHeaderData($array){
     $header['label'] = 'Order Now';
     return $header;
   }
 
-  public function getFooterData(){
+  private function getFooterData($array){
     $footer['content'] = 'footer';
+    $footer['assetsJsSuffix'] = $array['assetsJsSuffix'];
     return $footer;
   }
 
