@@ -1,29 +1,46 @@
 {
-  "path" : {
-    "asssets" : {
-      "base": "assets/",
-      "css" : "assets/css/",
-      "js" :  "assets/js/"
-    },
-    "files" : {
-      "contents" : {
-        "base"      : "files/contents/",
-        "places"    : "files/contents/places.json",
-        "users"     : "files/contents/users.json"   ,
-        "products"  : "files/contents/products.json"
-      },
-      "configs" : "files/contents/configs"
-    }
-  },
   "meta" : {
-    "sitename" : "Renify Store",
-    "favicon" : "favicon.ico"
+          "sitename" : "Renify Store",
+          "favicon" : "favicon.ico",
+          "number" : "0926777777"
+  },
+  "path" : {
+          "asssets" : {
+            "base": "assets/",
+            "css" : "assets/css/",
+            "js"  :  "assets/js/",
+            "images" : "images/contents/"
+          },
+          "files" : {
+            "contents" : {
+              "base"      : "files/contents/",
+              "places"    : "files/contents/places.json",
+              "users"     : "files/contents/users.json"   ,
+              "products"  : "files/contents/products.json"
+            },
+            "configs" : "files/contents/configs"
+          }
   },
   "pages":{
-    "styles":"Styles",
-    "places":"Places",
-    "users":"Users",
-    "products":"products",
-    "layout":"Home"
-  }
+          "styles" : {
+            "title":"Styles",
+            "layout":"main"
+          },
+          "places" : {
+            "title":"Places",
+            "layout":"main"
+          },
+          "users" : {
+            "title":"Users",
+            "layout":"main"
+          },
+          "products" :{
+            "title":"Products",
+            "layout":"main"
+          },
+          "layout" : {
+            "title":"Home",
+            "layout":"main"
+          }
+        }
 }

@@ -2,21 +2,25 @@
   {
     "id":"1",
     "name":"Renier",
-    "address":"Dauin"
+    "address":"Dauin",
+    "avatar":"user-01"
   },
   {
     "id":"2",
     "name":"Jiji",
-    "address":"Sara"
+    "address":"Sara",
+    "avatar":"user-02"
   },
   {
     "id":"3",
     "name":"AVICII",
-    "address":"London"
+    "address":"London",
+    "avatar":"user-03"
   },
   {
     "id":"4",
     "name":"Martix Garrix",
-    "address":"Amstedam"
+    "address":"Amstedam",
+    "avatar":"user-04"
   }
 ]

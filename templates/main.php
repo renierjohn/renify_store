@@ -23,3 +23,6 @@
         </div>
     </div>
 </section>
+
+<?php $this->insert('./blocks/pricing')?>
+<?php $this->insert('./blocks/video')?>

@@ -43,12 +43,13 @@ $app->with('/places', function () use ($app) {
 
 
 $app->respond('GET','/debug', function ($request, $response, $service) {
-  // $controller = new Controller(__DIR__);
-  // $data = $controller->getContentsPagination('users',1,0);
+  $controller = new Controller(__DIR__);
+  $data = $controller->getContentsPagination('users');
+  $data = $controller->getAssetsWithName(1,'user-02','jpg');
+  // $data = $controller->getAssets()[2];
 
-
-  $render    = new Render(__DIR__);
-  $data = $render->getPagesMetaData();
+  // $render    = new Render(__DIR__);
+  // $data = $render->getPagesMetaData();
   $response->dump($data);
   // return ;
 });

@@ -67,8 +67,8 @@
             </div>
         </div>
         <div class="col-full ss-copyright">
-            <span>&copy; Copyright Kairos 2018</span>
-            <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>
+            <span>&copy; Copyright Renify 2020</span>
+            <span>Design by <a href="https://www.renify.store/">Rendroid</a></span>
         </div>
     </div> <!-- end footer__bottom -->
     <div class="go-top">

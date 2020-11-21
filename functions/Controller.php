@@ -34,6 +34,14 @@ class Controller
         }
           return $assets[1];
       }
+      if($extension == 'jpg' || $extension == 'png' || $extension == 'jpeg' ){
+        foreach ($assets[2] as $key => $value) {
+          if($value['filename'] == $filename && $value['extension'] == $extension){
+            return $assets[2][$key];
+          }
+        }
+          return $assets[2];
+      }
       return $assets;
   }
 
@@ -73,8 +81,8 @@ class Controller
   }
 
 
-  private function getAssets($pathLevel = 1){
-    $extensions = ['css','js'];
+  public function getAssets($pathLevel = 1){
+    $extensions = ['css','js','jpg','png','jpeg'];
     $assets_arr = [];
     $pathLevelIdentifier = './';
     for ($i=1; $i < $pathLevel; $i++) {
@@ -82,7 +90,7 @@ class Controller
     }
 
     foreach ($extensions as $extensionKey => $extensionValue) {
-      $directory = $this->getFullPathAssets($extensionValue);
+      $directory = $this->getPathAssets($extensionValue,FALSE);
       //remove non file index
       $files = array_diff(scandir($directory,1), array('..', '.'));
       if(!empty($files)){
@@ -91,8 +99,8 @@ class Controller
           if(!empty(pathinfo($value)['extension']) && pathinfo($value)['extension'] == $extensionValue ) {
             $tmp = pathinfo($value);
             // insert properties on each file
-            $tmp['relativepath'] = $pathLevelIdentifier.$this->getRelativePathAssets($extensionValue);
-            $tmp['path'] = $pathLevelIdentifier.$this->getRelativePathAssets($extensionValue).$tmp['basename'];
+            $tmp['relativepath'] = $pathLevelIdentifier.$this->getPathAssets($extensionValue);
+            $tmp['path'] = $pathLevelIdentifier.$this->getPathAssets($extensionValue).$tmp['basename'];
             array_push($array,$tmp);
           }
         }
@@ -108,22 +116,25 @@ class Controller
     return $this->file.'\\'.$this->config['path']['files']['contents'][$filename];
   }
 
-  private function getFullPathAssets($filename){
-    $filename = strtolower($filename);
-    if($filename == 'css' || $filename == 'js'){
-      return $this->file.'\\'.$this->config['path']['asssets'][$filename];
-    }
-    return $this->file.'\\'.$this->config['path']['asssets']['css'];
-  }
 
-  private function getRelativePathAssets($filename){
+  public function getPathAssets($filename = 'css',$isRelative = TRUE){
     $filename = strtolower($filename);
-    if($filename == 'css' || $filename == 'js'){
-      return $this->config['path']['asssets'][$filename];
+    $extensions = ['css','js','jpg','png','jpeg'];
+    $imageExtensions = ['jpg','png','jpeg'];
+    foreach ($extensions as $extensionsKey => $extensionsValue) {
+        if($extensionsValue == $filename){
+          foreach ($imageExtensions as $key => $value) {
+            if($extensionsValue == $value){
+              $filename = 'images';
+            }
+          }
+          if($isRelative){
+            return $this->config['path']['asssets'][$filename];
+          }
+          return $this->file.'\\'.$this->config['path']['asssets'][$filename];
+      }
     }
-    return $this->config['path']['asssets']['css'];
   }
-
 
   public function getJsonFromFile($path){
     $contents = file_get_contents($path);

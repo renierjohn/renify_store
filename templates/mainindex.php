@@ -13,7 +13,7 @@
                 </h3>
                 <div class="home-content__btn-wrap">
                     <a href="#download" class="btn btn--primary home-content__btn smoothscroll">
-                        Get The App
+                        Order Now
                     </a>
                 </div>
             </div> <!-- end home-content__left-->
@@ -232,7 +232,7 @@
 
         <div class="col-block item-feature" data-aos="fade-up">
             <div class="item-feature__icon">
-                <i class="icon-chat"></i>
+                <i class="icon-cup"></i>
             </div>
             <div class="item-feature__text">
                 <h3 class="item-title">Group Chat</h3>
@@ -245,7 +245,7 @@
 
         <div class="col-block item-feature" data-aos="fade-up">
             <div class="item-feature__icon">
-                <i class="icon-wallet"></i>
+                <i class="icon-building"></i>
             </div>
             <div class="item-feature__text">
                 <h3 class="item-title">Payments</h3>

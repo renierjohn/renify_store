@@ -27,12 +27,12 @@ class Render extends Controller
    $limit = 1;
    if(empty($pageId)){
      $pageId = 'layout';
-     $title = $this->config['pages'][$pageId];
+     $title = $this->config['pages'][$pageId]['title'];
    }
    if(empty($pager)){
      $limit = 0;
      $pager = 1;
-     $title = $this->config['pages'][$pageId];
+     $title = $this->config['pages'][$pageId]['title'];
    }else {
      $title = strip_tags($this->getContentsPagination($pageId,$pager,1)[0]['title']);
    }
@@ -48,16 +48,18 @@ class Render extends Controller
    $contents = $this->getContentData($array);
    $footer = $this->getFooterData($array);
 
+   // $this->engine->addData(['layoutTemplate' => $this->config['pages'][$pageId]['layout']],'layout');
+   $this->engine->addData(['layoutTemplate' => 'main'],'layout');
    $this->engine->addData(['meta' => $meta],'meta');
    $this->engine->addData(['header' => $header],'header');
    $this->engine->addData(['contents' => $contents],'main');
    $this->engine->addData(['footer' => $footer],'footer');
-   return  $this->engine->render($pageId);
+   return  $this->engine->render('layout');
  }
 
   private function getMetaData($title){
     $pathLevel = 2;
-    $jsPrefixArr = ['modernizr','pace'];
+    $jsPrefixArr = ['modernizr','pace.min'];
     $jsSuffixArr = ['jquery-3.2.1.min','plugins','main'];
     $assetsJsPrefix = [];
     $assetsJsSuffix = [];
@@ -71,15 +73,27 @@ class Render extends Controller
        array_push($assetsJsSuffix,$this->getAssetsWithName($pathLevel,$value,'js'));
     }
 
-    $meta['assetsJsSuffix'] = $assetsJsSuffix;
-    $meta['assetsCss'] = $assetsCss;
     $meta['assetsJsPrefix'] = $assetsJsPrefix;
-    $meta['siteName'] = $this->getSeo();
-    $meta['title'] = $title;
+    $meta['assetsJsSuffix'] = $assetsJsSuffix;
+    $meta['assetsCss']      = $assetsCss;
+    $meta['siteName']       = $this->getSeo();
+    $meta['title']          = $title;
 
     return $meta;
   }
-  public function getContentData($array){
+
+  private function getContentData($array){
+      switch ($array['pageId']) {
+        case 'places':
+
+          break;
+
+        case 'users':
+
+          break;
+      }
+
+      
       return $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
   }
 
