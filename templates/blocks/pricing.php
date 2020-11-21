@@ -19,9 +19,9 @@
             <div class="item-plan__block">
 
                 <div class="item-plan__top-part">
-                    <h3 class="item-plan__title">Free</h3>
-                    <p class="item-plan__price">$0</p>
-                    <p class="item-plan__per">Forever</p>
+                    <h3 class="item-plan__title">Top Seller</h3>
+                    <p class="item-plan__price">Php 250</p>
+                    <p class="item-plan__per">Special</p>
                 </div>
 
                 <div class="item-plan__bottom-part">

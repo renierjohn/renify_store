@@ -54,6 +54,7 @@ class Render extends Controller
    $this->engine->addData(['header' => $header],'header');
    $this->engine->addData(['contents' => $contents],'main');
    $this->engine->addData(['footer' => $footer],'footer');
+   $this->engine->addData(['footer' => $footer],'jsSuffix');
    return  $this->engine->render('layout');
  }
 
@@ -93,7 +94,7 @@ class Render extends Controller
           break;
       }
 
-      
+
       return $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
   }
 

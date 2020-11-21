@@ -6,7 +6,6 @@
     <?php $this->insert('header') ?>
     <?php $this->insert('main')?>
     <?php $this->insert('footer') ?>
-
  </body>
 
 </html>

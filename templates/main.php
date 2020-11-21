@@ -24,5 +24,5 @@
     </div>
 </section>
 
-<?php $this->insert('./blocks/pricing')?>
 <?php $this->insert('./blocks/video')?>
+<?php $this->insert('./blocks/pricing')?>

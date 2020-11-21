@@ -11,7 +11,7 @@
                         3.1M
                     </span>
                     <span class="item-stats__title">
-                        Downloads
+                        Orders
                     </span>
                 </div> <!-- end item-stats -->
                 <div class="item-stats">
@@ -27,28 +27,28 @@
     </div>
 
     <div class="row process-wrap">
-        <h2 class="display-2 text-center" data-aos="fade-up">How The App Works?</h2>
+        <h2 class="display-2 text-center" data-aos="fade-up">How The Order Works?</h2>
         <div class="process" data-aos="fade-up">
             <div class="process__steps block-1-2 block-tab-full group">
                 <div class="col-block step">
-                    <h3 class="item-title">Sign-Up</h3>
+                    <h3 class="item-title">Add-to-Cart</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                     </p>
                 </div>
                 <div class="col-block step">
-                    <h3 class="item-title">Create</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                    </p>
-                </div>
-
-                <div class="col-block step">
-                    <h3 class="item-title">Compose</h3>
+                    <h3 class="item-title">Checkout</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                     </p>
                 </div>
 
                 <div class="col-block step">
-                    <h3 class="item-title">Send</h3>
+                    <h3 class="item-title">Deliver</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </p>
+                </div>
+
+                <div class="col-block step">
+                    <h3 class="item-title">Review</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                     </p>
                 </div>

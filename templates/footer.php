@@ -1,5 +1,4 @@
 <footer class="s-footer footer">
-
     <div class="row section-header align-center">
         <div class="col-full">
             <h1 class="display-1">
@@ -75,7 +74,6 @@
         <a class="smoothscroll" title="Back to Top" href="#top"></a>
     </div>
 </footer>
-
 <?php foreach ($footer['assetsJsSuffix'] as $key => $value): ?>
   <script src=<?=$this->e($value['path'])?>></script>
 <?php endforeach; ?>
