@@ -5,7 +5,7 @@ use Functions\renify\SEO;
 use League\Plates\Engine;
 use Klein\Klein;
 
-include './functions/Controller.php';
+
 include './vendor/autoload.php';
 
 $app      = new Klein();
@@ -26,7 +26,7 @@ $app->respond('GET','/style', function ($request, $response, $service) {
 });
 
 
-$app->with('/places', function () use ($app) {
+$app->with('/products', function () use ($app) {
     $app->respond('GET', '/?', function ($request, $response,$service) {
       $render    = new Render(__DIR__);
       $template = $render->render('places');
@@ -44,8 +44,8 @@ $app->with('/places', function () use ($app) {
 
 $app->respond('GET','/debug', function ($request, $response, $service) {
   $controller = new Controller(__DIR__);
-  $data = $controller->getContentsPagination('users');
-  $data = $controller->getAssetsWithName(1,'user-02','jpg');
+  $data = $controller->getContentsPagination('products');
+  // $data = $controller->getAssetsWithName(1,'user-02','jpg');
   // $data = $controller->getAssets()[2];
 
   // $render    = new Render(__DIR__);

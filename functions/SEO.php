@@ -2,7 +2,6 @@
 namespace Functions\renify;
 
 use Functions\renify\Controller;
-include '../vendor/autoload.php';
 
 class SEO extends Controller
 {

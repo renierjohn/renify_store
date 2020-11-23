@@ -4,21 +4,21 @@
         <div class="row home-content__main">
             <div class="home-content__left">
                 <h1>
-                An Amazing App <br>
-                That Does It All.
+                An Amazing Food <br>
+                That Taste So Good.
                 </h1>
                 <h3>
                 Voluptatem ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explica. Nemo enim ipsam voluptatem quia.
                 Ut quis enim.
                 </h3>
                 <div class="home-content__btn-wrap">
-                    <a href="#download" class="btn btn--primary home-content__btn smoothscroll">
+                    <a href="/products" class="btn btn--primary home-content__btn ">
                         Order Now
                     </a>
                 </div>
             </div> <!-- end home-content__left-->
             <div class="home-content__right">
-                <img src="images/hero-app-screens-800.png" srcset="images/hero-app-screens-800.png 1x, images/hero-app-screens-1600.png 2x">
+                <img src="images/food.png" srcset="images/food.png 1x, images/food.png 2x" width="100%">
             </div> <!-- end home-content__right -->
         </div> <!-- end home-content__main -->
         <ul class="home-content__social">
@@ -32,5 +32,4 @@
         <span class="home-scroll__text">Scroll</span>
         <span class="home-scroll__icon"></span>
     </a>
-
 </section> <!-- end s-home -->

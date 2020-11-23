@@ -4,7 +4,7 @@ use Functions\renify\Controller;
 use Functions\renify\SEO;
 use League\Plates\Engine;
 
-include '../vendor/autoload.php';
+include 'C:\xampp\htdocs\vendor\autoload.php';
 
 
 class Render extends Controller
@@ -52,7 +52,7 @@ class Render extends Controller
    $this->engine->addData(['layoutTemplate' => 'main'],'layout');
    $this->engine->addData(['meta' => $meta],'meta');
    $this->engine->addData(['header' => $header],'header');
-   $this->engine->addData(['contents' => $contents],'main');
+   $this->engine->addData(['contents' => $contents],'node');
    $this->engine->addData(['footer' => $footer],'footer');
    $this->engine->addData(['footer' => $footer],'jsSuffix');
    return  $this->engine->render('layout');
@@ -84,15 +84,15 @@ class Render extends Controller
   }
 
   private function getContentData($array){
-      switch ($array['pageId']) {
-        case 'places':
-
-          break;
-
-        case 'users':
-
-          break;
-      }
+      // switch ($array['pageId']) {
+      //   case 'places':
+      //
+      //     break;
+      //
+      //   case 'users':
+      //
+      //     break;
+      // }
 
 
       return $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);

@@ -14,7 +14,7 @@
                 <li><a class="smoothscroll" href="#download" title="download">Download</a></li>
             </ul>
             <div class="header-cta">
-                <a href="#download" class="btn btn--primary header-cta__btn smoothscroll"><?=$this->e($header['label'])?></a>
+                <a href="/products" class="btn btn--primary header-cta__btn "><?=$this->e($header['label'])?></a>
             </div>
         </nav> <!-- end header-nav-wrap -->
         <a class="header-menu-toggle" href="#"><span>Menu</span></a>
