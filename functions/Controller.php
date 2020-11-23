@@ -80,6 +80,11 @@ class Controller
     return $array;
   }
 
+  public function getContentsPaginationExternal($url,$pager = 1){
+      $query = 'items_per_page=All&offset=0';
+      return $this->getJsonFromFile($url);
+  }
+
 
   public function getAssets($pathLevel = 1){
     $extensions = ['css','js','jpg','png','jpeg'];
@@ -141,8 +146,8 @@ class Controller
     return json_decode($contents,TRUE);
   }
 
-  private function save(){
-      file_put_contents($this->config['path']['files']['contents']['places'], $contents);
+  private function save($filename,$contents){
+      file_put_contents($this->config['path']['files']['contents'][$filename], json_encode($contents));
   }
 
   public function setConfig($config,$dir){

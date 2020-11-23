@@ -29,29 +29,40 @@ $app->respond('GET','/style', function ($request, $response, $service) {
 $app->with('/products', function () use ($app) {
     $app->respond('GET', '/?', function ($request, $response,$service) {
       $render    = new Render(__DIR__);
-      $template = $render->render('places');
+      $template = $render->render('products');
       return $template;
     });
 
     $app->respond('GET', '/[:id]', function ($request, $response,$service) {
       $render    = new Render(__DIR__);
-      $template = $render->render('places',$request->id);
+      $template = $render->render('products',$request->id);
       return $template;
     });
 
 });
 
+$app->with('/users', function () use ($app) {
+    $app->respond('GET', '/?', function ($request, $response,$service) {
+      $render    = new Render(__DIR__);
+      $template = $render->render('users');
+      return $template;
+    });
+
+    $app->respond('GET', '/[:id]', function ($request, $response,$service) {
+      $render    = new Render(__DIR__);
+      $template = $render->render('users',$request->id);
+      return $template;
+    });
+
+});
 
 $app->respond('GET','/debug', function ($request, $response, $service) {
-  $controller = new Controller(__DIR__);
-  $data = $controller->getContentsPagination('products');
-  // $data = $controller->getAssetsWithName(1,'user-02','jpg');
-  // $data = $controller->getAssets()[2];
-
-  // $render    = new Render(__DIR__);
-  // $data = $render->getPagesMetaData();
+  // $controller = new Controller(__DIR__);
+  // $data = $controller->getContentsPagination('products',1,2);
+  // $data = $controller->getContentsPaginationExternal('http://dauin.dd:8080/api/article?items_per_page=All');
+  $render    = new Render(__DIR__);
+  $data = $render->getBlockTemplate(['pageId'=>'products','pager'=>1,'limit'=>5]);
   $response->dump($data);
-  // return ;
 });
 
 $app->dispatch();

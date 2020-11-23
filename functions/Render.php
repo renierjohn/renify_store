@@ -4,7 +4,7 @@ use Functions\renify\Controller;
 use Functions\renify\SEO;
 use League\Plates\Engine;
 
-include 'C:\xampp\htdocs\vendor\autoload.php';
+include '../vendor/autoload.php';
 
 
 class Render extends Controller
@@ -44,17 +44,18 @@ class Render extends Controller
    $array['pager']  = $pager;
    $array['assetsJsSuffix'] = $meta['assetsJsSuffix'];
 
-   $header = $this->getHeaderData($array);
-   $contents = $this->getContentData($array);
-   $footer = $this->getFooterData($array);
+   $header   = $this->getHeaderData($array);
+   $footer   = $this->getFooterData($array);
 
-   // $this->engine->addData(['layoutTemplate' => $this->config['pages'][$pageId]['layout']],'layout');
+   // array of block pageId with array contents
+   $blocks   = $this->getBlockTemplate($array);
+
    $this->engine->addData(['layoutTemplate' => 'main'],'layout');
-   $this->engine->addData(['meta' => $meta],'meta');
-   $this->engine->addData(['header' => $header],'header');
-   $this->engine->addData(['contents' => $contents],'node');
-   $this->engine->addData(['footer' => $footer],'footer');
-   $this->engine->addData(['footer' => $footer],'jsSuffix');
+   $this->engine->addData(['meta'     => $meta],'meta');
+   $this->engine->addData(['header'   => $header],'header');
+   $this->engine->addData(['blocks'   => $blocks],'main');
+   $this->engine->addData(['footer'   => $footer],'footer');
+   $this->engine->addData(['footer'   => $footer],'jsSuffix');
    return  $this->engine->render('layout');
  }
 
@@ -83,20 +84,54 @@ class Render extends Controller
     return $meta;
   }
 
-  private function getContentData($array){
-      // switch ($array['pageId']) {
-      //   case 'places':
-      //
-      //     break;
-      //
-      //   case 'users':
-      //
-      //     break;
-      // }
+  // private function getBlockTemplate($array){
+  //   $blocks = [];
+  //   $content = $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
+  //   switch ($array['pageId']) {
+  //     case $this->config['pages']['products']['pageId']:
+  //       $blocks = [
+  //                   [
+  //                     'blockid'=>$this->config['blocks']['node']['blockId'],'content'=>$content
+  //                   ],
+  //                   [
+  //                     'blockid'=>$this->config['blocks']['video']['blockId'],'content'=>[ 'viewsnumber'=>'100M','likesnumber'=>'1.1k' ]
+  //                   ]
+  //       ];
+  //       break;
+  //     case $this->config['pages']['users']['pageId']:
+  //       $blocks = [
+  //         ['blockid'=>$this->config['blocks']['feature']['blockId'],'content'=>['label1'=>'Label 1','label2'=>'Label 2']],
+  //         ['blockid'=>$this->config['blocks']['pricing']['blockId'],'content'=>['price1'=>'Php 100','price2'=>'Php 200']],
+  //         ['blockid'=>$this->config['blocks']['node']['blockId'],'content'=>$content]
+  //       ];
+  //       break;
+  //     case $this->config['pages']['layout']['pageId']:
+  //       $blocks = ['blockid'=>[$this->config['blocks']['home']['blockId']],
+  //                  'blockid'=>[$this->config['blocks']['about']['blockId']],
+  //                  'blockid'=>[$this->config['blocks']['video']['blockId']],
+  //                  'blockid'=>[$this->config['blocks']['pricing']['blockId']],
+  //                  'blockid'=>[$this->config['blocks']['feature']['blockId']]
+  //                  ];
+  //       break;
+  //   }
+  //   return $blocks;
+  // }
+
+  public function getBlockTemplate($array){
+    $blocks = [];
 
 
-      return $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
+    $blockId = $this->config['pages'][$array['pageId']]['blockId'];
+    foreach ($blockId as $key => $value) {
+      $content = $this->getContentsPagination($this->config['blocks'][$value]['content'][$array['pageId']],$array['pager'],$array['limit']);
+      array_push($blocks,['blockid'=>$value,'content'=>$content]);
+    }
+    return $blocks;
   }
+
+
+
+
 
   private function getHeaderData($array){
     $header['label'] = 'Order Now';
@@ -114,8 +149,8 @@ class Render extends Controller
     return $seo->getSiteName();
   }
 
-  public function getPagesMetaData(){
-    return $this->getContentsPagination('places',3,1)[0]['title'];
-  }
+  // public function getPagesMetaData(){
+  //   return $this->getContentsPagination('places',3,1)[0]['title'];
+  // }
 
 }

@@ -8,7 +8,7 @@
             <div class="stats">
                 <div class="item-stats">
                     <span class="item-stats__num">
-                        3.1M
+                        <?=$this->e($content['viewsnumber'])?>
                     </span>
                     <span class="item-stats__title">
                         Orders
@@ -16,7 +16,7 @@
                 </div> <!-- end item-stats -->
                 <div class="item-stats">
                     <span class="item-stats__num">
-                        24K
+                        <?=$this->e($content['likesnumber'])?>
                     </span>
                     <span class="item-stats__title">
                         Positive Reviews

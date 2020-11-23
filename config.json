@@ -16,31 +16,87 @@
               "base"      : "files/contents/",
               "places"    : "files/contents/places.json",
               "users"     : "files/contents/users.json"   ,
-              "products"  : "files/contents/products.json"
+              "products"  : "files/contents/products.json",
+              "videos"    : "files/contents/videos.json",
+              "feature"   : "files/contents/feature.json"
             },
             "configs" : "files/contents/configs"
           }
   },
   "pages":{
           "styles" : {
+            "pageId":"styles",
             "title":"Styles",
-            "layout":"main"
+            "blockId":{"0":"home",
+                       "1":"feature"
+                      }
           },
           "places" : {
+            "pageId":"places",
             "title":"Places",
-            "layout":"main"
+            "blockId":{"0":"home",
+                       "1":"feature"
+                      }
           },
           "users" : {
+            "pageId":"users",
             "title":"Users",
-            "layout":"main"
+            "blockId":{"0":"feature",
+                       "1":"pricing",
+                       "2":"node"
+                      }
           },
           "products" :{
+            "pageId":"products",
             "title":"Products",
-            "layout":"main"
+            "blockId":{"0":"node",
+                       "1":"video"
+                      }
           },
           "layout" : {
+            "pageId":"layout",
             "title":"Home",
-            "layout":"main"
+            "blockId":{"0":"home",
+                       "1":"about",
+                       "2":"video",
+                       "3":"pricing",
+                       "4":"feature"
+                      }
           }
-        }
+        },
+  "blocks":{
+    "about":{
+      "blockId":"about",
+      "filename":"about",
+      "content":{}
+    },
+    "feature":{
+      "blockId":"feature",
+      "filename":"feature",
+      "content":{}
+    },
+    "home":{
+      "blockId":"home",
+      "filename":"home",
+      "content":{}
+    },
+    "node":{
+      "blockId":"node",
+      "filename":"node",
+      "content":{
+        "users":"users",
+        "products":"products"
+      }
+    },
+    "pricing":{
+      "blockId":"pricing",
+      "filename":"pricing",
+      "content":{}
+    },
+    "video":{
+      "blockId":"video",
+      "filename":"video",
+      "content":{}
+    }
+  }
 }

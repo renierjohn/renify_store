@@ -3,13 +3,15 @@
     "id":"1",
     "name":"Renier",
     "address":"Dauin",
-    "avatar":"user-01"
+    "avatar":"user-01",
+    "description":"sasasasa"
   },
   {
     "id":"2",
     "name":"Jiji",
     "address":"Sara",
-    "avatar":"user-02"
+    "avatar":"user-02",
+    "description":"sasasasa"
   },
   {
     "id":"3",

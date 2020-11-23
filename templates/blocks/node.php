@@ -13,10 +13,10 @@
     </div>
     <div class="row wide about-desc" data-aos="fade-up">
         <div class="col-full slick-slider about-desc__slider">
-          <?php foreach ($contents as $key => $value): ?>
+          <?php foreach ($content as $key => $value): ?>
             <div class="about-desc__slide">
                 <h3 class="item-title"> <?=$this->e($value['title'],'strip_tags|strtoupper')?></h3>
-                <?=$this->e($value['details'],'strip_tags')?>
+                <?=$this->e($value['description'],'strip_tags')?>
             </div>
           <?php endforeach; ?>
         </div>
