@@ -10,3 +10,8 @@ Options All -Indexes
  Order Allow,Deny
  Deny from all
 </FilesMatch>
+
+RewriteCond %{REQUEST_URI} ^/404$
+RewriteRule ^(.*)$ /404 [L]
+ErrorDocument 404 /404
+RewriteRule "^(.+/.*|404)\.php($|/)" - [F]

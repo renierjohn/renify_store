@@ -4,7 +4,7 @@ use Functions\renify\Controller;
 use Functions\renify\SEO;
 use League\Plates\Engine;
 
-include '../vendor/autoload.php';
+include __DIR__.'/../vendor/autoload.php';
 
 
 class Render extends Controller
@@ -18,7 +18,7 @@ class Render extends Controller
 
   public  function __construct($dir){
     $this->engine = new Engine('./templates');
-    $this->config = $this->getJsonFromFile($dir.'\\'.'config.json');
+    $this->config = $this->getJsonFromFile($dir.'/'.'config.json');
     $this->file   = $dir;
     $this->setConfig($this->config,$dir);
   }
@@ -84,43 +84,10 @@ class Render extends Controller
     return $meta;
   }
 
-  // private function getBlockTemplate($array){
-  //   $blocks = [];
-  //   $content = $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
-  //   switch ($array['pageId']) {
-  //     case $this->config['pages']['products']['pageId']:
-  //       $blocks = [
-  //                   [
-  //                     'blockid'=>$this->config['blocks']['node']['blockId'],'content'=>$content
-  //                   ],
-  //                   [
-  //                     'blockid'=>$this->config['blocks']['video']['blockId'],'content'=>[ 'viewsnumber'=>'100M','likesnumber'=>'1.1k' ]
-  //                   ]
-  //       ];
-  //       break;
-  //     case $this->config['pages']['users']['pageId']:
-  //       $blocks = [
-  //         ['blockid'=>$this->config['blocks']['feature']['blockId'],'content'=>['label1'=>'Label 1','label2'=>'Label 2']],
-  //         ['blockid'=>$this->config['blocks']['pricing']['blockId'],'content'=>['price1'=>'Php 100','price2'=>'Php 200']],
-  //         ['blockid'=>$this->config['blocks']['node']['blockId'],'content'=>$content]
-  //       ];
-  //       break;
-  //     case $this->config['pages']['layout']['pageId']:
-  //       $blocks = ['blockid'=>[$this->config['blocks']['home']['blockId']],
-  //                  'blockid'=>[$this->config['blocks']['about']['blockId']],
-  //                  'blockid'=>[$this->config['blocks']['video']['blockId']],
-  //                  'blockid'=>[$this->config['blocks']['pricing']['blockId']],
-  //                  'blockid'=>[$this->config['blocks']['feature']['blockId']]
-  //                  ];
-  //       break;
-  //   }
-  //   return $blocks;
-  // }
-
   public function getBlockTemplate($array){
     $blocks = [];
 
-
+    // $content = $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
     $blockId = $this->config['pages'][$array['pageId']]['blockId'];
     foreach ($blockId as $key => $value) {
       $content = $this->getContentsPagination($this->config['blocks'][$value]['content'][$array['pageId']],$array['pager'],$array['limit']);

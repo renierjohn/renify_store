@@ -11,7 +11,7 @@ class Controller
 
 
   public  function __construct($dir){
-    $this->config   = $this->getJsonFromFile($dir.'\\'.'config.json');
+    $this->config   = $this->getJsonFromFile($dir.'/'.'config.json');
     $this->file   = $dir;
   }
 

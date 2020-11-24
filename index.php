@@ -56,12 +56,19 @@ $app->with('/users', function () use ($app) {
 
 });
 
+$app->respond('GET','/404', function ($request, $response, $service) {
+  $render    = new Render(__DIR__);
+  $template = $render->render('users');
+  return $template;
+});
+
 $app->respond('GET','/debug', function ($request, $response, $service) {
   // $controller = new Controller(__DIR__);
   // $data = $controller->getContentsPagination('products',1,2);
   // $data = $controller->getContentsPaginationExternal('http://dauin.dd:8080/api/article?items_per_page=All');
   $render    = new Render(__DIR__);
-  $data = $render->getBlockTemplate(['pageId'=>'products','pager'=>1,'limit'=>5]);
+  $data = $render->getBlockTemplate(['pageId'=>'products','pager'=>'1','limit'=>'1']);
+  // $data = $render->getContentsPagination('products','2','2');
   $response->dump($data);
 });
 
