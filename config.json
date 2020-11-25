@@ -32,7 +32,7 @@
           "places" : {
             "pageId":"places",
             "title":"Places",
-            "blockId":["home","feature"]
+            "blockId":["home","node","feature"]
           },
           "users" : {
             "pageId":"users",
@@ -42,7 +42,7 @@
           "products" :{
             "pageId":"products",
             "title":"Products",
-            "blockId":["node","video"]
+            "blockId":["about","videos","node"]
           },
           "layout" : {
             "pageId":"layout",

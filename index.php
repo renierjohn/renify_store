@@ -82,8 +82,9 @@ $app->respond('GET','/debug', function ($request, $response, $service) {
   // $data = $controller->getContentsPagination('products',1,2);
   // $data = $controller->getContentsPaginationExternal('http://dauin.dd:8080/api/article?items_per_page=All');
   $render    = new Render(__DIR__);
-  // $data = $render->getBlockTemplate(['pageId'=>'products','pager'=>'1','limit'=>'1']);
-  $data = $render->getBlockIdarray();
+  $data = $render->getBlockTemplate(['pageId'=>'places']);
+  $data = $render->getBlockTemplate(['pageId'=>'products']);
+  // $data = $render->getContentsPagination('videos');
   $response->dump($data);
 });
 

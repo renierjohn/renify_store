@@ -98,10 +98,21 @@ class Render extends Controller
   */
   public function getBlockTemplate($array){
     $blocks = [];
-    $content = $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
+    // $content = $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
     $blockId = $this->config['pages'][$array['pageId']]['blockId'];
     foreach ($blockId as $key => $value) {
-      // $content = $this->getContentsPagination($this->config['blocks'][$value]['content'][$array['pageId']],$array['pager'],$array['limit']);
+      if($value == 'node'){
+        /*
+        * retrieve contents products,users,blogs,places
+        */
+        $content = $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
+      }
+      else{
+        /*
+        * retrieve for non contents
+        */
+        $content = $this->getContentsPagination($value);
+      }
       array_push($blocks,['blockid'=>$value,'content'=>$content]);
     }
     return $blocks;

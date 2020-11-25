@@ -1,28 +1,30 @@
 [
   {
     "id":"1",
-    "name":"Renier",
+    "title":"Renier",
     "address":"Dauin",
     "avatar":"user-01",
-    "description":"sasasasa"
+    "description":"Renier Discription"
   },
   {
     "id":"2",
-    "name":"Jiji",
+    "title":"Jiji",
     "address":"Sara",
     "avatar":"user-02",
-    "description":"sasasasa"
+    "description":"JJI discription"
   },
   {
     "id":"3",
-    "name":"AVICII",
+    "title":"AVICII",
     "address":"London",
-    "avatar":"user-03"
+    "avatar":"user-03",
+    "description":"AVICII Discription"
   },
   {
     "id":"4",
-    "name":"Martix Garrix",
+    "title":"Martix Garrix",
     "address":"Amstedam",
-    "avatar":"user-04"
+    "avatar":"user-04",
+    "description":"MArtin Discription"
   }
 ]

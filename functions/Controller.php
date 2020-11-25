@@ -65,7 +65,7 @@ class Controller
     $directory =  $this->getFullPathContents('base');
     $files = array_diff(scandir($directory,1), array('..', '.'));
     $array = [];
-    if(!empty($filename)){
+    if(!empty($filename) && !empty($files)){
       foreach ($files as $key => $value) {
         if(!empty(pathinfo($value)['extension']) && pathinfo($value)['filename'] == $filename && pathinfo($value)['extension'] == $extensions )  {
           $json = $this->getJsonFromFile($directory.$value);
