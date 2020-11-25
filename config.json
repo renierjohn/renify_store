@@ -16,11 +16,18 @@
               "base"      : "files/contents/",
               "places"    : "files/contents/places.json",
               "users"     : "files/contents/users.json"   ,
-              "products"  : "files/contents/products.json",
-              "videos"    : "files/contents/videos.json",
-              "feature"   : "files/contents/feature.json"
+              "products"  : "files/contents/products.json"
             },
-            "configs" : "files/contents/configs"
+            "blocks" : {
+              "base"      : "files/blocks/",
+              "header"    : "files/blocks/header.json",
+              "footer"    : "files/blocks/footer/json",
+              "videos"    : "files/blocks/videos.json",
+              "feature"   : "files/blocks/feature.json"
+
+            },
+            "configs" : "files/contents/configs",
+            "logs"    : "files/logs"
           }
   },
   "pages":{

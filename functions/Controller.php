@@ -61,13 +61,20 @@ class Controller
   *
   */
   public function getContentsPagination($filename = NULL,$pageNumber = 1,$limit = 0){
-    $extensions = 'json';
-    $directory =  $this->getFullPathContents('base');
-    $files = array_diff(scandir($directory,1), array('..', '.'));
     $array = [];
+    $extension = 'json';
+    $type = ['blocks','contents'];
+
+
+    $directory =  $this->getFullPathContents($type[0],'base');
+    $files     = array_diff(scandir($directory,1), array('..', '.'));
+    if(!in_array($filename.'.'.$extension,$files)){
+      $directory =  $this->getFullPathContents($type[1],'base');
+      $files     = array_diff(scandir($directory,1), array('..', '.'));
+    }
     if(!empty($filename) && !empty($files)){
       foreach ($files as $key => $value) {
-        if(!empty(pathinfo($value)['extension']) && pathinfo($value)['filename'] == $filename && pathinfo($value)['extension'] == $extensions )  {
+        if(!empty(pathinfo($value)['extension']) && pathinfo($value)['filename'] == $filename && pathinfo($value)['extension'] == $extension )  {
           $json = $this->getJsonFromFile($directory.$value);
           if($limit == 0){
             $limit = count($json);
@@ -86,26 +93,13 @@ class Controller
       }
     }
     // fallback value if no parameter given, return all json contents
-    foreach ($files as $key => $value) {
-      if(!empty(pathinfo($value)['extension']) && pathinfo($value)['extension'] == $extensions )  {
-        $json = $this->getJsonFromFile($directory.$value);
-        array_push($array,$json);
-      }
-    }
+    // foreach ($files as $key => $value) {
+    //   if(!empty(pathinfo($value)['extension']) && pathinfo($value)['extension'] == $extensions )  {
+    //     $json = $this->getJsonFromFile($directory.$value);
+    //     array_push($array,$json);
+    //   }
+    // }
     return $array;
-  }
-
-  /*
-  *
-  * @params $filename : specify json filename
-  * @params $pageNumber : specify what pagination number
-  * @params $limit : specify how many display
-  * @return list of csss or js filenames
-  *
-  */
-  public function getContentsPaginationExternal($url,$pager = 1){
-      $query = 'items_per_page=All&offset=0';
-      return $this->getJsonFromFile($url);
   }
 
   /*
@@ -143,31 +137,47 @@ class Controller
     return $assets_arr;
   }
 
-
-  private function getFullPathContents($filename){
-    $filename = strtolower($filename);
-    return $this->file.'\\'.$this->config['path']['files']['contents'][$filename];
-  }
-
-
-  public function getPathAssets($filename = 'css',$isRelative = TRUE){
+  /*
+  *
+  * @params $filename : specify json filename
+  * @params $pageNumber : specify what pagination number
+  * @params $limit : specify how many display
+  * @return list of csss or js filenames
+  *
+  */
+  private function getPathAssets($filename = 'css',$isRelative = TRUE){
     $filename = strtolower($filename);
     $extensions = ['css','js','jpg','png','jpeg'];
     $imageExtensions = ['jpg','png','jpeg'];
     foreach ($extensions as $extensionsKey => $extensionsValue) {
-        if($extensionsValue == $filename){
-          foreach ($imageExtensions as $key => $value) {
-            if($extensionsValue == $value){
-              $filename = 'images';
-            }
+      if($extensionsValue == $filename){
+        foreach ($imageExtensions as $key => $value) {
+          if($extensionsValue == $value){
+            $filename = 'images';
           }
-          if($isRelative){
-            return $this->config['path']['asssets'][$filename];
-          }
-          return $this->file.'\\'.$this->config['path']['asssets'][$filename];
+        }
+        if($isRelative){
+          return $this->config['path']['asssets'][$filename];
+        }
+        return $this->file.'\\'.$this->config['path']['asssets'][$filename];
       }
     }
   }
+
+  public function getContentsPaginationExternal($url,$pager = 1){
+      $query = 'items_per_page=All&offset=0';
+      return $this->getJsonFromFile($url);
+  }
+
+
+
+  private function getFullPathContents($type,$filename){
+    $filename = strtolower($filename);
+    // return $this->file.'\\'.$this->config['path']['files']['contents'][$filename];
+    return $this->file.'\\'.$this->config['path']['files'][$type][$filename];
+  }
+
+
 
   public function getJsonFromFile($path){
     $contents = file_get_contents($path);

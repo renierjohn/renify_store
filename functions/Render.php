@@ -87,7 +87,6 @@ class Render extends Controller
     $meta['assetsCss']      = $assetsCss;
     $meta['siteName']       = $this->getSeo();
     $meta['title']          = $title;
-
     return $meta;
   }
 
@@ -98,7 +97,6 @@ class Render extends Controller
   */
   public function getBlockTemplate($array){
     $blocks = [];
-    // $content = $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
     $blockId = $this->config['pages'][$array['pageId']]['blockId'];
     foreach ($blockId as $key => $value) {
       if($value == 'node'){
