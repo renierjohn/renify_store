@@ -23,41 +23,48 @@ class Render extends Controller
     $this->setConfig($this->config,$dir);
   }
 
- public function render($pageId = NULL,$pager = NULL){
-   $limit = 1;
-   if(empty($pageId)){
-     $pageId = 'layout';
-     $title = $this->config['pages'][$pageId]['title'];
-   }
-   if(empty($pager)){
-     $limit = 0;
-     $pager = 1;
-     $title = $this->config['pages'][$pageId]['title'];
-   }else {
-     $title = strip_tags($this->getContentsPagination($pageId,$pager,1)[0]['title']);
-   }
+  /*
+  *
+  * @params $pageId : specify the pageId based from config json file
+  * @params $pager : specify page details with only 1 content, if NULL return all contents
+  * @return renderd content
+  *
+  */
+  public function render($pageId = NULL,$pager = NULL){
+     $limit = 1;
+     if(empty($pageId)){
+       $pageId = 'layout';
+       $title = $this->config['pages'][$pageId]['title'];
+     }
+     if(empty($pager)){
+       $limit = 0;
+       $pager = 1;
+       $title = $this->config['pages'][$pageId]['title'];
+     }else {
+       $title = strip_tags($this->getContentsPagination($pageId,$pager,1)[0]['title']);
+     }
 
-   $meta = $this->getMetaData($title);
+     $meta = $this->getMetaData($title);
 
-   $array['pageId'] = $pageId;
-   $array['limit']  = $limit;
-   $array['pager']  = $pager;
-   $array['assetsJsSuffix'] = $meta['assetsJsSuffix'];
+     $array['pageId'] = $pageId;
+     $array['limit']  = $limit;
+     $array['pager']  = $pager;
+     $array['assetsJsSuffix'] = $meta['assetsJsSuffix'];
 
-   $header   = $this->getHeaderData($array);
-   $footer   = $this->getFooterData($array);
+     $header   = $this->getHeaderData($array);
+     $footer   = $this->getFooterData($array);
 
-   // array of block pageId with array contents
-   $blocks   = $this->getBlockTemplate($array);
+     // array of block pageId with array contents
+     $blocks   = $this->getBlockTemplate($array);
 
-   $this->engine->addData(['layoutTemplate' => 'main'],'layout');
-   $this->engine->addData(['meta'     => $meta],'meta');
-   $this->engine->addData(['header'   => $header],'header');
-   $this->engine->addData(['blocks'   => $blocks],'main');
-   $this->engine->addData(['footer'   => $footer],'footer');
-   $this->engine->addData(['footer'   => $footer],'jsSuffix');
-   return  $this->engine->render('layout');
- }
+     $this->engine->addData(['layoutTemplate' => 'main'],'layout');
+     $this->engine->addData(['meta'     => $meta],'meta');
+     $this->engine->addData(['header'   => $header],'header');
+     $this->engine->addData(['blocks'   => $blocks],'main');
+     $this->engine->addData(['footer'   => $footer],'footer');
+     $this->engine->addData(['footer'   => $footer],'jsSuffix');
+     return  $this->engine->render('layout');
+  }
 
   private function getMetaData($title){
     $pathLevel = 2;
@@ -84,20 +91,21 @@ class Render extends Controller
     return $meta;
   }
 
+  /*
+  *
+  * @return blockid
+  * @return coontent
+  */
   public function getBlockTemplate($array){
     $blocks = [];
-
-    // $content = $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
+    $content = $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
     $blockId = $this->config['pages'][$array['pageId']]['blockId'];
     foreach ($blockId as $key => $value) {
-      $content = $this->getContentsPagination($this->config['blocks'][$value]['content'][$array['pageId']],$array['pager'],$array['limit']);
+      // $content = $this->getContentsPagination($this->config['blocks'][$value]['content'][$array['pageId']],$array['pager'],$array['limit']);
       array_push($blocks,['blockid'=>$value,'content'=>$content]);
     }
     return $blocks;
   }
-
-
-
 
 
   private function getHeaderData($array){

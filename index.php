@@ -56,6 +56,21 @@ $app->with('/users', function () use ($app) {
 
 });
 
+$app->with('/places', function () use ($app) {
+    $app->respond('GET', '/?', function ($request, $response,$service) {
+      $render    = new Render(__DIR__);
+      $template = $render->render('places');
+      return $template;
+    });
+
+    $app->respond('GET', '/[:id]', function ($request, $response,$service) {
+      $render    = new Render(__DIR__);
+      $template = $render->render('places',$request->id);
+      return $template;
+    });
+
+});
+
 $app->respond('GET','/404', function ($request, $response, $service) {
   $render    = new Render(__DIR__);
   $template = $render->render('users');
@@ -67,8 +82,8 @@ $app->respond('GET','/debug', function ($request, $response, $service) {
   // $data = $controller->getContentsPagination('products',1,2);
   // $data = $controller->getContentsPaginationExternal('http://dauin.dd:8080/api/article?items_per_page=All');
   $render    = new Render(__DIR__);
-  $data = $render->getBlockTemplate(['pageId'=>'products','pager'=>'1','limit'=>'1']);
-  // $data = $render->getContentsPagination('products','2','2');
+  // $data = $render->getBlockTemplate(['pageId'=>'products','pager'=>'1','limit'=>'1']);
+  $data = $render->getBlockIdarray();
   $response->dump($data);
 });
 

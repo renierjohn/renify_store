@@ -27,41 +27,27 @@
           "styles" : {
             "pageId":"styles",
             "title":"Styles",
-            "blockId":{"0":"home",
-                       "1":"feature"
-                      }
+            "blockId":["home","feature"]
           },
           "places" : {
             "pageId":"places",
             "title":"Places",
-            "blockId":{"0":"home",
-                       "1":"feature"
-                      }
+            "blockId":["home","feature"]
           },
           "users" : {
             "pageId":"users",
             "title":"Users",
-            "blockId":{"0":"feature",
-                       "1":"pricing",
-                       "2":"node"
-                      }
+            "blockId":["feature","pricing","node"]
           },
           "products" :{
             "pageId":"products",
             "title":"Products",
-            "blockId":{"0":"node",
-                       "1":"video"
-                      }
+            "blockId":["node","video"]
           },
           "layout" : {
             "pageId":"layout",
             "title":"Home",
-            "blockId":{"0":"home",
-                       "1":"about",
-                       "2":"video",
-                       "3":"pricing",
-                       "4":"feature"
-                      }
+            "blockId":["home","about","video","pricing","feature"]
           }
         },
   "blocks":{

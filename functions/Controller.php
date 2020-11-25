@@ -15,7 +15,14 @@ class Controller
     $this->file   = $dir;
   }
 
-
+  /*
+  *
+  * @params pathlevel : ./ or ../
+  * @params $filename : specify filename
+  * @params $extension : specify extension filename
+  * @return list of css , js or image filenames
+  *
+  */
   public function getAssetsWithName($pathLevel = 1,$filename = NULL ,$extension = NULL){
       $assets = $this->getAssets($pathLevel);
       if($extension == 'css'){
@@ -45,6 +52,14 @@ class Controller
       return $assets;
   }
 
+  /*
+  *
+  * @params $filename : specify json filename
+  * @params $pageNumber : specify what pagination number
+  * @params $limit : specify how many display
+  * @return list of json contents listed from config.json
+  *
+  */
   public function getContentsPagination($filename = NULL,$pageNumber = 1,$limit = 0){
     $extensions = 'json';
     $directory =  $this->getFullPathContents('base');
@@ -70,7 +85,7 @@ class Controller
         }
       }
     }
-    // fallback value if no parameter given
+    // fallback value if no parameter given, return all json contents
     foreach ($files as $key => $value) {
       if(!empty(pathinfo($value)['extension']) && pathinfo($value)['extension'] == $extensions )  {
         $json = $this->getJsonFromFile($directory.$value);
@@ -80,12 +95,25 @@ class Controller
     return $array;
   }
 
+  /*
+  *
+  * @params $filename : specify json filename
+  * @params $pageNumber : specify what pagination number
+  * @params $limit : specify how many display
+  * @return list of csss or js filenames
+  *
+  */
   public function getContentsPaginationExternal($url,$pager = 1){
       $query = 'items_per_page=All&offset=0';
       return $this->getJsonFromFile($url);
   }
 
-
+  /*
+  *
+  * @params pathlevel : ./ or ../
+  * @return list of csss or js filenames
+  *
+  */
   public function getAssets($pathLevel = 1){
     $extensions = ['css','js','jpg','png','jpeg'];
     $assets_arr = [];
@@ -144,6 +172,9 @@ class Controller
   public function getJsonFromFile($path){
     $contents = file_get_contents($path);
     return json_decode($contents,TRUE);
+  }
+  public function getBlockIdarray(){
+    return $this->config['pages']['layout'];
   }
 
   private function save($filename,$contents){
