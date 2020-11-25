@@ -29,7 +29,7 @@ $app->with('/products', function () use ($app) {
 
     $app->respond('GET', '/[:id]', function ($request, $response,$service) {
       $render    = new Render(__DIR__);
-      $template = $render->render('products',$request->id);
+      $template = $render->render('places',$request->id);
       return $template;
     });
 
@@ -59,7 +59,7 @@ $app->with('/places', function () use ($app) {
 
     $app->respond('GET', '/[:id]', function ($request, $response,$service) {
       $render    = new Render(__DIR__);
-      $template = $render->render('places',$request->id);
+      $template = $render->render('products',$request->id);
       return $template;
     });
 
@@ -75,7 +75,7 @@ $app->respond('GET','/debug', function ($request, $response, $service) {
   $controller = new Controller(__DIR__);
   // $data = $controller->getContentsPaginationExternal('http://dauin.dd:8080/api/article?items_per_page=All');
   // $render    = new Render(__DIR__);
-  $data = $controller->getContentsPagination('feature');
+  $data = $controller->getContentsPagination('places');
   // $data = $render->getBlockTemplate(['pageId'=>'places']);
   // $data = $render->getBlockTemplate(['pageId'=>'products','pager'=>'1','limit'=>'0']);
   // $data = $controller->getFullPathContents('blocks','base');

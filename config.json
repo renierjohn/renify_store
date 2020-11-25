@@ -54,42 +54,7 @@
           "layout" : {
             "pageId":"layout",
             "title":"Home",
-            "blockId":["home","about","video","pricing","feature"]
+            "blockId":["home","about","videos","pricing","feature"]
           }
-        },
-  "blocks":{
-    "about":{
-      "blockId":"about",
-      "filename":"about",
-      "content":{}
-    },
-    "feature":{
-      "blockId":"feature",
-      "filename":"feature",
-      "content":{}
-    },
-    "home":{
-      "blockId":"home",
-      "filename":"home",
-      "content":{}
-    },
-    "node":{
-      "blockId":"node",
-      "filename":"node",
-      "content":{
-        "users":"users",
-        "products":"products"
-      }
-    },
-    "pricing":{
-      "blockId":"pricing",
-      "filename":"pricing",
-      "content":{}
-    },
-    "video":{
-      "blockId":"video",
-      "filename":"video",
-      "content":{}
-    }
-  }
+        }
 }

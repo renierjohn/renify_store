@@ -82,7 +82,7 @@ class Controller
           if($limit < count($json)){
             $maxPages = round(count($json)/$limit);
             if($pageNumber < $maxPages ){
-              for ($i= intval($pageNumber) * intval($limit); $i < intval($pageNumber +1) * intval($limit); $i++) {
+              for ($i= (int)$pageNumber * (int)$limit; $i < ((int)$pageNumber +1) * (int)$limit; $i++) {
                   array_push($array,$json[$i]);
               }
               return $array;
