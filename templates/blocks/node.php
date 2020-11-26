@@ -16,7 +16,14 @@
           <?php foreach ($content as $key => $value): ?>
             <div class="about-desc__slide">
                 <h3 class="item-title"> <?=$this->e($value['title'],'strip_tags|strtoupper')?></h3>
-                <?=$this->e($value['description'],'strip_tags')?>
+                <p>
+                  <?=$this->e($value['description'],'strip_tags')?>
+                </p>
+                <?php if ($value['avatar']): ?>
+                    <p><?=$this->e($value['avatar'])?></p>
+                    <img src=<?=$this->e($value['img'])?> alt="">
+                <?php endif ?>
+                <p></p>
             </div>
           <?php endforeach; ?>
         </div>

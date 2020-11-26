@@ -13,25 +13,18 @@
         <div class="col-full footer__subscribe end">
             <div class="subscribe-form">
                 <form id="mc-form" class="group" novalidate="true">
-
                     <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-
                     <input type="submit" name="subscribe" value="Sign Up">
-
                     <label for="mc-email" class="subscribe-message"></label>
-
                 </form>
             </div>
         </div>
     </div> <!-- end footer__top -->
     <div class="row footer__bottom">
         <div class="footer__about col-five tab-full left">
-            <h4>About Kairos.</h4>
+            <h4>About Renify.</h4>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex consectetur adipisicing elit do eiusmod tempor.
+              Order the tastier food
             </p>
             <ul class="footer__social">
                 <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -44,12 +37,9 @@
                 <div class="footer__site-links col-five mob-full">
                     <h4>Site links.</h4>
                     <ul class="footer__site-links">
-                        <li><a href="#home" class="smoothscroll">Intro</a></li>
-                        <li><a href="#about" class="smoothscroll">About</a></li>
-                        <li><a href="#features" class="smoothscroll">Features</a></li>
-                        <li><a href="#pricing" class="smoothscroll">Pricing</a></li>
-                        <li><a href="#download" class="smoothscroll">Download</a></li>
-                        <li><a href="#0">Privacy Policy</a></li>
+                        <?php foreach ($footer['content']['links'] as $key => $value): ?>
+                          <li ><a class=<?=$this->e($value['class'])?> href=<?=$this->e($value['link'])?> title="intro"><?=$this->e($value['title'])?></a></li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
                 <div class="footer__contact col-seven mob-full">
@@ -60,7 +50,7 @@
                     </p>
                     <p>
                     Need help or have a question? Contact us at: <br>
-                    <a href="mailto:#0" class="footer__mail-link">support@kairos.com</a>
+                    <a href="mailto:#0" class="footer__mail-link">renify.official@gmail.com</a>
                     </p>
                 </div>
             </div>

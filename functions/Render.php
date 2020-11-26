@@ -51,7 +51,7 @@ class Render extends Controller
      $array['pager']  = $pager;
      $array['assetsJsSuffix'] = $meta['assetsJsSuffix'];
 
-     $header   = $this->getHeaderData($array);
+     $header   = $this->getContentsPagination('header');
      $footer   = $this->getFooterData($array);
 
      // array of block pageId with array contents
@@ -72,8 +72,6 @@ class Render extends Controller
     $jsSuffixArr = ['jquery-3.2.1.min','plugins','main'];
     $assetsJsPrefix = [];
     $assetsJsSuffix = [];
-
-    $data = $this->getContentsPagination('places');
     $assetsCss = $this->getAssetsWithName($pathLevel,'','css');
     foreach ($jsPrefixArr as $key => $value) {
        array_push($assetsJsPrefix,$this->getAssetsWithName($pathLevel,$value,'js'));
@@ -104,6 +102,11 @@ class Render extends Controller
         * retrieve contents products,users,blogs,places
         */
         $content = $this->getContentsPagination($array['pageId'],$array['pager'],$array['limit']);
+        if($array['pageId'] == 'user'){
+          foreach ($content as $key => $value) {
+            $content[$key]['img'] = '/images/content/'.$value['avatar'].'.jpg';
+          }
+        }
       }
       else{
         /*
@@ -117,15 +120,15 @@ class Render extends Controller
   }
 
 
-  private function getHeaderData($array){
-    $header['label'] = 'Order Now';
-    return $header;
-  }
-
   private function getFooterData($array){
-    $footer['content'] = 'footer';
+    $footer['content'] = $this->getContentsPagination('footer');
     $footer['assetsJsSuffix'] = $array['assetsJsSuffix'];
     return $footer;
+  }
+
+  private function getheaderData($array){
+    $header = $this->getContentsPagination('header');
+    return $header;
   }
 
   public function getSeo(){

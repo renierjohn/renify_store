@@ -1,1 +1,32 @@
-[]
+{
+  "links":{
+    "layout":{
+      "title":"Home",
+      "link":"/",
+      "class":"none"
+    },
+    "blog":{
+      "title":"Blogs",
+      "link":"/",
+      "class":"none"
+    },
+    "products":{
+      "title":"Foods",
+      "link":"/products",
+      "class":"none"
+    },
+    "places":{
+      "title":"Places",
+      "link":"/places",
+      "class":"none"
+    },
+    "features":{
+      "title":"Features",
+      "link":"#features",
+      "class":"smoothscroll"
+    }
+  },
+  "label":{
+    "title":"Order Now"
+  }
+}

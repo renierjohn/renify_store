@@ -31,11 +31,6 @@
           }
   },
   "pages":{
-          "styles" : {
-            "pageId":"styles",
-            "title":"Styles",
-            "blockId":["home","feature"]
-          },
           "places" : {
             "pageId":"places",
             "title":"Places",
@@ -44,7 +39,7 @@
           "users" : {
             "pageId":"users",
             "title":"Users",
-            "blockId":["feature","pricing","node"]
+            "blockId":["feature","node","pricing"]
           },
           "products" :{
             "pageId":"products",

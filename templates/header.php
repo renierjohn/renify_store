@@ -7,14 +7,12 @@
         </div>
         <nav class="header-nav-wrap">
             <ul class="header-main-nav">
-                <li class="current"><a class="smoothscroll" href="#home" title="intro">Intro</a></li>
-                <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-                <li><a class="smoothscroll" href="#features" title="features">Features</a></li>
-                <li><a class="smoothscroll" href="#pricing" title="pricing">Pricing</a></li>
-                <li><a class="smoothscroll" href="#download" title="download">Download</a></li>
+              <?php foreach ($header['links'] as $key => $value): ?>
+                <li class="current"><a class=<?=$this->e($value['class'])?> href=<?=$this->e($value['link'])?> title="intro"><?=$this->e($value['title'])?></a></li>
+              <?php endforeach; ?>
             </ul>
             <div class="header-cta">
-                <a href="/products" class="btn btn--primary header-cta__btn "><?=$this->e($header['label'])?></a>
+                <a href="/products" class="btn btn--primary header-cta__btn "><?=$this->e($header['label']['title'])?></a>
             </div>
         </nav> <!-- end header-nav-wrap -->
         <a class="header-menu-toggle" href="#"><span>Menu</span></a>
