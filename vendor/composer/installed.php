@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '19032f81251606190bcfa96036e51ab28c45acc4',
+    'reference' => '830d97855e7b1cf1540237004253bc4ca96a8094',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '19032f81251606190bcfa96036e51ab28c45acc4',
+      'reference' => '830d97855e7b1cf1540237004253bc4ca96a8094',
     ),
     'klein/klein' => 
     array (
@@ -28,6 +28,15 @@
       array (
       ),
       'reference' => '6549676cc831b9417332b3d9485c64bbf7bac728',
+    ),
+    'ktamas77/firebase-php' => 
+    array (
+      'pretty_version' => '2.2.2',
+      'version' => '2.2.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '75b4b47243fde8c35dbb007e40bd97725433c728',
     ),
     'league/plates' => 
     array (
