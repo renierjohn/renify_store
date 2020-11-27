@@ -2,6 +2,8 @@
 use Functions\renify\Render;
 use Functions\renify\Controller;
 use Functions\renify\SEO;
+use Functions\renify\FirebaseRule;
+
 use League\Plates\Engine;
 use Klein\Klein;
 
@@ -72,10 +74,14 @@ $app->respond('GET','/404', function ($request, $response, $service) {
 });
 
 $app->respond('GET','/debug', function ($request, $response, $service) {
-  $controller = new Controller(__DIR__);
+  $firebase = new FirebaseRule(__DIR__);
+  $firebase->setDatabase();
+
+  $data = [];
+  // $controller = new Controller(__DIR__);
   // $data = $controller->getContentsPaginationExternal('http://dauin.dd:8080/api/article?items_per_page=All');
   // $render    = new Render(__DIR__);
-  $data = $controller->getContentsPagination('footer');
+  // $data = $controller->getContentsPagination('footer');
   // $data = $render->getBlockTemplate(['pageId'=>'places']);
   // $data = $render->getBlockTemplate(['pageId'=>'products','pager'=>'1','limit'=>'0']);
   // $data = $controller->getFullPathContents('blocks','base');

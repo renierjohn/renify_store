@@ -4,7 +4,7 @@ use Functions\renify\Controller;
 use Functions\renify\SEO;
 use League\Plates\Engine;
 
-include __DIR__.'/../vendor/autoload.php';
+include __DIR__.'../vendor/autoload.php';
 
 
 class Render extends Controller

@@ -8,5 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'League\\Plates\\' => array($vendorDir . '/league/plates/src'),
     'Klein\\' => array($vendorDir . '/klein/klein/src/Klein'),
-    'Functions\\' => array($baseDir . '/functions'),
+    'Functions\\renify\\' => array($baseDir . '/functions'),
 );
